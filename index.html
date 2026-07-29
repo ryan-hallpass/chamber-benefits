@@ -91,12 +91,19 @@
   .btn-ghost:hover{border-color:var(--navy);background:rgba(13,34,64,.03)}
   .btn-lg{font-size:1.06rem;padding:17px 30px}
   .link-under{
-    font-family:"Montserrat",sans-serif;font-weight:600;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M3,7.5 C20,4 34,9.5 52,6.5 C68,4 82,10 100,6 C108,4.5 114,6.5 117,6' fill='none' stroke='%23E85449' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;background-position:0 100%;background-size:100% .55em;
-    padding-bottom:5px;transition:color .2s, background-size .22s var(--ease);
+    font-family:"Montserrat",sans-serif;font-weight:600;position:relative;
+    padding-bottom:7px;transition:color .2s;
   }
-  .link-under:hover{color:var(--red-ink);background-size:100% .72em}
+  /* tapered pen-stroke underline (filled shape: thick left, thins to the right) */
+  .link-under::after{
+    content:"";position:absolute;left:-2px;right:-4px;bottom:0;height:.6em;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16' preserveAspectRatio='none'%3E%3Cpath d='M3,4.2 C64,1.4 132,4.6 197,7.2 C150,8.4 74,9.6 3,12.4 Q1,8.3 3,4.2 Z' fill='%23E85449'/%3E%3C/svg%3E") no-repeat;
+    background-size:100% 100%;
+  }
+  /* JS adds .pen (hides) then .drawn (reveals left→right) for the written-on effect */
+  .link-under.pen::after{clip-path:inset(0 100% 0 0)}
+  .link-under.pen.drawn::after{clip-path:inset(0 0 0 0);transition:clip-path .6s var(--ease)}
+  .link-under:hover{color:var(--red-ink)}
 
   /* ---------- Header ---------- */
   header.site{
@@ -689,6 +696,18 @@
     },{threshold:.14, rootMargin:'0px 0px -8% 0px'});
     revealEls.forEach(el=>io.observe(el));
   }
+
+  // Pen-stroke underline: "write on" when scrolled into view (respects reduced motion)
+  (function(){
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const links = document.querySelectorAll('.link-under');
+    if(reduce || !links.length) return;
+    links.forEach(l=>l.classList.add('pen'));
+    const uio = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('drawn'); uio.unobserve(e.target); } });
+    },{threshold:.9});
+    links.forEach(l=>uio.observe(l));
+  })();
 
   // Count-up on 500+
   (function(){
