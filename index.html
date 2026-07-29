@@ -228,7 +228,8 @@
   .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
   .tcard .qm{font-family:"Montserrat";font-weight:800;font-size:2.6rem;line-height:.6;color:var(--red);margin-bottom:10px}
   .tcard blockquote{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 20px;flex:1}
-  .tcard .who{font-family:"Montserrat";font-weight:700;font-size:.9rem;color:var(--navy)}
+  .tcard .who{display:flex;align-items:center;gap:12px;font-family:"Montserrat";font-weight:700;font-size:.9rem;color:var(--navy)}
+  .tcard .who .avatar{width:50px;height:50px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:2px solid #fff;box-shadow:0 2px 10px rgba(13,34,64,.18)}
   .tcard .who span{display:block;color:#6b7280;font-weight:500;font-size:.82rem;margin-top:2px}
 
   /* ---------- Pricing ---------- */
@@ -502,17 +503,17 @@
       <div class="tcard" data-reveal>
         <div class="qm">&ldquo;</div>
         <blockquote>Getting involved in the Chamber helps you grow your business — it introduces you to a wider audience than just putting a sign on the street corner.</blockquote>
-        <div class="who">Tem Barrett<span>Success Mortgage Partners</span></div>
+        <div class="who"><img class="avatar" src="avatar-tem.jpg" alt="Tem Barrett" width="50" height="50" /><div>Tem Barrett<span>Success Mortgage Partners</span></div></div>
       </div>
       <div class="tcard" data-reveal data-d="1">
         <div class="qm">&ldquo;</div>
         <blockquote>The biggest benefit for me is the networking. People here are from every walk of Ardmore — small businesses to large corporations — all looking to make connections.</blockquote>
-        <div class="who">Chris Greening<span>Charles B. Goddard Center for Visual and Performing Arts</span></div>
+        <div class="who"><img class="avatar" src="avatar-chris.jpg" alt="Chris Greening" width="50" height="50" /><div>Chris Greening<span>Charles B. Goddard Center for Visual and Performing Arts</span></div></div>
       </div>
       <div class="tcard" data-reveal data-d="2">
         <div class="qm">&ldquo;</div>
         <blockquote>You get to meet all the other chamber members, and you get to also talk about what it is that you do. It builds community, and there's nothing better than being able to be united.</blockquote>
-        <div class="who">Desiree Reed<span>Keller Williams Realty</span></div>
+        <div class="who"><img class="avatar" src="avatar-desiree.jpg" alt="Desiree Reed" width="50" height="50" /><div>Desiree Reed<span>Keller Williams Realty</span></div></div>
       </div>
     </div>
   </div>
