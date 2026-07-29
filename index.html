@@ -222,6 +222,15 @@
   .quote .who span{display:block;color:#9fb2d1;font-weight:500;font-size:.84rem;letter-spacing:.02em}
   @media(max-width:760px){.proof .wrap{grid-template-columns:1fr;gap:30px}}
 
+  /* ---------- Testimonials ---------- */
+  .testimonials{background:var(--paper)}
+  .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .tcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+  .tcard .qm{font-family:"Montserrat";font-weight:800;font-size:2.6rem;line-height:.6;color:var(--red);margin-bottom:10px}
+  .tcard blockquote{font-size:1.08rem;line-height:1.55;color:var(--ink);margin:0 0 20px;flex:1}
+  .tcard .who{font-family:"Montserrat";font-weight:700;font-size:.9rem;color:var(--navy)}
+  .tcard .who span{display:block;color:#6b7280;font-weight:500;font-size:.82rem;margin-top:2px}
+
   /* ---------- Pricing ---------- */
   .pricing{background:var(--paper);text-align:center}
   .price-card{
@@ -481,6 +490,34 @@
   </div>
 </section>
 
+<!-- ===================== TESTIMONIALS ===================== -->
+<!-- Quotes pulled from the member testimonial video (SELECTS.txt). NEEDS real names + businesses per timecode to attribute properly. -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal>
+      <span class="eyebrow">In their own words</span>
+      <h2>Why members keep showing up.</h2>
+    </div>
+    <div class="tgrid">
+      <div class="tcard" data-reveal>
+        <div class="qm">&ldquo;</div>
+        <blockquote>Getting involved in the Chamber helps you grow your business — it introduces you to a wider audience than just putting a sign on the street corner.</blockquote>
+        <div class="who">Ardmore Chamber member<span>From the member testimonial video</span></div>
+      </div>
+      <div class="tcard" data-reveal data-d="1">
+        <div class="qm">&ldquo;</div>
+        <blockquote>The biggest benefit for me is the networking. People here are from every walk of Ardmore — small businesses to large corporations — all looking to make connections.</blockquote>
+        <div class="who">Ardmore Chamber member<span>From the member testimonial video</span></div>
+      </div>
+      <div class="tcard" data-reveal data-d="2">
+        <div class="qm">&ldquo;</div>
+        <blockquote>The more involved I've gotten in the community, the more business it's brought to mine.</blockquote>
+        <div class="who">Ardmore Chamber member<span>From the member testimonial video</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== PRICING ===================== -->
 <section class="pricing">
   <div class="wrap">
@@ -513,8 +550,8 @@
         <span><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg> Come as our guest</span>
       </div>
       <div class="mini-quote">
-        "There are a lot of opportunities for personal and professional development within the Chamber."
-        <b>— Les Brown, EJ Ardmore Foundry</b>
+        "Show up. Make yourself known. Start being part of the community."
+        <b>— A new Ardmore Chamber member</b>
       </div>
     </div>
 
