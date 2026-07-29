@@ -1,0 +1,9 @@
+# Internal working docs — never published
+docs/
+
+# Screenshots / scratch
+_shot-*.png
+*.tmp
+
+# OS
+.DS_Store
