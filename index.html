@@ -787,10 +787,11 @@
     btn.disabled=true; btn.textContent='Saving…';
     try{
       if(CAPTURE_ENDPOINT){
-        // No JSON content-type header on purpose: keeps this a "simple" request so the
-        // browser skips the CORS preflight that GHL's inbound webhook won't answer.
-        // GHL still parses the JSON body. Reveal-first: never block the guest on this.
-        await fetch(CAPTURE_ENDPOINT,{method:'POST',body:JSON.stringify({...data, source:'chamberbenefits-landing', event:'Business After Hours'})});
+        // Send as application/x-www-form-urlencoded (URLSearchParams sets that header
+        // automatically). It's a "simple" request — no CORS preflight for GHL to reject —
+        // AND GoHighLevel parses form fields natively. Reveal-first: never block the guest.
+        const body = new URLSearchParams({...data, source:'chamberbenefits-landing', event:'Business After Hours'});
+        await fetch(CAPTURE_ENDPOINT,{method:'POST',body});
       }
     }catch(err){ /* reveal-first: never block the guest on a network error */ }
     form.style.display='none';
