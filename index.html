@@ -245,6 +245,20 @@
   .tcard .who .avatar{width:50px;height:50px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:2px solid #fff;box-shadow:0 2px 10px rgba(13,34,64,.18)}
   .tcard .who span{display:block;color:#6b7280;font-weight:500;font-size:.82rem;margin-top:2px}
 
+  /* ---------- Moments (real event photos) ---------- */
+  .moments{background:var(--paper)}
+  .mgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:182px;gap:14px}
+  .mgrid figure{margin:0;overflow:hidden;border-radius:14px;position:relative;background:#e9ecf1;box-shadow:var(--shadow)}
+  .mgrid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+  .mgrid figure:hover img{transform:scale(1.055)}
+  .mgrid figure.big{grid-column:span 2;grid-row:span 2}
+  .mgrid figure.wide{grid-column:span 2}
+  .mgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-family:"Montserrat";font-weight:700;font-size:.82rem;letter-spacing:.02em;background:linear-gradient(to top,rgba(8,20,40,.72),transparent)}
+  @media(max-width:640px){
+    .mgrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:132px;gap:10px}
+    .mgrid figcaption{font-size:.74rem;padding:20px 12px 10px}
+  }
+
   /* ---------- Pricing ---------- */
   .pricing{background:var(--paper);text-align:center}
   .price-card{
@@ -526,6 +540,23 @@
         <blockquote>You get to meet all the other chamber members, and you get to also talk about what it is that you do. It builds community, and there's nothing better than being able to be united.</blockquote>
         <div class="who"><img class="avatar" src="avatar-desiree.jpg" alt="Desiree Reed" width="50" height="50" /><div>Desiree Reed<span>Keller Williams Realty</span></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MOMENTS ===================== -->
+<section class="moments">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal>
+      <span class="eyebrow">Life at the Chamber</span>
+      <h2>This is what showing up looks like.</h2>
+      <p>Ribbon cuttings, Business After Hours, and the everyday connections that keep Ardmore moving.</p>
+    </div>
+    <div class="mgrid" data-reveal data-d="1">
+      <figure class="big"><img src="img/event-ribbon.jpg" alt="Chamber ribbon cutting celebrating a new Ardmore business" loading="lazy" /><figcaption>Ribbon cuttings that put members front and center</figcaption></figure>
+      <figure class="wide"><img src="img/event-crowd.jpg" alt="Members networking at a Business After Hours event" loading="lazy" /><figcaption>Business After Hours</figcaption></figure>
+      <figure><img src="img/event-chat.jpg" alt="Two members making a connection at a Chamber event" loading="lazy" /></figure>
+      <figure><img src="img/event-group.jpg" alt="Members visiting at a Chamber event" loading="lazy" /></figure>
     </div>
   </div>
 </section>
