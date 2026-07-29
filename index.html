@@ -787,7 +787,10 @@
     btn.disabled=true; btn.textContent='Saving…';
     try{
       if(CAPTURE_ENDPOINT){
-        await fetch(CAPTURE_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...data, source:'chamberbenefits-landing', event:'Business After Hours'})});
+        // No JSON content-type header on purpose: keeps this a "simple" request so the
+        // browser skips the CORS preflight that GHL's inbound webhook won't answer.
+        // GHL still parses the JSON body. Reveal-first: never block the guest on this.
+        await fetch(CAPTURE_ENDPOINT,{method:'POST',body:JSON.stringify({...data, source:'chamberbenefits-landing', event:'Business After Hours'})});
       }
     }catch(err){ /* reveal-first: never block the guest on a network error */ }
     form.style.display='none';
