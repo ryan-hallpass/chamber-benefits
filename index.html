@@ -92,10 +92,11 @@
   .btn-lg{font-size:1.06rem;padding:17px 30px}
   .link-under{
     font-family:"Montserrat",sans-serif;font-weight:600;
-    border-bottom:2px solid rgba(188,58,43,.45);padding-bottom:1px;
-    transition:border-color .2s, color .2s;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M3,7.5 C20,4 34,9.5 52,6.5 C68,4 82,10 100,6 C108,4.5 114,6.5 117,6' fill='none' stroke='%23E85449' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:0 100%;background-size:100% .55em;
+    padding-bottom:5px;transition:color .2s, background-size .22s var(--ease);
   }
-  .link-under:hover{border-color:var(--red-ink);color:var(--red-ink)}
+  .link-under:hover{color:var(--red-ink);background-size:100% .72em}
 
   /* ---------- Header ---------- */
   header.site{
@@ -134,18 +135,13 @@
   .trust-chip{
     display:inline-flex;align-items:center;gap:9px;
     background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
-    padding:7px 14px 7px 11px;border-radius:100px;font-size:.82rem;font-weight:600;color:#dbe6f7;
-    margin-bottom:12px;
+    padding:8px 16px 8px 13px;border-radius:100px;font-size:.82rem;font-weight:600;color:#dbe6f7;
+    margin-bottom:26px;transition:background .2s,border-color .2s,color .2s;
   }
   .trust-chip b{color:#fff;font-family:"Montserrat";font-weight:800}
-  .members-link{
-    display:flex;width:fit-content;align-items:center;gap:6px;font-family:"Montserrat";font-weight:600;
-    font-size:.9rem;color:#cdd9ec;border-bottom:2px solid rgba(232,84,73,.55);padding-bottom:2px;
-    margin-bottom:26px;transition:color .2s,border-color .2s;
-  }
-  .members-link:hover{color:#fff;border-color:var(--red)}
-  .members-link .arw{transition:transform .22s var(--ease)}
-  .members-link:hover .arw{transform:translateX(4px)}
+  .trust-chip .arw{color:var(--red);font-weight:800;transition:transform .22s var(--ease)}
+  a.trust-chip:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.32);color:#fff}
+  a.trust-chip:hover .arw{transform:translateX(4px)}
   .hero h1{
     color:#fff;font-weight:800;font-size:clamp(2.35rem,5.4vw,4rem);letter-spacing:-.02em;
     margin-bottom:20px;
@@ -367,7 +363,6 @@
   @media(max-width:820px){
     .hero-grid{grid-template-columns:1fr;gap:38px;text-align:center}
     .hero p.sub{margin-left:auto;margin-right:auto}
-    .members-link{margin-left:auto;margin-right:auto}
     .hero-cta{justify-content:center}
     .video-wrap{order:-1;max-width:250px}
     section{padding:60px 0}
@@ -397,8 +392,7 @@
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="trust-chip" data-reveal><b>500+</b>&nbsp;Ardmore businesses are members</span>
-        <a class="members-link" href="https://townspark.app/d/ardmore" target="_blank" rel="noopener" data-reveal>Check out current members <span class="arw">→</span></a>
+        <a class="trust-chip" href="https://townspark.app/d/ardmore" target="_blank" rel="noopener" data-reveal><b>500+</b>&nbsp;Ardmore businesses are members <span class="arw">→</span></a>
         <h1 data-reveal data-d="1">Your business,<br /><span class="accent">known all over Ardmore.</span></h1>
         <p class="sub" data-reveal data-d="2">Join 500+ local businesses using the Chamber to find new customers, make the right connections, and have a say in what happens next in Ardmore.</p>
         <div class="hero-cta" data-reveal data-d="3">
