@@ -10,8 +10,15 @@
 <meta property="og:title" content="Your business, known all over Ardmore." />
 <meta property="og:description" content="Join 500+ local businesses. Be our guest at the next Business After Hours — free, no membership required." />
 <meta property="og:type" content="website" />
-<!-- SWAP: absolute og:image URL once the subdomain is live -->
-<meta property="og:image" content="og-image.jpg" />
+<meta property="og:url" content="https://ryan-hallpass.github.io/chamber-benefits/" />
+<!-- SWAP to the subdomain (chamberbenefits.ardmore.org) once DNS is live -->
+<meta property="og:image" content="https://ryan-hallpass.github.io/chamber-benefits/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Your business, known all over Ardmore." />
+<meta name="twitter:description" content="Join 500+ local businesses. Be our guest at the next Business After Hours — free." />
+<meta name="twitter:image" content="https://ryan-hallpass.github.io/chamber-benefits/og-image.jpg" />
 
 <link rel="icon" href="favicon.png" />
 
@@ -218,7 +225,8 @@
   .stat .lbl{font-family:"Montserrat";font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.8rem;color:#b9c8e2;margin-top:8px}
   .quote{border-left:3px solid var(--red);padding-left:26px}
   .quote p{font-size:1.3rem;line-height:1.5;color:#eaf0fb;font-weight:400;font-style:italic}
-  .quote .who{margin-top:14px;font-family:"Montserrat";font-weight:700;font-size:.92rem;color:#fff;font-style:normal}
+  .quote .who{display:flex;align-items:center;gap:13px;margin-top:18px;font-family:"Montserrat";font-weight:700;font-size:.92rem;color:#fff;font-style:normal}
+  .quote .who .avatar{width:54px;height:54px;border-radius:50%;object-fit:cover;flex:0 0 auto;border:2px solid rgba(255,255,255,.6);box-shadow:0 3px 12px rgba(0,0,0,.35)}
   .quote .who span{display:block;color:#9fb2d1;font-weight:500;font-size:.84rem;letter-spacing:.02em}
   @media(max-width:760px){.proof .wrap{grid-template-columns:1fr;gap:30px}}
 
@@ -486,7 +494,7 @@
     </div>
     <div class="quote" data-reveal data-d="1">
       <p>"There are a lot of opportunities for personal and professional development within the Chamber."</p>
-      <div class="who">Les Brown<span>EJ Ardmore Foundry</span></div>
+      <div class="who"><img class="avatar" src="avatar-les.jpg" alt="Les Brown" width="54" height="54" /><div>Les Brown<span>EJ Ardmore Foundry</span></div></div>
     </div>
   </div>
 </section>
