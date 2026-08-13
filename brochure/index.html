@@ -290,6 +290,8 @@
   #c7 .pos-2{transform:translateY(-32px) scale(.88);z-index:10;opacity:.4;filter:blur(1px);pointer-events:none}
   #c7 .fly{transform:translateX(120%) rotate(15deg) scale(1)!important;opacity:0!important;z-index:40!important}
 
+  #c7 .stack:focus-visible{outline:2px solid var(--red);outline-offset:6px;border-radius:18px}
+
   #c7 .taphint{
     display:flex;align-items:center;justify-content:center;gap:6px;
     margin-top:12px;font-family:var(--mono);font-size:.62rem;color:var(--red);opacity:.85;
@@ -297,6 +299,19 @@
   @media(prefers-reduced-motion:reduce){
     #c7 .tcard{transition:none}
   }
+
+  /* ---------- Card 8: Programs ---------- */
+  #c8 .prog{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+  #c8 .p{background:var(--white);border:1px solid rgba(13,34,64,.1);border-radius:12px;padding:13px 14px}
+  #c8 .p h3{color:var(--navy);margin-bottom:4px;font-size:.9rem}
+  #c8 .p p{font-size:.78rem;opacity:.8;line-height:1.45}
+
+  /* ---------- Card 9: Bento ---------- */
+  #c9 .bento{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}
+  #c9 .bento figure{position:relative;border-radius:11px;overflow:hidden;aspect-ratio:6/5}
+  #c9 .bento figure:first-child{grid-column:1 / -1;aspect-ratio:2.85/1}
+  #c9 .body{margin-top:6px}
+  #c9 .bento img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
   @media(prefers-reduced-motion:reduce){
     [data-r]{animation:none;opacity:1;filter:none;transform:none}
@@ -420,7 +435,7 @@
             <div class="num"><span data-count="500">0</span>+</div>
             <div class="lbl">Ardmore businesses<br />are members</div>
           </div>
-          <div class="stack" id="stack" data-r="2">
+          <div class="stack" id="stack" data-r="2" tabindex="0" role="button" aria-label="Show the next member testimonial">
             <div class="tcard pos-0">
               <blockquote>&ldquo;Getting involved in the Chamber introduces you to a wider audience than just putting a sign on the street corner.&rdquo;</blockquote>
               <div class="who"><img src="img/avatar-tem.jpg" alt="Tem Barrett" /><div><b>Tem Barrett</b><span>Success Mortgage Partners</span></div></div>
@@ -442,8 +457,40 @@
         <div class="cfoot" data-r="4"><span>Member voices</span><span>3 of 500+</span></div>
       </div>
     </section>
-    <section class="card card--paper" id="c8"><div class="tex"></div><div class="in"><h2>8</h2></div></section>
-    <section class="card card--navy"  id="c9"><div class="tex"></div><div class="in"><h2>9</h2></div></section>
+    <section class="card card--paper" id="c8">
+      <div class="tex"></div>
+      <div class="in">
+        <div class="chead"><span class="snum">[08]</span><span class="slabel">Get involved</span></div>
+        <div class="cbody">
+          <h2 data-r="1">Signature programs worth showing up for.</h2>
+          <div class="prog">
+            <div class="p" data-r="2"><h3>Chamber Ambassadors</h3><p>The volunteer welcoming committee that cuts ribbons and greets new businesses. The fastest way to raise your profile.</p></div>
+            <div class="p" data-r="3"><h3>Leadership Ardmore</h3><p>A hands-on program that takes you behind the scenes of how Ardmore really works.</p></div>
+            <div class="p" data-r="4"><h3>Chamber Classic Golf Tournament</h3><p>Hole and tee sponsorships put your brand in front of Ardmore's decision-makers for a full day.</p></div>
+          </div>
+        </div>
+        <div class="cfoot" data-r="4"><span>Programs</span><span>Included with membership</span></div>
+      </div>
+    </section>
+
+    <section class="card card--navy" id="c9">
+      <div class="tex"></div>
+      <div class="in">
+        <div class="chead"><span class="snum">[09]</span><span class="slabel">Life at the Chamber</span></div>
+        <div class="cbody">
+          <h2 data-r="1">This is what showing up looks like.</h2>
+          <p class="body" data-r="2">Ribbon cuttings, Business After Hours, Lunch &amp; Learn, and the everyday connections that keep Ardmore moving.</p>
+          <div class="bento" data-r="3">
+            <figure><img src="img/event-ribbon.jpg" alt="Chamber ribbon cutting" /></figure>
+            <figure><img src="img/event-crowd.jpg" alt="Business After Hours" /></figure>
+            <figure><img src="img/event-lunch.jpg" alt="Lunch and Learn" /></figure>
+            <figure><img src="img/event-chat.jpg" alt="Two members talking" /></figure>
+            <figure><img src="img/event-group.jpg" alt="Members visiting at a Chamber event" /></figure>
+          </div>
+        </div>
+        <div class="cfoot" data-r="4"><span>Every month, all year</span><span>Ardmore, OK</span></div>
+      </div>
+    </section>
     <section class="card card--paper" id="c10"><div class="tex"></div><div class="in"><h2>10</h2></div></section>
     <section class="card card--navy"  id="c11"><div class="tex"></div><div class="in"><h2>11</h2></div></section>
   </div>
@@ -539,7 +586,7 @@
     const POS = ['pos-0','pos-1','pos-2'];
     let busy = false;
 
-    stack.addEventListener('click', () => {
+    function advance(){
       if(busy) return;
       const order = Array.from(stack.querySelectorAll('.tcard'));
       const top = order.find(c => c.classList.contains('pos-0'));
@@ -557,6 +604,14 @@
         busy = false;
       };
       if(REDUCE) settle(); else setTimeout(settle, 500);
+    }
+
+    stack.addEventListener('click', advance);
+    stack.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
+        e.preventDefault();   // stop Space from scrolling the rail
+        advance();
+      }
     });
   })();
 
