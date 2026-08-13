@@ -543,7 +543,7 @@
           <p class="lead" data-r="2">Be our guest at the next Business After Hours. Free to attend. No membership required.</p>
           <a class="btn" data-landing href="#" data-r="2">See the full benefits &amp; RSVP&nbsp;&rarr;</a>
           <div class="qr" data-r="3">
-            <img src="qr.png" alt="QR code linking to the Ardmore Chamber membership page" />
+            <img src="qr.png" alt="QR code linking to this digital brochure" />
             <p>Scan or share<br />this brochure</p>
           </div>
           <p class="joinline" data-r="4">Already know you want in? <a data-join href="#">Join now &rarr;</a></p>
@@ -564,6 +564,10 @@
      Swap both to the ardmore.org subdomain equivalents when DNS is live. */
   const LANDING_URL = "https://ryan-hallpass.github.io/chamber-benefits/";
   const JOIN_URL    = "https://business.ardmore.org/member/newmemberapp/";
+  // Encoded in qr.png — regenerate the PNG if this changes (see the plan's Task 7).
+  // Not read by any code below; it exists so the URL is visible where someone
+  // doing the migration will look. Do not remove as "unused."
+  const BROCHURE_URL = "https://ryan-hallpass.github.io/chamber-benefits/brochure/";
   /* ================================================================== */
 
   const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
