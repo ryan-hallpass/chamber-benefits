@@ -101,11 +101,16 @@
   .deck{
     position:fixed;left:0;right:0;bottom:0;
     top:calc(var(--navh) + env(safe-area-inset-top));
-    --cardH:min(calc(100dvh - var(--navh) - env(safe-area-inset-top) - 68px), 800px);
-    --cardW:min(calc(var(--cardH) * 9 / 16), 90vw);
+    /* PHONES: no fixed aspect ratio — the card fills the available height and takes
+       88vw, so its ratio is whatever the device gives (the TownSpark behaviour).
+       Forcing 9:16 here made the card TALLER than the phone's own ~1.47 deck ratio,
+       so height bound first, the width shrank to compensate, and the slide floated
+       in dead space. Desktop re-imposes 3/4 below. */
+    --cardH:min(calc(100dvh - var(--navh) - env(safe-area-inset-top) - 34px), 860px);
+    --cardW:88vw;
   }
   @supports not (height:100dvh){
-    .deck{--cardH:min(calc(100vh - var(--navh) - env(safe-area-inset-top) - 68px), 800px)}
+    .deck{--cardH:min(calc(100vh - var(--navh) - env(safe-area-inset-top) - 34px), 860px)}
   }
 
   .rail{
@@ -130,7 +135,7 @@
   .card{
     flex:0 0 auto;
     width:var(--cardW);
-    height:calc(var(--cardW) * 16 / 9);
+    height:var(--cardH);
     scroll-snap-align:center;scroll-snap-stop:always;
     /* ratio is overridden to 3/4 at >=768px — see the media query below */
     position:relative;overflow:hidden;
