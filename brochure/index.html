@@ -139,6 +139,11 @@
 
   .card--navy{background:var(--navy);color:var(--on-navy);border:1px solid rgba(255,255,255,.1)}
   .card--navy h1,.card--navy h2,.card--navy h3{color:var(--white)}
+  /* --red on navy is 4.4:1 (just under the 4.5:1 AA floor for normal-size text). Small
+     mono/caption text on navy cards borrows the already-navy-safe --eyebrow-navy tint
+     (9:1) instead — --red itself stays untouched since it is a token shared with the
+     landing page and reads fine at the large sizes it's used at elsewhere. */
+  .card--navy .snum{color:var(--eyebrow-navy)}
   .card--paper{background:var(--paper);color:var(--ink);border:1px solid rgba(13,34,64,.1)}
   .card--paper h1,.card--paper h2,.card--paper h3{color:var(--navy)}
 
@@ -227,7 +232,7 @@
   .badge{
     display:grid;place-content:center;text-align:center;
     width:96px;height:96px;border-radius:50%;
-    background:var(--red);color:#fff;
+    background:var(--red-cta);color:#fff;
   }
   /* Both MUST be display:block. As inline elements they flow onto one line
      ("500+local member") and overflow the circle horizontally. */
@@ -237,7 +242,7 @@
   .numeral{
     display:grid;place-content:center;
     width:34px;height:34px;border-radius:50%;
-    background:var(--red);color:#fff;
+    background:var(--red-cta);color:#fff;
     font-family:"Montserrat",sans-serif;font-weight:800;font-size:.94rem;
     margin-bottom:14px;
   }
@@ -247,7 +252,7 @@
     font-family:"Montserrat",sans-serif;font-weight:700;font-size:.92rem;
     padding:14px 20px;border-radius:10px;
     background:var(--red-cta);color:#fff;
-    box-shadow:0 8px 22px rgba(192,57,43,.3);
+    box-shadow:0 8px 22px rgba(0,0,0,.35);
     transition:background .2s var(--ease),transform .18s var(--ease);
   }
   .btn:hover{background:var(--red-cta-h);transform:translateY(-2px)}
@@ -294,7 +299,7 @@
 
   #c7 .taphint{
     display:flex;align-items:center;justify-content:center;gap:6px;
-    margin-top:12px;font-family:var(--mono);font-size:.62rem;color:var(--red);opacity:.85;
+    margin-top:12px;font-family:var(--mono);font-size:.62rem;color:var(--eyebrow-navy);opacity:.85;
   }
   @media(prefers-reduced-motion:reduce){
     #c7 .tcard{transition:none}
@@ -319,7 +324,7 @@
   }
 
   /* ---------- Card 10: Pricing ---------- */
-  #c10 .price{background:var(--red);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;margin-top:14px}
+  #c10 .price{background:var(--red-cta);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;margin-top:14px}
   #c10 .price .pre{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.76rem;opacity:.92}
   #c10 .price .amt{font-family:"Montserrat",sans-serif;font-weight:800;font-size:2.5rem;line-height:1.05;letter-spacing:-.03em;margin:2px 0}
   #c10 .price .amt small{font-size:.95rem;font-weight:700}
@@ -377,7 +382,7 @@
         </div>
         <div class="cfoot" data-r="4">
           <span>Ardmore, Oklahoma</span>
-          <span style="display:flex;align-items:center;gap:6px;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Swipe
+          <span style="display:flex;align-items:center;gap:6px;color:var(--eyebrow-navy);font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Swipe
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </span>
         </div>
@@ -460,7 +465,7 @@
             <div class="num"><span data-count="500">0</span>+</div>
             <div class="lbl">Ardmore businesses<br />are members</div>
           </div>
-          <div class="stack" id="stack" data-r="2" tabindex="0" role="button" aria-label="Show the next member testimonial">
+          <div class="stack" id="stack" data-r="2" tabindex="0" role="button" aria-live="polite" aria-label="Show the next member testimonial">
             <div class="tcard pos-0">
               <blockquote>&ldquo;Getting involved in the Chamber introduces you to a wider audience than just putting a sign on the street corner.&rdquo;</blockquote>
               <div class="who"><img src="img/avatar-tem.jpg" alt="Tem Barrett" /><div><b>Tem Barrett</b><span>Success Mortgage Partners</span></div></div>
