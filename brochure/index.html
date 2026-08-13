@@ -264,14 +264,19 @@
   #c7 .stat .num{font-family:"Montserrat",sans-serif;font-weight:800;font-size:2.5rem;line-height:1;color:var(--red);letter-spacing:-.03em}
   #c7 .stat .lbl{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.76rem;line-height:1.2;color:var(--white)}
 
-  #c7 .stack{position:relative;width:100%;max-width:280px;margin:0 auto;aspect-ratio:4/5;cursor:pointer}
+  #c7 .stack{position:relative;width:100%;max-width:280px;margin:34px auto 0;aspect-ratio:4/5;cursor:pointer}
   #c7 .tcard{
     position:absolute;inset:0;
     background:var(--white);color:var(--ink);
     border-radius:15px;padding:20px;
     display:flex;flex-direction:column;justify-content:center;
     box-shadow:0 10px 30px rgba(0,0,0,.3);
-    transform-origin:center bottom;will-change:transform;
+    /* origin MUST be center top. With center bottom, scale() pulls the back card's
+       top edge DOWN by (1-scale)*height — ~20px at this card's height — which
+       exceeds the translateY lifting it up, so the back cards hide entirely behind
+       the front one and the stack reads as a single card. Anchoring at the top makes
+       the peek exactly the translateY distance, independent of card height. */
+    transform-origin:center top;will-change:transform;
     transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s ease,filter .5s ease;
   }
   #c7 .tcard blockquote{font-size:.85rem;line-height:1.5}
