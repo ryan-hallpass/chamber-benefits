@@ -317,6 +317,31 @@
     [data-r]{animation:none;opacity:1;filter:none;transform:none}
     .rail{scroll-behavior:auto}
   }
+
+  /* ---------- Card 10: Pricing ---------- */
+  #c10 .price{background:var(--red);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;margin-top:14px}
+  #c10 .price .pre{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.76rem;opacity:.92}
+  #c10 .price .amt{font-family:"Montserrat",sans-serif;font-weight:800;font-size:2.5rem;line-height:1.05;letter-spacing:-.03em;margin:2px 0}
+  #c10 .price .amt small{font-size:.95rem;font-weight:700}
+  #c10 .price .sub{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.82rem}
+  #c10 .fine{font-size:.76rem;margin-top:13px;opacity:.8;line-height:1.45}
+  #c10 .tax{
+    display:inline-flex;align-items:center;gap:7px;margin-top:12px;
+    background:rgba(13,34,64,.05);border:1px solid rgba(13,34,64,.12);
+    border-radius:999px;padding:8px 13px;
+    font-family:"Montserrat",sans-serif;font-weight:700;font-size:.7rem;color:var(--navy);line-height:1.3;
+  }
+  #c10 .tax svg{width:14px;height:14px;flex:0 0 14px;fill:none;stroke:var(--red-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---------- Card 11: Close ---------- */
+  #c11 .btn{width:100%;margin-top:16px}
+  #c11 .qr{display:flex;align-items:center;gap:12px;margin-top:14px;background:var(--white);border-radius:12px;padding:11px 13px}
+  #c11 .qr img{width:66px;height:66px;flex:0 0 66px;border-radius:5px}
+  #c11 .qr p{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.74rem;color:var(--navy);line-height:1.3}
+  #c11 .contact{margin-top:14px;font-size:.76rem;line-height:1.7;opacity:.82}
+  #c11 .contact a{border-bottom:1px solid rgba(255,255,255,.28)}
+  #c11 .joinline{margin-top:11px;font-size:.78rem;opacity:.9}
+  #c11 .joinline a{color:var(--eyebrow-navy);font-weight:700;border-bottom:1px solid currentColor}
 </style>
 </head>
 <body>
@@ -491,16 +516,67 @@
         <div class="cfoot" data-r="4"><span>Every month, all year</span><span>Ardmore, OK</span></div>
       </div>
     </section>
-    <section class="card card--paper" id="c10"><div class="tex"></div><div class="in"><h2>10</h2></div></section>
-    <section class="card card--navy"  id="c11"><div class="tex"></div><div class="in"><h2>11</h2></div></section>
+    <section class="card card--paper" id="c10">
+      <div class="tex"></div>
+      <div class="in">
+        <div class="chead"><span class="snum">[10]</span><span class="slabel">What it costs</span></div>
+        <div class="cbody">
+          <h2 data-r="1">Simple, honest pricing.</h2>
+          <div class="price" data-r="2">
+            <div class="pre">Membership starts at</div>
+            <div class="amt">$348<small>/year</small></div>
+            <div class="sub">Less than a dollar a day.</div>
+          </div>
+          <p class="fine" data-r="3">Dues scale with the size of your organization. One membership covers every benefit in this brochure — no per-event fees to show up and be seen.</p>
+          <div data-r="4"><span class="tax"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg> 80% of your dues are tax-deductible as a business expense</span></div>
+        </div>
+        <div class="cfoot" data-r="4"><span>Pricing</span><span>Scales with your size</span></div>
+      </div>
+    </section>
+
+    <section class="card card--navy" id="c11">
+      <div class="tex"></div>
+      <div class="in">
+        <div class="chead"><span class="snum">[11]</span><span class="slabel">Come see for yourself</span></div>
+        <div class="cbody">
+          <h2 data-r="1">Come see for yourself.</h2>
+          <p class="lead" data-r="2">Be our guest at the next Business After Hours. Free to attend. No membership required.</p>
+          <a class="btn" data-landing href="#" data-r="2">See the full benefits &amp; RSVP &rarr;</a>
+          <div class="qr" data-r="3">
+            <img src="qr.png" alt="QR code linking to the Ardmore Chamber membership page" />
+            <p>Scan or share<br />this brochure</p>
+          </div>
+          <p class="joinline" data-r="4">Already know you want in? <a data-join href="#">Join now &rarr;</a></p>
+          <div class="contact" data-r="4">
+            <a href="tel:+15802237765">580-223-7765</a> &nbsp;·&nbsp;
+            <a href="mailto:kfryer@ardmore.org">kfryer@ardmore.org</a><br />
+            <a href="https://chamber.ardmore.org" target="_blank" rel="noopener">chamber.ardmore.org</a>
+          </div>
+        </div>
+        <div class="cfoot" data-r="4"><span>Ardmore Chamber of Commerce</span><span>[11 / 11]</span></div>
+      </div>
+    </section>
   </div>
 </div>
 
 <script>
+  /* ===== SWAPPABLE CONFIG =============================================
+     Swap both to the ardmore.org subdomain equivalents when DNS is live. */
+  const LANDING_URL = "https://ryan-hallpass.github.io/chamber-benefits/";
+  const JOIN_URL    = "https://business.ardmore.org/member/newmemberapp/";
+  /* ================================================================== */
+
   const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const rail  = document.getElementById('rail');
   const cards = Array.from(rail.querySelectorAll('.card'));
+
+  document.querySelectorAll('[data-landing]').forEach(a => {
+    a.href = LANDING_URL; a.target = '_blank'; a.rel = 'noopener';
+  });
+  document.querySelectorAll('[data-join]').forEach(a => {
+    a.href = JOIN_URL; a.target = '_blank'; a.rel = 'noopener';
+  });
   const dots  = document.getElementById('dots');
   const prev  = document.getElementById('prev');
   const next  = document.getElementById('next');
