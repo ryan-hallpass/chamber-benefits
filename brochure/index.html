@@ -129,6 +129,14 @@
     border-radius:16px;
     box-shadow:0 18px 50px rgba(0,0,0,.45);
   }
+  /* Dim the peeking neighbours. Grounds alternate navy/paper, so without this a
+     paper card peeking past a navy one reads as a glaring white bar down the edge,
+     while a navy neighbour behind a paper card is barely visible — the peek is
+     asymmetric and loud in one direction. Dimming by state (not by mask width)
+     works at every breakpoint, since the peek width changes with the viewport. */
+  .card{transition:opacity .35s var(--ease)}
+  .card:not(.in-view){opacity:.45}
+
   .card--navy{background:var(--navy);color:var(--on-navy);border:1px solid rgba(255,255,255,.1)}
   .card--navy h1,.card--navy h2,.card--navy h3{color:var(--white)}
   .card--paper{background:var(--paper);color:var(--ink);border:1px solid rgba(13,34,64,.1)}
