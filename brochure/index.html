@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Join the Ardmore Chamber of Commerce — Your business, known all over Ardmore</title>
+<meta name="description" content="A swipe-through look at what Ardmore Chamber membership actually does for your business. Join 500+ local businesses." />
+
+<meta property="og:title" content="Your business, known all over Ardmore." />
+<meta property="og:description" content="Swipe through what Chamber membership actually does for your business. Join 500+ local businesses." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ryan-hallpass.github.io/chamber-benefits/brochure/" />
+<!-- SWAP to the ardmore.org subdomain once DNS is live -->
+<meta property="og:image" content="https://ryan-hallpass.github.io/chamber-benefits/brochure/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="favicon.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="favicon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --navy:#0D2240;
+    --navy-900:#081a32;
+    --red:#E85449;
+    --red-cta:#C0392B;
+    --red-cta-h:#A5301F;
+    --red-ink:#BC3A2B;
+    --paper:#F4F6FA;
+    --white:#fff;
+    --ink:#1A1A18;
+    --on-navy:#eaf0fb;
+    --eyebrow-navy:#F2B4AC;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --ease:cubic-bezier(.16,1,.3,1);
+    --navh:64px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:"Open Sans",-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--navy-900);
+    color:var(--on-navy);
+    line-height:1.55;
+    overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+    -webkit-user-select:none;user-select:none;-webkit-touch-callout:none;
+  }
+  h1,h2,h3{font-family:"Montserrat",sans-serif;line-height:1.08;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  /* ---------- Fixed top nav ---------- */
+  .topbar{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    height:calc(var(--navh) + env(safe-area-inset-top));
+    padding:env(safe-area-inset-top) 16px 0;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    background:rgba(13,34,64,.92);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    color:#fff;
+  }
+  .topbar .brand img{height:34px;width:auto;max-width:180px;object-fit:contain}
+
+  .dots{display:none;align-items:center;gap:7px}
+  .dots i{
+    width:7px;height:7px;border-radius:50%;
+    background:rgba(255,255,255,.28);
+    transition:background .3s var(--ease),transform .3s var(--ease);
+  }
+  .dots i.on{background:var(--red);transform:scale(1.3)}
+  @media(min-width:640px){.dots{display:flex}}
+
+  .tb-right{display:flex;align-items:center;gap:6px}
+  .arrow{
+    width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;
+    display:none;place-items:center;
+    background:transparent;color:#fff;opacity:.6;
+    transition:background .2s var(--ease),opacity .2s var(--ease);
+  }
+  .arrow:hover{background:rgba(255,255,255,.12);opacity:1}
+  .arrow[disabled]{opacity:.2;cursor:default;background:transparent}
+  @media(min-width:768px){.arrow{display:grid}}
+
+  .swipe-hint{
+    display:flex;align-items:center;gap:6px;opacity:.75;
+    font-family:"Montserrat",sans-serif;font-weight:700;
+    font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  }
+  @media(min-width:768px){.swipe-hint{display:none}}
+
+  /* ---------- Deck + rail ---------- */
+  .deck{
+    position:fixed;left:0;right:0;bottom:0;
+    top:calc(var(--navh) + env(safe-area-inset-top));
+    --cardH:min(calc(100dvh - var(--navh) - env(safe-area-inset-top) - 68px), 800px);
+    --cardW:min(calc(var(--cardH) * 9 / 16), 86vw);
+  }
+  @supports not (height:100dvh){
+    .deck{--cardH:min(calc(100vh - var(--navh) - 68px), 800px)}
+  }
+
+  .rail{
+    display:flex;align-items:center;
+    height:100%;
+    gap:clamp(14px,4vw,48px);
+    padding-inline:calc(50% - var(--cardW) / 2);
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  }
+  .rail::-webkit-scrollbar{display:none}
+
+  .card{
+    flex:0 0 auto;
+    width:var(--cardW);
+    height:calc(var(--cardW) * 16 / 9);
+    scroll-snap-align:center;scroll-snap-stop:always;
+    position:relative;overflow:hidden;
+    border-radius:16px;
+    box-shadow:0 18px 50px rgba(0,0,0,.45);
+  }
+  .card--navy{background:var(--navy);color:var(--on-navy);border:1px solid rgba(255,255,255,.1)}
+  .card--navy h1,.card--navy h2,.card--navy h3{color:var(--white)}
+  .card--paper{background:var(--paper);color:var(--ink);border:1px solid rgba(13,34,64,.1)}
+  .card--paper h1,.card--paper h2,.card--paper h3{color:var(--navy)}
+
+  /* Radial dot-grid texture */
+  .tex{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.08) 1px,transparent 0);
+    background-size:32px 32px;
+  }
+  .card--paper .tex{background-image:radial-gradient(circle at 1px 1px,rgba(13,34,64,.09) 1px,transparent 0)}
+
+  /* ---------- Card internals: 3 zones ---------- */
+  .in{
+    position:relative;z-index:10;
+    display:flex;flex-direction:column;justify-content:space-between;
+    height:100%;padding:clamp(18px,5.5%,32px);
+  }
+  .chead{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .snum{font-family:var(--mono);font-size:.66rem;font-weight:700;color:var(--red)}
+  .slabel{
+    font-family:"Montserrat",sans-serif;font-weight:700;
+    font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+    text-align:right;
+  }
+  .cbody{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0}
+  .cfoot{
+    display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
+    padding-top:12px;border-top:1px solid rgba(255,255,255,.1);
+    font-size:.68rem;opacity:.72;
+  }
+  .card--paper .cfoot{border-top-color:rgba(13,34,64,.12)}
+
+  /* ---------- Blur-in reveal ---------- */
+  @keyframes riseIn{
+    from{opacity:0;transform:translateY(26px);filter:blur(8px)}
+    to{opacity:1;transform:none;filter:blur(0)}
+  }
+  [data-r]{animation:riseIn .8s var(--ease) both;animation-play-state:paused}
+  .card.in-view [data-r]{animation-play-state:running}
+  [data-r="2"]{animation-delay:.09s}
+  [data-r="3"]{animation-delay:.18s}
+  [data-r="4"]{animation-delay:.27s}
+
+  @media(prefers-reduced-motion:reduce){
+    [data-r]{animation:none;opacity:1;filter:none;transform:none}
+    .rail{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a class="brand" href="#c1"><img src="logo-white.png" alt="Ardmore Chamber of Commerce" /></a>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <div class="tb-right">
+    <div class="swipe-hint">Swipe
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+    </div>
+    <button class="arrow" id="prev" aria-label="Previous card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="arrow" id="next" aria-label="Next card"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+  </div>
+</nav>
+
+<div class="deck" id="deck">
+  <div class="rail" id="rail">
+    <section class="card card--navy"  id="c1"><div class="tex"></div><div class="in"><h2>1</h2></div></section>
+    <section class="card card--paper" id="c2"><div class="tex"></div><div class="in"><h2>2</h2></div></section>
+    <section class="card card--navy"  id="c3"><div class="tex"></div><div class="in"><h2>3</h2></div></section>
+    <section class="card card--paper" id="c4"><div class="tex"></div><div class="in"><h2>4</h2></div></section>
+    <section class="card card--navy"  id="c5"><div class="tex"></div><div class="in"><h2>5</h2></div></section>
+    <section class="card card--paper" id="c6"><div class="tex"></div><div class="in"><h2>6</h2></div></section>
+    <section class="card card--navy"  id="c7"><div class="tex"></div><div class="in"><h2>7</h2></div></section>
+    <section class="card card--paper" id="c8"><div class="tex"></div><div class="in"><h2>8</h2></div></section>
+    <section class="card card--navy"  id="c9"><div class="tex"></div><div class="in"><h2>9</h2></div></section>
+    <section class="card card--paper" id="c10"><div class="tex"></div><div class="in"><h2>10</h2></div></section>
+    <section class="card card--navy"  id="c11"><div class="tex"></div><div class="in"><h2>11</h2></div></section>
+  </div>
+</div>
+
+<script>
+  const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const rail  = document.getElementById('rail');
+  const cards = Array.from(rail.querySelectorAll('.card'));
+  const dots  = document.getElementById('dots');
+  const prev  = document.getElementById('prev');
+  const next  = document.getElementById('next');
+
+  cards.forEach(() => dots.appendChild(document.createElement('i')));
+  const pips = Array.from(dots.querySelectorAll('i'));
+
+  let active = -1;
+
+  // Cards are centred in the rail, so scroll to the card's centre minus half the rail's width.
+  function offsetFor(i){
+    return cards[i].offsetLeft - (rail.clientWidth - cards[i].clientWidth) / 2;
+  }
+
+  function go(i){
+    i = Math.max(0, Math.min(cards.length - 1, i));
+    rail.scrollTo({ left: offsetFor(i), behavior: REDUCE ? 'auto' : 'smooth' });
+  }
+
+  function setActive(i, replaceHash){
+    if(i === active) return;
+    active = i;
+    pips.forEach((p, n) => p.classList.toggle('on', n === i));
+    cards.forEach((c, n) => c.classList.toggle('in-view', n === i));
+    prev.disabled = (i === 0);
+    next.disabled = (i === cards.length - 1);
+    if(replaceHash !== false) history.replaceState(null, '', '#c' + (i + 1));
+    if(cards[i].id === 'c7' && typeof countUp === 'function') countUp();
+  }
+
+  // Derive the active index from the rail's scroll position.
+  function nearest(){
+    const mid = rail.scrollLeft + rail.clientWidth / 2;
+    let best = 0, bestD = Infinity;
+    cards.forEach((c, n) => {
+      const d = Math.abs((c.offsetLeft + c.clientWidth / 2) - mid);
+      if(d < bestD){ bestD = d; best = n; }
+    });
+    return best;
+  }
+
+  let raf = null;
+  rail.addEventListener('scroll', () => {
+    if(raf) return;
+    raf = requestAnimationFrame(() => { raf = null; setActive(nearest()); });
+  }, { passive: true });
+
+  prev.addEventListener('click', () => go(active - 1));
+  next.addEventListener('click', () => go(active + 1));
+
+  window.addEventListener('keydown', (e) => {
+    const k = e.key;
+    if(k === 'ArrowRight' || k === 'ArrowDown'){ e.preventDefault(); go(active + 1); }
+    else if(k === 'ArrowLeft' || k === 'ArrowUp'){ e.preventDefault(); go(active - 1); }
+    else if(k === 'Home'){ e.preventDefault(); go(0); }
+    else if(k === 'End'){ e.preventDefault(); go(cards.length - 1); }
+  });
+
+  // Deep link on load (#c1..#c11), jumping without animation on first paint
+  (function(){
+    const m = /^#c(\d+)$/.exec(location.hash);
+    const i = m ? Math.max(0, Math.min(cards.length - 1, parseInt(m[1], 10) - 1)) : 0;
+    rail.scrollLeft = offsetFor(i);
+    setActive(i, false);
+  })();
+
+  window.addEventListener('resize', () => { rail.scrollLeft = offsetFor(active); });
+</script>
+</body>
+</html>

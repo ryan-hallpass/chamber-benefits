@@ -8,3 +8,14 @@ _shot-*.png
 # OS
 .DS_Store
 og.html
+
+# SDD scratch — never published
+.superpowers/
+
+# Brochure QA harness — never published
+brochure/node_modules/
+brochure/package.json
+brochure/package-lock.json
+brochure/shot.mjs
+brochure/_shot-*.png
+brochure/og.html
