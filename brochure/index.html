@@ -109,7 +109,12 @@
     display:flex;align-items:center;
     height:100%;
     gap:clamp(14px,4vw,48px);
-    padding-inline:calc(50% - var(--cardW) / 2);
+    /* A small fixed gutter, NOT centring padding. With snap-align:center the first
+       card cannot scroll far enough left to centre, so it pins to the left edge and
+       the deck fills the screen (the TownSpark behaviour); middle cards still centre
+       and the last pins right. Centring padding instead strands card 1 mid-screen
+       with dead space either side. */
+    padding-inline:clamp(14px,4vw,44px);
     overflow-x:auto;overflow-y:hidden;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
@@ -134,7 +139,7 @@
      asymmetric and loud in one direction. Dimming by state (not by mask width)
      works at every breakpoint, since the peek width changes with the viewport. */
   .card{transition:opacity .35s var(--ease)}
-  .card:not(.in-view){opacity:.45}
+  .card:not(.is-active){opacity:.45}
 
   .card--navy{background:var(--navy);color:var(--on-navy);border:1px solid rgba(255,255,255,.1)}
   .card--navy h1,.card--navy h2,.card--navy h3{color:var(--white)}
@@ -182,8 +187,13 @@
     from{opacity:0;transform:translateY(26px);filter:blur(8px)}
     to{opacity:1;transform:none;filter:blur(0)}
   }
+  /* `.revealed` (any card that has entered the viewport) drives the reveal;
+     `.is-active` (the single snapped card) drives the dimming. These MUST stay
+     separate — when one class did both, every card except the active one rendered
+     blank, so on desktop the visible neighbours were empty rectangles until
+     scrolled to. */
   [data-r]{animation:riseIn .8s var(--ease) both;animation-play-state:paused}
-  .card.in-view [data-r]{animation-play-state:running}
+  .card.revealed [data-r]{animation-play-state:running}
   [data-r="2"]{animation-delay:.09s}
   [data-r="3"]{animation-delay:.18s}
   [data-r="4"]{animation-delay:.27s}
@@ -344,7 +354,7 @@
   #c11 .joinline{margin-top:11px;font-size:.78rem;opacity:.9}
   #c11 .joinline a{color:var(--eyebrow-navy);font-weight:700;border-bottom:1px solid currentColor}
 </style>
-<noscript><style>[data-r]{animation:none;opacity:1;filter:none;transform:none}.card{opacity:1}.card:not(.in-view){opacity:1}</style></noscript>
+<noscript><style>[data-r]{animation:none;opacity:1;filter:none;transform:none}.card{opacity:1}.card:not(.is-active){opacity:1}</style></noscript>
 </head>
 <body>
 
@@ -598,9 +608,13 @@
 
   let active = -1;
 
-  // Cards are centred in the rail, so scroll to the card's centre minus half the rail's width.
+  // Cards snap centred, but the rail's small gutter means the first and last cards
+  // pin to their edges instead. Clamping to the rail's real scroll range reproduces
+  // exactly where the browser's own snapping lands, so button/keyboard navigation
+  // agrees with a manual swipe.
   function offsetFor(i){
-    return cards[i].offsetLeft - (rail.clientWidth - cards[i].clientWidth) / 2;
+    const raw = cards[i].offsetLeft - (rail.clientWidth - cards[i].clientWidth) / 2;
+    return Math.max(0, Math.min(raw, rail.scrollWidth - rail.clientWidth));
   }
 
   function go(i){
@@ -612,7 +626,7 @@
     if(i === active) return;
     active = i;
     pips.forEach((p, n) => p.classList.toggle('on', n === i));
-    cards.forEach((c, n) => c.classList.toggle('in-view', n === i));
+    cards.forEach((c, n) => c.classList.toggle('is-active', n === i));
     prev.disabled = (i === 0);
     next.disabled = (i === cards.length - 1);
     if(replaceHash !== false) history.replaceState(null, '', '#c' + (i + 1));
@@ -636,8 +650,41 @@
     raf = requestAnimationFrame(() => { raf = null; setActive(nearest()); });
   }, { passive: true });
 
+  // Reveal ANY card that enters the rail's viewport, not just the snapped one.
+  // On desktop two or three cards are visible at once; gating the reveal on the
+  // active card alone left those neighbours as blank rectangles until scrolled to.
+  // `.revealed` is added once and never removed — a card that has been seen stays
+  // rendered. Cards already on screen at load are revealed immediately.
+  if('IntersectionObserver' in window){
+    const revealIO = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if(e.isIntersecting){ e.target.classList.add('revealed'); revealIO.unobserve(e.target); }
+      });
+    }, { root: rail, threshold: 0.12 });
+    cards.forEach((c) => revealIO.observe(c));
+  } else {
+    cards.forEach((c) => c.classList.add('revealed'));
+  }
+
   prev.addEventListener('click', () => go(active - 1));
   next.addEventListener('click', () => go(active + 1));
+
+  // A mouse wheel emits deltaY, which browsers do not reliably translate into
+  // horizontal scrolling — so a wheel user could not advance the deck at all.
+  // Map one wheel gesture to one card. Trackpad horizontal swipes (deltaX
+  // dominant) are left alone; so is a wheel over a .cbody that can actually
+  // scroll, which owns its own overflow at small sizes.
+  let wheelLock = false;
+  rail.addEventListener('wheel', (e) => {
+    if(Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+    const cb = e.target.closest && e.target.closest('.cbody');
+    if(cb && cb.scrollHeight > cb.clientHeight + 1) return;
+    e.preventDefault();
+    if(wheelLock || Math.abs(e.deltaY) < 4) return;
+    wheelLock = true;
+    go(active + (e.deltaY > 0 ? 1 : -1));
+    setTimeout(() => { wheelLock = false; }, 420);
+  }, { passive: false });
 
   window.addEventListener('keydown', (e) => {
     if(e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return;
