@@ -334,17 +334,6 @@
   #c8 .p h3{color:var(--navy);margin-bottom:4px;font-size:.9rem}
   #c8 .p p{font-size:.78rem;opacity:.8;line-height:1.45}
 
-  /* ---------- Card 9: Bento ---------- */
-  #c9 .bento{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}
-  #c9 .bento figure{position:relative;border-radius:11px;overflow:hidden;aspect-ratio:6/5}
-  #c9 .bento figure:first-child{grid-column:1 / -1;aspect-ratio:2.85/1}
-  #c9 .body{margin-top:6px}
-  #c9 .bento img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  /* The desktop card is wider but shorter (3/4 vs 9:16), so the two-column bento
-     grows taller and overflowed by 20px. Wider tiles shrink the grid's height. */
-  @media(min-width:768px){
-    #c9 .bento figure{aspect-ratio:4/3}
-  }
 
   @media(prefers-reduced-motion:reduce){
     [data-r]{animation:none;opacity:1;filter:none;transform:none}
@@ -352,30 +341,27 @@
   }
 
   /* ---------- Card 10: Pricing ---------- */
-  #c10 .price{background:var(--red-cta);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;margin-top:14px}
-  #c10 .price .pre{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.76rem;opacity:.92}
-  #c10 .price .amt{font-family:"Montserrat",sans-serif;font-weight:800;font-size:2.5rem;line-height:1.05;letter-spacing:-.03em;margin:2px 0}
-  #c10 .price .amt small{font-size:.95rem;font-weight:700}
-  #c10 .price .sub{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.82rem}
-  #c10 .fine{font-size:.76rem;margin-top:13px;opacity:.8;line-height:1.45}
-  #c10 .tax{
+  #c9 .price{background:var(--red-cta);color:#fff;border-radius:16px;padding:20px 18px;text-align:center;margin-top:14px}
+  #c9 .price .pre{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.76rem;opacity:.92}
+  #c9 .price .amt{font-family:"Montserrat",sans-serif;font-weight:800;font-size:2.5rem;line-height:1.05;letter-spacing:-.03em;margin:2px 0}
+  #c9 .price .amt small{font-size:.95rem;font-weight:700}
+  #c9 .price .sub{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.82rem}
+  #c9 .fine{font-size:.76rem;margin-top:13px;opacity:.8;line-height:1.45}
+  #c9 .tax{
     display:inline-flex;align-items:center;gap:7px;margin-top:12px;
     background:rgba(13,34,64,.05);border:1px solid rgba(13,34,64,.12);
     border-radius:999px;padding:8px 13px;
     font-family:"Montserrat",sans-serif;font-weight:700;font-size:.7rem;color:var(--navy);line-height:1.3;
   }
-  #c10 .tax svg{width:14px;height:14px;flex:0 0 14px;fill:none;stroke:var(--red-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  #c9 .tax svg{width:14px;height:14px;flex:0 0 14px;fill:none;stroke:var(--red-ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
 
   /* ---------- Card 11: Close ---------- */
-  #c11 .btn{width:100%;margin-top:16px;font-size:.86rem;text-align:center}
-  #c11 .qr{display:flex;align-items:center;gap:12px;margin-top:14px;background:var(--white);border-radius:12px;padding:11px 13px}
-  #c11 .qr img{width:96px;height:96px;flex:0 0 96px;border-radius:5px}
-  #c11 .qr p{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.74rem;color:var(--navy);line-height:1.3}
-  #c11 .contact{margin-top:14px;font-size:.76rem;line-height:1.7;opacity:.82}
-  #c11 .contact,#c11 .contact a{-webkit-user-select:text;user-select:text}
-  #c11 .contact a{display:inline-block;padding-block:4px;border-bottom:1px solid rgba(255,255,255,.28)}
-  #c11 .joinline{margin-top:11px;font-size:.78rem;opacity:.9}
-  #c11 .joinline a{color:var(--eyebrow-navy);font-weight:700;border-bottom:1px solid currentColor}
+  #c10 .btn{width:100%;margin-top:16px;font-size:.86rem;text-align:center}
+  #c10 .contact{margin-top:14px;font-size:.76rem;line-height:1.7;opacity:.82}
+  #c10 .contact,#c10 .contact a{-webkit-user-select:text;user-select:text}
+  #c10 .contact a{display:inline-block;padding-block:4px;border-bottom:1px solid rgba(255,255,255,.28)}
+  #c10 .joinline{margin-top:11px;font-size:.78rem;opacity:.9}
+  #c10 .joinline a{color:var(--eyebrow-navy);font-weight:700;border-bottom:1px solid currentColor}
 </style>
 <noscript><style>[data-r]{animation:none;opacity:1;filter:none;transform:none}.card{opacity:1}.card:not(.is-active){opacity:1}</style></noscript>
 </head>
@@ -532,28 +518,10 @@
       </div>
     </section>
 
-    <section class="card card--navy" id="c9">
+    <section class="card card--paper" id="c9">
       <div class="tex"></div>
       <div class="in">
-        <div class="chead"><span class="snum">[09]</span><span class="slabel">Life at the Chamber</span></div>
-        <div class="cbody">
-          <h2 data-r="1">This is what showing up looks like.</h2>
-          <p class="body" data-r="2">Ribbon cuttings, Business After Hours, Lunch &amp; Learn, and the everyday connections that keep Ardmore moving.</p>
-          <div class="bento" data-r="3">
-            <figure><img src="img/event-ribbon.jpg" alt="Chamber ribbon cutting" loading="lazy" /></figure>
-            <figure><img src="img/event-crowd.jpg" alt="Business After Hours" loading="lazy" /></figure>
-            <figure><img src="img/event-lunch.jpg" alt="Lunch and Learn" loading="lazy" /></figure>
-            <figure><img src="img/event-chat.jpg" alt="Two members talking" loading="lazy" /></figure>
-            <figure><img src="img/event-group.jpg" alt="Members visiting at a Chamber event" loading="lazy" /></figure>
-          </div>
-        </div>
-        <div class="cfoot" data-r="4"><span>Every month, all year</span><span>Ardmore, OK</span></div>
-      </div>
-    </section>
-    <section class="card card--paper" id="c10">
-      <div class="tex"></div>
-      <div class="in">
-        <div class="chead"><span class="snum">[10]</span><span class="slabel">What it costs</span></div>
+        <div class="chead"><span class="snum">[09]</span><span class="slabel">What it costs</span></div>
         <div class="cbody">
           <h2 data-r="1">Simple, honest pricing.</h2>
           <div class="price" data-r="2">
@@ -568,19 +536,15 @@
       </div>
     </section>
 
-    <section class="card card--navy" id="c11">
+    <section class="card card--navy" id="c10">
       <div class="tex"></div>
       <div class="in">
-        <div class="chead"><span class="snum">[11]</span><span class="slabel">Come see for yourself</span></div>
+        <div class="chead"><span class="snum">[10]</span><span class="slabel">Come see for yourself</span></div>
         <div class="cbody">
           <h2 data-r="1">Come see for yourself.</h2>
           <p class="lead" data-r="2">Be our guest at the next Business After Hours. Free to attend. No membership required.</p>
           <!-- No-JS fallback href — keep in sync with LANDING_URL below. -->
           <a class="btn" data-landing href="https://ryan-hallpass.github.io/chamber-benefits/" data-r="2">See the full benefits &amp; RSVP&nbsp;&rarr;</a>
-          <div class="qr" data-r="3">
-            <img src="qr.png" alt="QR code linking to this digital brochure" loading="lazy" />
-            <p>Scan or share<br />this brochure</p>
-          </div>
           <!-- No-JS fallback href — keep in sync with JOIN_URL below (this one does NOT change during the subdomain migration). -->
           <p class="joinline" data-r="4">Already know you want in? <a data-join href="https://business.ardmore.org/member/newmemberapp/">Join now &rarr;</a></p>
           <div class="contact" data-r="4">
@@ -589,7 +553,7 @@
             <a href="https://chamber.ardmore.org" target="_blank" rel="noopener">chamber.ardmore.org</a>
           </div>
         </div>
-        <div class="cfoot" data-r="4"><span>Ardmore Chamber of Commerce</span><span>[11 / 11]</span></div>
+        <div class="cfoot" data-r="4"><span>Ardmore Chamber of Commerce</span><span>[10 / 10]</span></div>
       </div>
     </section>
   </div>
@@ -598,17 +562,12 @@
 <script>
   /* ===== SWAPPABLE CONFIG =============================================
      When the ardmore.org subdomain goes live, swap LANDING_URL and
-     BROCHURE_URL to their subdomain equivalents (and update the matching
      href= fallbacks on [data-landing] / the QR-panel copy in the markup,
      which non-JS visitors rely on). Leave JOIN_URL alone — it points at
      the Chamber's ChamberMaster new-member application, which is
      unrelated to this migration and must not change. */
   const LANDING_URL = "https://ryan-hallpass.github.io/chamber-benefits/";
   const JOIN_URL    = "https://business.ardmore.org/member/newmemberapp/";
-  // Encoded in qr.png — regenerate the PNG if this changes (see the plan's Task 7).
-  // Not read by any code below; it exists so the URL is visible where someone
-  // doing the migration will look. Do not remove as "unused."
-  const BROCHURE_URL = "https://ryan-hallpass.github.io/chamber-benefits/brochure/";
   /* ================================================================== */
 
   const REDUCE = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -657,11 +616,16 @@
   }
 
   // Derive the active index from the rail's scroll position.
+  // Match on scroll POSITION, not on which card centre is nearest the viewport
+  // centre. The first and last cards pin to their edges rather than centring, so
+  // a centre-distance test picks the neighbour at both ends — the final card never
+  // became active and `next` never disabled. offsetFor() already encodes where the
+  // browser actually snaps, so comparing against it is correct everywhere.
   function nearest(){
-    const mid = rail.scrollLeft + rail.clientWidth / 2;
+    const x = rail.scrollLeft;
     let best = 0, bestD = Infinity;
     cards.forEach((c, n) => {
-      const d = Math.abs((c.offsetLeft + c.clientWidth / 2) - mid);
+      const d = Math.abs(offsetFor(n) - x);
       if(d < bestD){ bestD = d; best = n; }
     });
     return best;
@@ -787,7 +751,7 @@
     });
   })();
 
-  // Deep link on load (#c1..#c11), jumping without animation on first paint
+  // Deep link on load (#c1..#c10), jumping without animation on first paint
   (function(){
     const m = /^#c(\d+)$/.exec(location.hash);
     const i = m ? Math.max(0, Math.min(cards.length - 1, parseInt(m[1], 10) - 1)) : 0;
