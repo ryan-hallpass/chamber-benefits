@@ -259,6 +259,40 @@
     background:linear-gradient(to top,rgba(8,26,50,.94) 18%,rgba(8,26,50,.55) 55%,rgba(8,26,50,.35) 100%);
   }
 
+  /* ---------- Card 7: Stat + tappable testimonial stack ---------- */
+  #c7 .stat{display:flex;align-items:baseline;gap:11px;margin-bottom:16px}
+  #c7 .stat .num{font-family:"Montserrat",sans-serif;font-weight:800;font-size:2.5rem;line-height:1;color:var(--red);letter-spacing:-.03em}
+  #c7 .stat .lbl{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.76rem;line-height:1.2;color:var(--white)}
+
+  #c7 .stack{position:relative;width:100%;max-width:280px;margin:0 auto;aspect-ratio:4/5;cursor:pointer}
+  #c7 .tcard{
+    position:absolute;inset:0;
+    background:var(--white);color:var(--ink);
+    border-radius:15px;padding:20px;
+    display:flex;flex-direction:column;justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    transform-origin:center bottom;will-change:transform;
+    transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .5s ease,filter .5s ease;
+  }
+  #c7 .tcard blockquote{font-size:.85rem;line-height:1.5}
+  #c7 .who{display:flex;align-items:center;gap:9px;margin-top:12px}
+  #c7 .who img{width:34px;height:34px;border-radius:50%;object-fit:cover;flex:0 0 34px}
+  #c7 .who b{display:block;font-family:"Montserrat",sans-serif;font-weight:700;font-size:.74rem;color:var(--navy);line-height:1.25}
+  #c7 .who span{display:block;font-size:.66rem;color:#5B6B84}
+
+  #c7 .pos-0{transform:translateY(0) scale(1);z-index:30;opacity:1;filter:blur(0);pointer-events:auto}
+  #c7 .pos-1{transform:translateY(-16px) scale(.94);z-index:20;opacity:.7;filter:blur(.5px);pointer-events:none}
+  #c7 .pos-2{transform:translateY(-32px) scale(.88);z-index:10;opacity:.4;filter:blur(1px);pointer-events:none}
+  #c7 .fly{transform:translateX(120%) rotate(15deg) scale(1)!important;opacity:0!important;z-index:40!important}
+
+  #c7 .taphint{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    margin-top:12px;font-family:var(--mono);font-size:.62rem;color:var(--red);opacity:.85;
+  }
+  @media(prefers-reduced-motion:reduce){
+    #c7 .tcard{transition:none}
+  }
+
   @media(prefers-reduced-motion:reduce){
     [data-r]{animation:none;opacity:1;filter:none;transform:none}
     .rail{scroll-behavior:auto}
@@ -372,7 +406,37 @@
         <div class="cfoot" data-r="4"><span>Influence</span><span>04 / 04</span></div>
       </div>
     </section>
-    <section class="card card--navy"  id="c7"><div class="tex"></div><div class="in"><h2>7</h2></div></section>
+    <section class="card card--navy" id="c7">
+      <div class="tex"></div>
+      <div class="in">
+        <div class="chead"><span class="snum">[07]</span><span class="slabel">In their own words</span></div>
+        <div class="cbody">
+          <div class="stat" data-r="1">
+            <div class="num"><span data-count="500">0</span>+</div>
+            <div class="lbl">Ardmore businesses<br />are members</div>
+          </div>
+          <div class="stack" id="stack" data-r="2">
+            <div class="tcard pos-0">
+              <blockquote>&ldquo;Getting involved in the Chamber introduces you to a wider audience than just putting a sign on the street corner.&rdquo;</blockquote>
+              <div class="who"><img src="img/avatar-tem.jpg" alt="Tem Barrett" /><div><b>Tem Barrett</b><span>Success Mortgage Partners</span></div></div>
+            </div>
+            <div class="tcard pos-1">
+              <blockquote>&ldquo;People here are from every walk of Ardmore — small businesses to large corporations — all looking to make connections.&rdquo;</blockquote>
+              <div class="who"><img src="img/avatar-chris.jpg" alt="Chris Greening" /><div><b>Chris Greening</b><span>Goddard Center</span></div></div>
+            </div>
+            <div class="tcard pos-2">
+              <blockquote>&ldquo;You get to meet all the other members and talk about what it is that you do. It builds community.&rdquo;</blockquote>
+              <div class="who"><img src="img/avatar-desiree.jpg" alt="Desiree Reed" /><div><b>Desiree Reed</b><span>Keller Williams Realty</span></div></div>
+            </div>
+          </div>
+          <div class="taphint" data-r="3">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.6 13a4 4 0 0 1-7.7 2.3l-2.6-7.5a1.7 1.7 0 0 0-3.3 1L9 18.2a5.3 5.3 0 0 0 2.2 4.1l6.3 3.6c2.4 1.4 5.3-.2 5.5-2.9l.6-9.1a4 4 0 0 0-5-4.1z"/></svg>
+            TAP CARDS
+          </div>
+        </div>
+        <div class="cfoot" data-r="4"><span>Member voices</span><span>3 of 500+</span></div>
+      </div>
+    </section>
     <section class="card card--paper" id="c8"><div class="tex"></div><div class="in"><h2>8</h2></div></section>
     <section class="card card--navy"  id="c9"><div class="tex"></div><div class="in"><h2>9</h2></div></section>
     <section class="card card--paper" id="c10"><div class="tex"></div><div class="in"><h2>10</h2></div></section>
@@ -445,6 +509,51 @@
     else if(k === 'Home'){ e.preventDefault(); go(0); }
     else if(k === 'End'){ e.preventDefault(); go(cards.length - 1); }
   });
+
+  // 500+ count-up, run once when its card first becomes active
+  let counted = false;
+  function countUp(){
+    if(counted) return;
+    const el = document.querySelector('[data-count]');
+    if(!el) return;
+    counted = true;
+    const target = +el.getAttribute('data-count');
+    if(REDUCE){ el.textContent = target; return; }
+    const dur = 1400, t0 = performance.now();
+    (function tick(now){
+      const p = Math.min((now - t0) / dur, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+      if(p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  // Tappable testimonial stack: top card flies out, the rest promote, it returns to the back
+  (function(){
+    const stack = document.getElementById('stack');
+    if(!stack) return;
+    const POS = ['pos-0','pos-1','pos-2'];
+    let busy = false;
+
+    stack.addEventListener('click', () => {
+      if(busy) return;
+      const order = Array.from(stack.querySelectorAll('.tcard'));
+      const top = order.find(c => c.classList.contains('pos-0'));
+      if(!top) return;
+      busy = true;
+
+      const rotated = order.slice(order.indexOf(top) + 1).concat(order.slice(0, order.indexOf(top)));
+      top.classList.add('fly');
+
+      const settle = () => {
+        rotated.forEach((c, n) => { POS.forEach(p => c.classList.remove(p)); c.classList.add(POS[n]); });
+        top.classList.remove('fly');
+        POS.forEach(p => top.classList.remove(p));
+        top.classList.add(POS[POS.length - 1]);
+        busy = false;
+      };
+      if(REDUCE) settle(); else setTimeout(settle, 500);
+    });
+  })();
 
   // Deep link on load (#c1..#c11), jumping without animation on first paint
   (function(){
