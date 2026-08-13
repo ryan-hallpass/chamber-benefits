@@ -174,6 +174,71 @@
   [data-r="3"]{animation-delay:.18s}
   [data-r="4"]{animation-delay:.27s}
 
+  /* ---------- Shared components ---------- */
+  h1{font-size:clamp(1.75rem,7.4vw,2.35rem);font-weight:800}
+  h2{font-size:clamp(1.32rem,5.4vw,1.75rem);font-weight:800}
+  h3{font-size:.98rem;font-weight:700}
+
+  .eyebrow{
+    font-family:"Montserrat",sans-serif;font-weight:700;
+    font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red-ink);margin-bottom:10px;
+  }
+  .card--navy .eyebrow{color:var(--eyebrow-navy)}
+  .lead{font-size:.92rem;margin-top:12px;opacity:.92}
+  .body{font-size:.87rem;margin-top:11px;opacity:.88}
+  .accent{color:var(--red)}
+  .card--paper .accent{color:var(--red-ink)}
+
+  /* DonorSpark hook rule: accent bar down the left of the key line */
+  .hook{
+    font-size:.87rem;font-weight:600;
+    border-left:4px solid var(--red);padding-left:13px;margin-top:14px;
+  }
+
+  /* Duotone: grayscale base, multiply shadow, lighten highlight */
+  .duo{position:relative;overflow:hidden;background:var(--navy)}
+  .duo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06)}
+  .duo::after{content:"";position:absolute;inset:0;background:var(--duo-dark);mix-blend-mode:multiply}
+  .duo::before{content:"";position:absolute;inset:0;z-index:3;background:var(--duo-light);mix-blend-mode:lighten;pointer-events:none}
+  .duo--coral{--duo-dark:#0D2240;--duo-light:#E85449}
+  .duo--blue{--duo-dark:#0D2240;--duo-light:#5B9BD5}
+
+  .media{position:relative;width:100%;border-radius:12px;overflow:hidden}
+
+  .badge{
+    display:grid;place-content:center;text-align:center;
+    width:96px;height:96px;border-radius:50%;
+    background:var(--red);color:#fff;
+  }
+  .badge b{font-family:"Montserrat",sans-serif;font-weight:800;font-size:1.55rem;line-height:1;letter-spacing:-.03em}
+  .badge span{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.52rem;line-height:1.25;margin-top:4px}
+
+  .numeral{
+    display:grid;place-content:center;
+    width:34px;height:34px;border-radius:50%;
+    background:var(--red);color:#fff;
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:.94rem;
+    margin-bottom:14px;
+  }
+
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+    font-family:"Montserrat",sans-serif;font-weight:700;font-size:.92rem;
+    padding:14px 20px;border-radius:10px;
+    background:var(--red-cta);color:#fff;
+    box-shadow:0 8px 22px rgba(192,57,43,.3);
+    transition:background .2s var(--ease),transform .18s var(--ease);
+  }
+  .btn:hover{background:var(--red-cta-h);transform:translateY(-2px)}
+
+  /* Cover: full-bleed media behind the whole card */
+  .bleed{position:absolute;inset:0;z-index:0}
+  .bleed .scrim{
+    position:absolute;inset:0;z-index:5;
+    background:linear-gradient(to top,rgba(8,26,50,.94) 18%,rgba(8,26,50,.55) 55%,rgba(8,26,50,.35) 100%);
+  }
+
   @media(prefers-reduced-motion:reduce){
     [data-r]{animation:none;opacity:1;filter:none;transform:none}
     .rail{scroll-behavior:auto}
@@ -196,7 +261,29 @@
 
 <div class="deck" id="deck">
   <div class="rail" id="rail">
-    <section class="card card--navy"  id="c1"><div class="tex"></div><div class="in"><h2>1</h2></div></section>
+    <section class="card card--navy" id="c1">
+      <div class="bleed duo duo--coral">
+        <img src="img/courthouse.jpg" alt="Downtown Ardmore" />
+      </div>
+      <div class="bleed"><div class="scrim"></div></div>
+      <div class="in">
+        <div class="chead">
+          <span class="snum">[01]</span>
+          <span class="slabel">Ardmore Chamber of Commerce</span>
+        </div>
+        <div class="cbody" style="justify-content:flex-end">
+          <div class="badge" data-r="1" style="margin-bottom:18px"><div><b>500+</b><span>local member<br />businesses</span></div></div>
+          <h1 data-r="2">Your business,<br /><span class="accent">known all over Ardmore.</span></h1>
+          <p class="hook" data-r="3">Join 500+ local businesses using the Chamber to find new customers, make the right connections, and have a say in what happens next in Ardmore.</p>
+        </div>
+        <div class="cfoot" data-r="4">
+          <span>Ardmore, Oklahoma</span>
+          <span style="display:flex;align-items:center;gap:6px;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Swipe
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </div>
+    </section>
     <section class="card card--paper" id="c2"><div class="tex"></div><div class="in"><h2>2</h2></div></section>
     <section class="card card--navy"  id="c3"><div class="tex"></div><div class="in"><h2>3</h2></div></section>
     <section class="card card--paper" id="c4"><div class="tex"></div><div class="in"><h2>4</h2></div></section>
