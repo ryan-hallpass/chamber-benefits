@@ -100,7 +100,7 @@
     position:fixed;left:0;right:0;bottom:0;
     top:calc(var(--navh) + env(safe-area-inset-top));
     --cardH:min(calc(100dvh - var(--navh) - env(safe-area-inset-top) - 68px), 800px);
-    --cardW:min(calc(var(--cardH) * 9 / 16), 86vw);
+    --cardW:min(calc(var(--cardH) * 9 / 16), 90vw);
   }
   @supports not (height:100dvh){
     .deck{--cardH:min(calc(100vh - var(--navh) - env(safe-area-inset-top) - 68px), 800px)}
@@ -217,8 +217,10 @@
     width:96px;height:96px;border-radius:50%;
     background:var(--red);color:#fff;
   }
-  .badge b{font-family:"Montserrat",sans-serif;font-weight:800;font-size:1.55rem;line-height:1;letter-spacing:-.03em}
-  .badge span{font-family:"Montserrat",sans-serif;font-weight:700;font-size:.52rem;line-height:1.25;margin-top:4px}
+  /* Both MUST be display:block. As inline elements they flow onto one line
+     ("500+local member") and overflow the circle horizontally. */
+  .badge b{display:block;font-family:"Montserrat",sans-serif;font-weight:800;font-size:1.55rem;line-height:1;letter-spacing:-.03em}
+  .badge span{display:block;font-family:"Montserrat",sans-serif;font-weight:700;font-size:.52rem;line-height:1.25;margin-top:4px}
 
   .numeral{
     display:grid;place-content:center;
