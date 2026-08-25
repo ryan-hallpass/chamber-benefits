@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Now Hiring in Ardmore | Ardmore Chamber of Commerce</title>
+<meta name="description" content="Every open job at Ardmore-area employers, updated weekly by the Ardmore Chamber of Commerce. Healthcare, skilled trades, logistics, schools and retail positions in Ardmore, Oklahoma.">
+<!-- REMOVE this noindex line when this page moves to the Chamber's live domain -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --navy:#0D2240; --navy-700:#16305a; --navy-900:#081a32;
+  --red:#E85449; --red-cta:#C0392B; --red-cta-h:#A5301F; --red-ink:#BC3A2B; --red-deep:#C8412F;
+  --paper:#F4F6FA; --paper-2:#FFFFFF; --ink:#1A1A18; --ink-2:#4A5568; --ink-3:#7A8699;
+  --line:rgba(13,34,64,.12); --line-2:rgba(13,34,64,.07); --white:#fff;
+  --shadow:0 1px 2px rgba(13,34,64,.04),0 8px 24px rgba(13,34,64,.06);
+  --shadow-lg:0 2px 4px rgba(13,34,64,.05),0 20px 50px rgba(13,34,64,.12);
+  --radius:14px; --maxw:1120px; --ease:cubic-bezier(.22,.61,.36,1);
+  --chip:#fff; --field:#fff;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --navy:#0A1830; --navy-700:#16305a; --navy-900:#060F1F;
+  --paper:#0A1220; --paper-2:#101B2E; --ink:#EAF0F8; --ink-2:#A7B6CA; --ink-3:#76869C;
+  --line:rgba(255,255,255,.14); --line-2:rgba(255,255,255,.07);
+  --red-ink:#F58074; --red-cta:#C0392B; --red-cta-h:#D9503F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.35),0 20px 50px rgba(0,0,0,.45);
+  --chip:#152541; --field:#152541;
+}}
+:root[data-theme=dark]{
+  --navy:#0A1830; --navy-700:#16305a; --navy-900:#060F1F;
+  --paper:#0A1220; --paper-2:#101B2E; --ink:#EAF0F8; --ink-2:#A7B6CA; --ink-3:#76869C;
+  --line:rgba(255,255,255,.14); --line-2:rgba(255,255,255,.07);
+  --red-ink:#F58074; --red-cta:#C0392B; --red-cta-h:#D9503F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.35),0 20px 50px rgba(0,0,0,.45);
+  --chip:#152541; --field:#152541;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.01em}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+.eyebrow{font-family:Montserrat,sans-serif;font-weight:700;font-size:.76rem;
+  text-transform:uppercase;letter-spacing:.18em;margin:0}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:50;height:70px;display:flex;align-items:center;
+  background:color-mix(in srgb,var(--paper-2) 90%,transparent);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
+.brand img{height:46px;width:auto;display:block}
+.only-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .only-dark{display:block}
+  :root:not([data-theme=light]) .only-light{display:none}}
+:root[data-theme=dark] .only-dark{display:block}
+:root[data-theme=dark] .only-light{display:none}
+.foot-logo{height:82px;width:auto;display:block;margin-bottom:18px}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a{font-size:.9rem;font-weight:600;color:var(--ink-2);text-decoration:none}
+.nav a:hover{color:var(--red-ink)}
+.btn{display:inline-block;font-family:Montserrat,sans-serif;font-weight:700;font-size:.92rem;
+  padding:11px 20px;border-radius:var(--radius);text-decoration:none;border:0;cursor:pointer;
+  transition:all .3s var(--ease)}
+.btn-primary{background:var(--red-cta);color:#fff;box-shadow:0 8px 22px rgba(192,57,43,.26)}
+.btn-primary:hover{background:var(--red-cta-h);transform:translateY(-2px)}
+.btn-lg{font-size:1.06rem;padding:17px 30px}
+@media(max-width:760px){.nav a{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-700) 55%,var(--navy-900) 100%);
+  color:#fff;padding:64px 0 0;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(700px 340px at 82% 8%,rgba(232,84,73,.20),transparent 60%),
+             radial-gradient(600px 320px at 8% 92%,rgba(255,255,255,.07),transparent 62%)}
+.hero .wrap{position:relative}
+.hero .eyebrow{color:var(--red);opacity:.95}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);font-weight:800;line-height:1.06;margin:16px 0 0;max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lede{font-size:1.1rem;color:rgba(255,255,255,.8);margin:18px 0 0;max-width:52ch}
+.updated{font-family:Montserrat,sans-serif;font-size:.74rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.16em;color:rgba(255,255,255,.62);margin:22px 0 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;
+  margin:40px 0 0;border-top:1px solid rgba(255,255,255,.16)}
+.stat{padding:22px 20px 30px;border-right:1px solid rgba(255,255,255,.13)}
+.stat:last-child{border-right:0}
+.stat .n{font-family:Montserrat,sans-serif;font-weight:800;font-size:2.4rem;line-height:1;color:#fff}
+.stat .l{font-family:Montserrat,sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.15em;color:rgba(255,255,255,.6);margin-top:9px}
+
+/* controls */
+.controls{background:var(--paper-2);border-bottom:1px solid var(--line);position:sticky;top:70px;z-index:40;
+  box-shadow:var(--shadow)}
+.controls .wrap{padding-top:16px;padding-bottom:16px}
+.ctl-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 260px;position:relative;min-width:220px}
+.search input{width:100%;padding:12px 14px 12px 40px;border:1.5px solid var(--line);
+  border-radius:var(--radius);background:var(--field);color:var(--ink);font-family:"Open Sans",sans-serif;
+  font-size:.95rem;transition:border-color .25s var(--ease)}
+.search input:focus{outline:0;border-color:var(--red-cta)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.42}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:Montserrat,sans-serif;font-weight:600;font-size:.83rem;padding:9px 15px;
+  border-radius:99px;border:1.5px solid var(--line);background:var(--chip);color:var(--ink-2);
+  cursor:pointer;transition:all .25s var(--ease)}
+.chip:hover{border-color:var(--red-cta);color:var(--red-ink)}
+.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip.mem[aria-pressed=true]{background:var(--red-cta);border-color:var(--red-cta)}
+.result{font-family:Montserrat,sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.14em;color:var(--ink-3);margin:14px 0 0}
+.result b{color:var(--red-ink)}
+
+/* jobs */
+.jobs{padding:36px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+.card{background:var(--paper-2);border:1px solid var(--line-2);border-radius:var(--radius);
+  padding:20px 21px;box-shadow:var(--shadow);transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  display:flex;flex-direction:column;gap:9px}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.card .cat{font-family:Montserrat,sans-serif;font-size:.64rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.15em;color:var(--ink-3)}
+.card h3{font-size:1.06rem;font-weight:700;margin:0;line-height:1.3}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{color:var(--red-ink)}
+.card .emp{font-size:.93rem;color:var(--ink-2);margin:0;font-weight:600}
+.star{color:var(--red-ink)}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:10px}
+.pill{font-family:Montserrat,sans-serif;font-size:.67rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;padding:4px 9px;border-radius:99px;background:var(--paper);color:var(--ink-2);
+  border:1px solid var(--line-2)}
+.pill.new{background:var(--red-cta);color:#fff;border-color:transparent}
+.pill.pay{background:transparent;border-color:var(--red-cta);color:var(--red-ink)}
+.pill.mem{background:var(--navy);color:#fff;border-color:transparent}
+.empty{text-align:center;padding:60px 20px;color:var(--ink-3)}
+
+/* bands */
+.band{background:var(--navy);color:#fff;padding:56px 0;margin-top:36px}
+.band-in{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center}
+.band h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;margin:14px 0 0;line-height:1.16}
+.band .eyebrow{color:var(--red)}
+.band p{color:rgba(255,255,255,.78);margin:14px 0 0}
+.band .cta{text-align:right}
+@media(max-width:820px){.band-in{grid-template-columns:1fr}.band .cta{text-align:left}}
+
+.about{padding:56px 0 20px}
+.about h2{font-size:1.5rem;font-weight:800;margin:12px 0 16px}
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:22px}
+.about-card{background:var(--paper-2);border:1px solid var(--line-2);border-radius:var(--radius);
+  padding:20px;box-shadow:var(--shadow)}
+.about-card h3{font-size:.95rem;margin:0 0 8px;font-weight:700}
+.about-card p{font-size:.9rem;color:var(--ink-2);margin:0}
+.about>.wrap>p{max-width:70ch;color:var(--ink-2)}
+
+.site-foot{background:var(--navy-900);color:rgba(255,255,255,.7);padding:44px 0 40px;margin-top:44px;
+  font-size:.86rem}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:28px}
+.site-foot h4{font-family:Montserrat,sans-serif;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.16em;color:#fff;margin:0 0 12px}
+.site-foot a{color:rgba(255,255,255,.7);text-decoration:none;display:block;margin-bottom:7px}
+.site-foot a:hover{color:#fff}
+.site-foot .rule{height:3px;width:54px;background:var(--red-cta);margin-bottom:18px}
+@media(max-width:700px){.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Ardmore Chamber of Commerce"><img src="../logo-red.svg" alt="Ardmore Chamber of Commerce"></a>
+    <nav class="nav">
+      <a href="#jobs">Jobs</a>
+      <a href="#employers">For employers</a>
+      <a class="btn btn-primary" href="https://ryan-hallpass.github.io/chamber-benefits/">Join the Chamber</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Ardmore Chamber of Commerce</p>
+    <h1>Every job open in Ardmore, <em>in one place</em>.</h1>
+    <p class="lede">We collect openings from Ardmore-area employers every week so you don't have to check twenty different sites. Updated every Tuesday.</p>
+    <p class="updated">Last updated Tuesday, August 25, 2026</p>
+    <div class="stats">
+      <div class="stat"><div class="n">180+</div><div class="l">Open positions</div></div>
+      <div class="stat"><div class="n">41</div><div class="l">Employers hiring</div></div>
+      <div class="stat"><div class="n">23</div><div class="l">Posted this week</div></div>
+      <div class="stat"><div class="n">14</div><div class="l">List a wage</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="controls" id="jobs">
+  <div class="wrap">
+    <div class="ctl-row">
+      <div class="search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search job title or employer…" aria-label="Search jobs">
+      </div>
+      <div class="chips" id="chips">
+        <button class="chip" data-cat="all" aria-pressed="true">All</button>
+        <button class="chip" data-cat="health" aria-pressed="false">Healthcare</button>
+        <button class="chip" data-cat="trades" aria-pressed="false">Trades &amp; Industrial</button>
+        <button class="chip" data-cat="logistics" aria-pressed="false">Logistics</button>
+        <button class="chip" data-cat="education" aria-pressed="false">Schools &amp; Public</button>
+        <button class="chip" data-cat="retail" aria-pressed="false">Retail &amp; Service</button>
+        <button class="chip mem" id="memOnly" aria-pressed="false">★ Chamber members</button>
+      </div>
+    </div>
+    <p class="result" id="count">Showing all positions</p>
+  </div>
+</div>
+
+<section class="jobs">
+  <div class="wrap"><div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>No positions match that search. Try clearing the filters.</div></div>
+</section>
+
+<section class="band" id="employers">
+  <div class="wrap band-in">
+    <div>
+      <p class="eyebrow">For employers</p>
+      <h2>Hiring? You're probably already listed.</h2>
+      <p>We pull openings automatically from public job postings, so most Ardmore employers appear here without lifting a finger. If yours isn't showing up — or you want it featured at the top — send it over and we'll add it to Tuesday's list. Free for Chamber members.</p>
+    </div>
+    <div class="cta"><a class="btn btn-primary btn-lg" href="mailto:hiring@ardmore.org">Submit an opening</a></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--red-ink)">About this list</p>
+    <h2>Where these listings come from</h2>
+    <p>Openings are gathered each week from public job postings published by Ardmore-area employers and from CareerOneStop, the national job bank sponsored by the U.S. Department of Labor's Employment and Training Administration (DOLETA) and the Minnesota Department of Employment and Economic Development (DEED). Positions change without notice — always apply through the employer's own site.</p>
+    <div class="about-grid">
+      <div class="about-card"><h3>Updated weekly</h3><p>The list refreshes every Tuesday morning. Filled positions drop off automatically as employers close them.</p></div>
+      <div class="about-card"><h3>Free to browse, free to post</h3><p>No account, no login, no fee. Chamber members can have openings featured at no cost.</p></div>
+      <div class="about-card"><h3>★ marks a Chamber member</h3><p>Businesses that invest in the Ardmore Chamber are marked so you can see who's backing the local business community.</p></div>
+    </div>
+    <p style="font-size:.82rem;color:var(--ink-3);margin-top:22px">Preview build: this page carries the listings verified on 25 August 2026. The live feed carries all current openings.</p>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <img class="foot-logo" src="../logo-red.svg" alt="Ardmore Chamber of Commerce">
+    <div class="foot-grid">
+      <div>
+        <h4>Ardmore Chamber of Commerce</h4>
+        <p style="margin:0">PO Box 1585<br>Ardmore, OK 73402<br>580.223.7765</p>
+      </div>
+      <div><h4>Jobs</h4>
+        <a href="#jobs">Browse openings</a><a href="#employers">Submit an opening</a><a href="#">Get the weekly email</a></div>
+      <div><h4>Chamber</h4>
+        <a href="https://ryan-hallpass.github.io/chamber-benefits/">Member benefits</a><a href="#">Member directory</a><a href="#">Events</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const JOBS = [
+ {t:"Dentist",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$150,000–$180,000/yr",type:"Full time",posted:"Aug 24",new:1,u:"https://buildinghealthypeople.apscareerportal.com/jobs/3562868"},
+ {t:"Family Medicine Physician",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$325,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3315699"},
+ {t:"Extended Hours Family Medicine Physician",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$325,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3315758"},
+ {t:"Medical Director",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$350,000/yr",type:"Full time",posted:"May 5",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3393847"},
+ {t:"Pediatrician",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$300,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/2908336"},
+ {t:"Family Practice Nurse Practitioner",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$115,000–$145,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3315741"},
+ {t:"Licensed Practical Nurse (LPN)",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$17–$28/hr",type:"Full time",posted:"Jul 31",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3278366"},
+ {t:"Dental Patient Financial Specialist",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$17–$28/hr",type:"Full time",posted:"Aug 11",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3541263"},
+ {t:"Registered Nurse — Emergency Department, Nights",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR260227",u:"https://careers.mercy.net/jobs/JR260227"},
+ {t:"Registered Nurse — Med/Surg, 2nd Floor, Nights",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR260816",u:"https://careers.mercy.net/jobs/JR260816"},
+ {t:"Surgical Technologist II",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR263290",u:"https://careers.mercy.net/jobs/JR263290"},
+ {t:"Physical Therapy Assistant",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR260276",u:"https://careers.mercy.net/jobs/JR260276"},
+ {t:"Advanced Certified Medical Assistant",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR261847",u:"https://careers.mercy.net/jobs/JR261847"},
+ {t:"Patient Services Representative — Breast Surgery Clinic",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR265140",u:"https://careers.mercy.net/jobs/JR265140"},
+ {t:"Counselor I/II — Adults",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Ardmore Clinic",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs/211198"},
+ {t:"Crisis Intervention Specialist",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Partial remote",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs"},
+ {t:"School Based Behavioral Health Coach II",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Ardmore Clinic",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs"},
+ {t:"Care Coordinator — Adult",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Ardmore Clinic",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs"},
+ {t:"New Graduate Registered Nurse (RN)",e:"Fresenius Medical Care",m:0,c:"health",posted:"Aug 20",new:1,u:"#"},
+ {t:"Staff Project Engineer",e:"Valero Ardmore Refinery",m:1,c:"trades",posted:"Aug 22",new:1,req:"26001BT",u:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job=26001BT"},
+ {t:"Senior Reliability Engineer",e:"Valero Ardmore Refinery",m:1,c:"trades",posted:"Aug 21",new:1,req:"26001BS",u:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job=26001BS"},
+ {t:"Senior Electrical Engineer",e:"Valero Ardmore Refinery",m:1,c:"trades",req:"26001A5",u:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job=26001A5"},
+ {t:"Maintenance Supervisor — 3rd Shift",e:"EJ Ardmore Foundry",m:1,c:"trades",posted:"Aug 20",new:1,req:"2349",u:"https://myjobs.adp.com/externalej/"},
+ {t:"Product Health Technician",e:"Warren Power & Machinery",m:1,c:"trades",posted:"Aug 19",new:1,u:"#"},
+ {t:"Class A CDL Truck Driver — Fresh",e:"Dollar General Distribution Center",m:1,c:"logistics",type:"Full time",req:"225313",u:"https://careers.dollargeneral.com/jobs/225313"},
+ {t:"General Warehouse Worker — Perishable DC",e:"Dollar General Distribution Center",m:1,c:"logistics",type:"Full time",req:"220615",u:"https://careers.dollargeneral.com/jobs/220615"},
+ {t:"HR Assistant — Distribution Center",e:"Dollar General Distribution Center",m:1,c:"logistics",type:"Full time",req:"366078",u:"https://careers.dollargeneral.com/jobs/366078"},
+ {t:"Garage Technician Level II",e:"Dot Foods",m:0,c:"logistics",posted:"Aug 21",new:1,u:"https://careers.dotfoods.com/jobs/623747874-garage-technician-level-ii"},
+ {t:"Warehouse Worker",e:"Dot Foods",m:0,c:"logistics",posted:"Jul 26",u:"https://careers.dotfoods.com/jobs/127272838-warehouse-worker"},
+ {t:"Parcel Handler",e:"Dot Foods",m:0,c:"logistics",type:"Full time",u:"https://careers.dotfoods.com/jobs/582322468-parcel-handler"},
+ {t:"Truck Driver",e:"Dot Foods",m:0,c:"logistics",u:"https://careers.dotfoods.com/jobs/127280666-truck-driver"},
+ {t:"Truck Driver Student",e:"Dot Foods",m:0,c:"logistics",u:"https://careers.dotfoods.com/jobs/127280649-truck-driver-student"},
+ {t:"Truck Driver",e:"Roehl Transport",m:0,c:"logistics",posted:"Aug 24",new:1,u:"#"},
+ {t:"Elementary Classroom Teacher (FY27)",e:"Ardmore City Schools",m:1,c:"education",type:"OK certification required",req:"JobID 295",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
+ {t:"Early Childhood Teacher",e:"Ardmore City Schools",m:1,c:"education",type:"Will Rogers Elementary",req:"JobID 313",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
+ {t:"Paraprofessional",e:"Ardmore City Schools",m:1,c:"education",type:"Support staff",req:"JobID 294",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
+ {t:"Secretary",e:"Ardmore City Schools",m:1,c:"education",posted:"Jul 30",req:"JobID 325",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
+ {t:"Cook / Cashier",e:"Ardmore City Schools",m:1,c:"education",type:"Child Nutrition",req:"JobID 180",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
+ {t:"ESL Tutor",e:"Ardmore City Schools",m:1,c:"education",req:"JobID 249",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
+ {t:"Bus Drivers",e:"Plainview Public Schools",m:1,c:"education",type:"Training available",u:"https://www.plainview.k12.ok.us/employment"},
+ {t:"Encumbrance Clerk",e:"Plainview Public Schools",m:1,c:"education",posted:"Aug 11",new:1,u:"https://www.plainview.k12.ok.us/employment"},
+ {t:"Special Education Para-Professional",e:"Plainview Public Schools",m:1,c:"education",u:"https://www.plainview.k12.ok.us/employment"},
+ {t:"Custodians",e:"Plainview Public Schools",m:1,c:"education",u:"https://www.plainview.k12.ok.us/employment"},
+ {t:"Maintenance Assistant",e:"Plainview Public Schools",m:1,c:"education",u:"https://www.plainview.k12.ok.us/employment"},
+ {t:"Clerk / Deputy",e:"Carter County Court Clerk's Office",m:0,c:"education",type:"Apply by Oct 1",new:1,u:"https://www.cartercountyok.us/job_openings/index.php"},
+ {t:"Retail Stocking Associate",e:"Burlington",m:0,c:"retail",type:"Part time",posted:"Aug 23",new:1,u:"#"},
+ {t:"Merchandising Assistant Manager",e:"Dollar Tree",m:0,c:"retail",posted:"Aug 21",new:1,u:"#"},
+ {t:"Photo Specialist",e:"Walgreens",m:0,c:"retail",posted:"Aug 20",new:1,u:"#"}
+];
+const CATS={health:"Healthcare & Clinical",trades:"Trades & Industrial",logistics:"Logistics & Driving",education:"Schools & Public Service",retail:"Retail & Service"};
+const grid=document.getElementById('grid'),countEl=document.getElementById('count'),emptyEl=document.getElementById('empty');
+let cat='all',memOnly=false,q='';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function card(j){
+  const pills=[];
+  if(j.new)pills.push('<span class="pill new">New</span>');
+  if(j.pay)pills.push('<span class="pill pay">'+esc(j.pay)+'</span>');
+  if(j.type)pills.push('<span class="pill">'+esc(j.type)+'</span>');
+  if(j.posted)pills.push('<span class="pill">Posted '+esc(j.posted)+'</span>');
+  if(j.req)pills.push('<span class="pill">'+esc(j.req)+'</span>');
+  if(j.m)pills.push('<span class="pill mem">★ Member</span>');
+  const href=j.u&&j.u!=='#'?j.u:'#';
+  const tgt=href==='#'?'':' target="_blank" rel="noopener"';
+  return '<article class="card"><p class="cat">'+CATS[j.c]+'</p>'+
+    '<h3><a href="'+href+'"'+tgt+'>'+esc(j.t)+'</a></h3>'+
+    '<p class="emp">'+esc(j.e)+(j.m?' <span class="star">★</span>':'')+'</p>'+
+    '<div class="meta">'+pills.join('')+'</div></article>';
+}
+function render(){
+  const t=q.trim().toLowerCase();
+  const out=JOBS.filter(j=>(cat==='all'||j.c===cat)&&(!memOnly||j.m)&&
+    (!t||j.t.toLowerCase().includes(t)||j.e.toLowerCase().includes(t)));
+  grid.innerHTML=out.map(card).join('');
+  emptyEl.hidden=out.length>0;
+  const bits=[];
+  if(cat!=='all')bits.push(CATS[cat]);
+  if(memOnly)bits.push('Chamber members');
+  if(t)bits.push('“'+t+'”');
+  countEl.innerHTML='Showing <b>'+out.length+'</b> position'+(out.length===1?'':'s')+
+    (bits.length?' · '+esc(bits.join(' · ')):'');
+}
+document.getElementById('chips').addEventListener('click',e=>{
+  const b=e.target.closest('.chip'); if(!b)return;
+  if(b.id==='memOnly'){memOnly=!memOnly;b.setAttribute('aria-pressed',memOnly);}
+  else{cat=b.dataset.cat;
+    document.querySelectorAll('.chip[data-cat]').forEach(c=>c.setAttribute('aria-pressed',c===b));}
+  render();
+});
+document.getElementById('q').addEventListener('input',e=>{q=e.target.value;render();});
+render();
+</script>
+</body>
+</html>
