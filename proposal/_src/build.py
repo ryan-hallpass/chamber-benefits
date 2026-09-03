@@ -451,7 +451,7 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 
 # 10 INITIATIVE 02
 slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Card Marketing Engine</p>
-<h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; and brings visitors <em>back.</em></h2>''')
+<h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')
 
 slide(11,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
 <h2 class="display-sm" data-reveal data-delay="1" style="max-width:920px">The card is already collecting email addresses &mdash; but once they land in a spreadsheet, <em>nothing happens.</em></h2>
