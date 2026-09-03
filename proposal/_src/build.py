@@ -450,12 +450,12 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 <div class="pillar-grid" data-reveal data-delay="2" style="margin-top:34px">
 <div class="pillar pillar--active"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
 <div class="pillar"><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
-<div class="pillar"><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment &mdash; riding the buzz, not waiting for announcements</div>
+<div class="pillar"><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment</div>
 <div class="pillar"><b>Doing-business Q&amp;As</b>Common questions answered &mdash; ADA, incentives, properties, development opportunities, doing business in Ardmore</div>
 <div class="pillar"><b>Jobs &amp; workforce</b>Employers, career opportunities, workforce development and the people behind Ardmore&rsquo;s industries</div>
 <div class="pillar"><b>Education &amp; talent</b>How education and training support the next generation of Ardmore&rsquo;s workforce</div>
 <div class="pillar"><b>Arts &amp; quality of life</b>The quality-of-life story that attracts businesses &mdash; and the people those businesses need to recruit</div>
-<div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work</div>
+<div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work &mdash; while still keeping the outsider perspective that made this succeed</div>
 </div>''')
 
 # 10 INITIATIVE 02
