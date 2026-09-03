@@ -184,10 +184,11 @@ any new panel class).
 Scroll reveal via `[data-reveal]` + `data-delay` and an IntersectionObserver.
 Keyboard nav for presenting: `→` `PgDn` `Space` next slide, `←` `PgUp` `Shift+Space`
 previous (`↑`/`↓` stay native scroll so tall slides remain reachable).
-**Stepped pillars:** on a slide whose `.pillar-grid` has a `.pillar--active` in the
-markup (slide 09 only), next/prev keys step the sage highlight through the pillars
-(covered ones get `.pillar--done`, faded) before the deck advances. Grids without an
-initial active pillar (the library grid) are not stepped.
+**Walk-throughs:** elements carrying `data-walk` (with `walk-active` on the first
+in the markup) are stepped one-by-one by next/prev keys — sage inset ring on the
+active one, covered ones get `.walk-done` (faded, !important to beat the reveal
+CSS; transition-delay zeroed so fades are immediate). Used on slide 09's pillars
+and slide 24's outcome cards. Elements without data-walk (library pillars) don't step.
 **Generic reveal steps:** elements with `data-step="N"` start hidden (opacity 0);
 next/prev keys reveal/unreveal them group by group (all elements sharing N appear
 together, ascending) before the deck advances. Used on slide 02's before/after.

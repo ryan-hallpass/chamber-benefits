@@ -167,8 +167,11 @@ padding:14px 20px;max-width:760px;border:1px dashed rgba(26,26,24,.25)}
 .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;max-width:1020px}
 .pillar{border:1px solid var(--rule);background:var(--warm-white);padding:15px 17px;font-size:12.5px;line-height:1.45;opacity:.85;transition:box-shadow .3s,opacity .3s}
 .pillar b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;margin-bottom:3px}
-.pillar--active{box-shadow:inset 0 0 0 2px var(--sage);opacity:1;background:#fff}
-.pillar--done{opacity:.32}
+.walk-active{box-shadow:inset 0 0 0 2px var(--sage);opacity:1}
+.pillar.walk-active{background:#fff}
+.walk-done{opacity:.32!important}
+.walk-done,.walk-active{transition-delay:0s!important}
+.card{transition:box-shadow .3s,opacity .3s}
 .email-card{border:1px solid var(--rule);background:#fff;max-width:360px;justify-self:center;width:100%}
 .email-card img{display:block;width:100%;height:430px;object-fit:cover;object-position:top}
 .email-card-cap{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:10px 14px;border-top:1px solid var(--rule)}
@@ -449,14 +452,14 @@ slide(8,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 01 &mdash; A
 slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
 <h2 class="display-sm" data-reveal data-delay="1">Opportunities for future<br><em>Ardmore Means More</em> social content:</h2>
 <div class="pillar-grid" data-reveal data-delay="2" style="margin-top:34px">
-<div class="pillar pillar--active"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
-<div class="pillar"><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
-<div class="pillar"><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment</div>
-<div class="pillar"><b>Doing-business Q&amp;As</b>Common questions answered &mdash; ADA, incentives, properties, development opportunities, doing business in Ardmore</div>
-<div class="pillar"><b>Jobs &amp; workforce</b>Employers, career opportunities, workforce development and the people behind Ardmore&rsquo;s industries</div>
-<div class="pillar"><b>Education &amp; talent</b>How education and training support the next generation of Ardmore&rsquo;s workforce</div>
-<div class="pillar"><b>Arts &amp; quality of life</b>The quality-of-life story that attracts businesses &mdash; and the people those businesses need to recruit</div>
-<div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work &mdash; while still keeping the outsider perspective that made this succeed</div>
+<div class="pillar walk-active" data-walk><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
+<div class="pillar" data-walk><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
+<div class="pillar" data-walk><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment</div>
+<div class="pillar" data-walk><b>Doing-business Q&amp;As</b>Common questions answered &mdash; ADA, incentives, properties, development opportunities, doing business in Ardmore</div>
+<div class="pillar" data-walk><b>Jobs &amp; workforce</b>Employers, career opportunities, workforce development and the people behind Ardmore&rsquo;s industries</div>
+<div class="pillar" data-walk><b>Education &amp; talent</b>How education and training support the next generation of Ardmore&rsquo;s workforce</div>
+<div class="pillar" data-walk><b>Arts &amp; quality of life</b>The quality-of-life story that attracts businesses &mdash; and the people those businesses need to recruit</div>
+<div class="pillar" data-walk><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work &mdash; while still keeping the outsider perspective that made this succeed</div>
 </div>''')
 
 # 10 INITIATIVE 02
@@ -600,12 +603,12 @@ slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
-<div class="card" data-reveal data-delay="3"><div class="card-title">Top of mind, out of market</div><div class="card-body">Site selectors and entrepreneurs evaluate communities online &mdash; anonymously, long before they make contact. The audience we&rsquo;ve built keeps Ardmore in that conversation.</div></div>
-<div class="card" data-reveal data-delay="3"><div class="card-title">A clear sense of place</div><div class="card-body">The plan names the lack of &ldquo;a clear sense of who Ardmore is&rdquo; as a core weakness. A year of storytelling &mdash; and a rebuilt visitor site &mdash; is the answer.</div></div>
-<div class="card" data-reveal data-delay="4"><div class="card-title">Stronger small businesses</div><div class="card-body">Diversifying beyond one large employer starts with the businesses already here. Training, visibility and measurable foot traffic, for all 587 members.</div></div>
-<div class="card" data-reveal data-delay="4"><div class="card-title">Talent that stays</div><div class="card-body">The plan lists &ldquo;loss of talent to larger cities&rdquo; as a threat. Every open job in Ardmore, in one place, gives people a reason to stay &mdash; or come back.</div></div>
-<div class="card" data-reveal data-delay="5"><div class="card-title">Tourism assets, put to work</div><div class="card-body">&ldquo;Underutilized tourism assets&rdquo; is the plan&rsquo;s phrase. The discount card, the weekly round-up and a rebuilt Explore Ardmore put them in front of visitors.</div></div>
-<div class="card" data-reveal data-delay="5"><div class="card-title">Progress the board can report</div><div class="card-body">The plan asks each organization to track and share its metrics annually. The measurement layer delivers the Chamber&rsquo;s numbers &mdash; no added staff time.</div></div>
+<div class="card walk-active" data-walk data-reveal data-delay="3"><div class="card-title">Top of mind, out of market</div><div class="card-body">Site selectors and entrepreneurs evaluate communities online &mdash; anonymously, long before they make contact. The audience we&rsquo;ve built keeps Ardmore in that conversation.</div></div>
+<div class="card" data-walk data-reveal data-delay="3"><div class="card-title">A clear sense of place</div><div class="card-body">The plan names the lack of &ldquo;a clear sense of who Ardmore is&rdquo; as a core weakness. A year of storytelling &mdash; and a rebuilt visitor site &mdash; is the answer.</div></div>
+<div class="card" data-walk data-reveal data-delay="4"><div class="card-title">Stronger small businesses</div><div class="card-body">Diversifying beyond one large employer starts with the businesses already here. Training, visibility and measurable foot traffic, for all 587 members.</div></div>
+<div class="card" data-walk data-reveal data-delay="4"><div class="card-title">Talent that stays</div><div class="card-body">The plan lists &ldquo;loss of talent to larger cities&rdquo; as a threat. Every open job in Ardmore, in one place, gives people a reason to stay &mdash; or come back.</div></div>
+<div class="card" data-walk data-reveal data-delay="5"><div class="card-title">Tourism assets, put to work</div><div class="card-body">&ldquo;Underutilized tourism assets&rdquo; is the plan&rsquo;s phrase. The discount card, the weekly round-up and a rebuilt Explore Ardmore put them in front of visitors.</div></div>
+<div class="card" data-walk data-reveal data-delay="5"><div class="card-title">Progress the board can report</div><div class="card-body">The plan asks each organization to track and share its metrics annually. The measurement layer delivers the Chamber&rsquo;s numbers &mdash; no added staff time.</div></div>
 </div>
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
@@ -628,7 +631,6 @@ slide(25,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 slide(26,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">Let&rsquo;s build the brand<br><em>worthy of Ardmore.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>
 <p class="body" data-reveal data-delay="4">The audience is growing. The only open question is what we point it at over the next twelve months.</p>
 <p class="body" data-reveal data-delay="6" style="opacity:1;margin-top:30px">
 <strong style="font-family:var(--serif);font-size:20px;font-weight:400">Ryan McNeill</strong><br>
@@ -657,15 +659,15 @@ HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Communi
  'if(d>0){for(var i=0;i<vals.length;i++){if(!on(vals[i])){grp(vals[i]).forEach(function(e){e.classList.add("step-on")});return true}}return false}'
  'for(var j=vals.length-1;j>=0;j--){if(on(vals[j])){grp(vals[j]).forEach(function(e){e.classList.remove("step-on")});return true}}return false}'
  'function step(d){var s=sl[cur()];if(!s)return false;'
- 'var it=s.querySelectorAll(".pillar");'
- 'if(it.length){var idx=-1;it.forEach(function(p,i){if(p.classList.contains("pillar--active"))idx=i});'
+ 'var it=s.querySelectorAll("[data-walk]");'
+ 'if(it.length){var idx=-1;it.forEach(function(p,i){if(p.classList.contains("walk-active"))idx=i});'
  'if(idx>=0){'
  'if(d>0){if(idx<it.length-1){'
- 'it[idx].classList.remove("pillar--active");it[idx].classList.add("pillar--done");'
- 'it[idx+1].classList.add("pillar--active");return true}}'
+ 'it[idx].classList.remove("walk-active");it[idx].classList.add("walk-done");'
+ 'it[idx+1].classList.add("walk-active");return true}}'
  'else if(idx>0){'
- 'it[idx].classList.remove("pillar--active");'
- 'it[idx-1].classList.remove("pillar--done");it[idx-1].classList.add("pillar--active");return true}}}'
+ 'it[idx].classList.remove("walk-active");'
+ 'it[idx-1].classList.remove("walk-done");it[idx-1].classList.add("walk-active");return true}}}'
  'return gstep(s,d)}'
  'document.addEventListener("keydown",function(ev){'
  'if(ev.metaKey||ev.ctrlKey||ev.altKey)return;var k=ev.key,d=0;'
