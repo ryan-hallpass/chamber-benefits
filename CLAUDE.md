@@ -208,8 +208,11 @@ has pricing on it. Keep it. The `hiring/` page also carries a `noindex` that sho
   Per-initiative pricing lives in the contract only.
 - If per-initiative pricing is ever wanted, the **$46,800** covering LOA sections 3–7
   needs splitting between initiatives 02 and 03. No agreed split exists — ask, don't invent.
-- ~~Al's pre-Hallpass baseline metrics~~ **RECEIVED 2026-09-03** (see Verified numbers).
-  Flat-line-then-spike chart now buildable; not yet added to a slide.
+- ~~Al's pre-Hallpass baseline metrics~~ **RECEIVED + SHIPPED 2026-09-03** (see Verified
+  numbers). Rendered as a dashed "nine months before this work" baseline strip on slide 02
+  (not a chart), with the channel-mix caveat in the source note. Slide 03 gained the
+  real-world-impact sentence; slide 08 replaced its bullets with an 8-item content-pillar
+  grid from Al's list (`.pillar-grid`).
 - **ADA creative-reuse clause** — the 2025 contract barred reuse for any other client
   outright; the new draft softens it. Needs a decision.
 - A **speaker-notes companion** (one page per slide: the point, the number, the likely

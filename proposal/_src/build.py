@@ -120,6 +120,15 @@ text-transform:uppercase;fill:var(--ink);opacity:.55;text-anchor:middle}
 .fw-midsub{font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
 fill:var(--ink);opacity:.4;text-anchor:middle}
 .chart{display:block;width:100%;height:auto;margin-top:26px;max-width:760px}
+.baseline-strip{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-top:26px;
+padding:14px 20px;max-width:760px;border:1px dashed rgba(26,26,24,.25)}
+.slide--dark .baseline-strip{border-color:rgba(242,239,232,.3)}
+.bl-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;line-height:1.5}
+.bl-stat{font-size:13px;opacity:.75;white-space:nowrap}
+.bl-stat b{font-family:var(--serif);font-weight:400;font-size:22px;margin-right:6px}
+.pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;max-width:1020px}
+.pillar{border:1px solid var(--rule);background:var(--warm-white);padding:15px 17px;font-size:12.5px;line-height:1.45;opacity:.85}
+.pillar b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;margin-bottom:3px}
 .ch-title{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.16em;
 text-transform:uppercase;fill:var(--ink);opacity:.45;text-anchor:middle}
 .ch-val{font-family:var(--serif);font-size:19px;fill:var(--ink);text-anchor:middle}
@@ -184,7 +193,7 @@ transition:opacity 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}}
 @media (max-width:700px){
 .slide{padding:56px 26px;min-height:auto}
-.card-grid,.price-grid,.metric-strip,.two-col,.two-col-tight,.diagram{grid-template-columns:1fr}
+.card-grid,.price-grid,.metric-strip,.two-col,.two-col-tight,.diagram,.pillar-grid{grid-template-columns:1fr}
 .diagram{gap:14px}.dgap{transform:rotate(90deg);padding:8px 0}
 .phase-item{grid-template-columns:1fr;gap:10px}
 .display{font-size:32px}.slide-footer{position:static;margin-top:40px}
@@ -308,9 +317,15 @@ FLY = '''<svg class="flywheel" viewBox="0 -38 720 481" role="img"
 slide(2,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<div data-reveal data-delay="3">%s</div>
-<p class="body wide" data-reveal data-delay="4">Not a spike from one lucky video. Views, engagement and audience growth all moved together, quarter over quarter, which is what sustained momentum looks like rather than a fluke.</p>
-<p class="srcnote" data-reveal data-delay="5">Ardmore Means More channels, Q1 vs Q2 2026.</p>''' % CHART_GROWTH)
+<div class="baseline-strip" data-reveal data-delay="3">
+<span class="bl-label">The nine months before this work<br>Feb &ndash; Nov 2025</span>
+<span class="bl-stat"><b>98K</b> views</span>
+<span class="bl-stat"><b>7K</b> engagements</span>
+<span class="bl-stat"><b>258</b> followers gained</span>
+</div>
+<div data-reveal data-delay="4">%s</div>
+<p class="body wide" data-reveal data-delay="5">Not a spike from one lucky video. Views, engagement and audience growth all moved together, quarter over quarter, which is what sustained momentum looks like rather than a fluke.</p>
+<p class="srcnote" data-reveal data-delay="6">Ardmore Means More channels, Q1 vs Q2 2026. Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn, Feb&ndash;Nov 2025; regular posting began late November 2025.</p>''' % CHART_GROWTH)
 
 # 04 CUMULATIVE + REACH
 slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
@@ -322,7 +337,7 @@ slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <div class="metric" data-reveal data-delay="5"><div class="metric-value">~2,000</div><div class="metric-label">New followers added in July alone &mdash; a slow month for approvals</div></div>
 </div>
 <div data-reveal data-delay="6">%s</div>
-<p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered.</p>''' % CHART_REACH)
+<p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
 
 # 04 MOMENTUM (dark)
 slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>The Momentum</p>
@@ -367,11 +382,17 @@ slide(7,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Comin
 # 08 INITIATIVE 01
 slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
 <h2 class="display-sm" data-reveal data-delay="1">Continue to grow our reach on<br><em>Ardmore Means More</em> social media.</h2>
-<ul class="init-bullets">
-<li data-reveal data-delay="2">Continue to highlight Ardmore businesses and organizations</li>
-<li data-reveal data-delay="3">Create more content about economic development</li>
-<li data-reveal data-delay="4">Opportunities for storytelling around CORI and Paradise Alley</li>
-</ul>''')
+<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">The business and organization features keep running. Layered on top, the next phase of content:</p>
+<div class="pillar-grid" data-reveal data-delay="3">
+<div class="pillar"><b>Property highlights</b>Available sites, made discoverable</div>
+<div class="pillar"><b>The Michelin site</b>Told as an opportunity story</div>
+<div class="pillar"><b>Growth updates</b>CORI, Paradise Alley, PREP projects</div>
+<div class="pillar"><b>Doing-business Q&amp;As</b>Incentives, sites, infrastructure</div>
+<div class="pillar"><b>Jobs &amp; workforce</b>Employers and the people behind them</div>
+<div class="pillar"><b>Education &amp; talent</b>The pipeline behind the workforce</div>
+<div class="pillar"><b>Arts &amp; quality of life</b>The story that recruits talent</div>
+<div class="pillar"><b>A face for ADA</b>A human voice for economic development</div>
+</div>''')
 
 # 09 INITIATIVE 02
 slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
