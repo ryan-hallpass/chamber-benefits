@@ -181,11 +181,11 @@ has pricing on it. Keep it. The `hiring/` page also carries a `noindex` that sho
 
 ## Open items
 
-- **Two-tier investment slide.** Slide 14 currently itemises three prices, which invites
-  cherry-picking — Bill reliably takes the cheaper option. Agreed plan: show
-  **$199,200** (all five initiatives) and **$214,200** (adds two campaign videos back),
-  making the target number the cheapest option on the page, and drop per-initiative
-  pricing from the deck while keeping it in the contract. Not built yet.
+- ~~Two-tier investment slide.~~ **DONE 2026-09-03.** Slide 14 now shows two options —
+  **$199,200** "The Program" (featured ink card, five initiatives named, no per-initiative
+  prices) and **$214,200** "The Program + Campaign Video" (adds two 2–5 min videos).
+  Slide 15 carries the flat-spend line ($196,800 last year vs $199,200 ask).
+  Per-initiative pricing lives in the contract only.
 - If per-initiative pricing is ever wanted, the **$46,800** covering LOA sections 3–7
   needs splitting between initiatives 02 and 03. No agreed split exists — ask, don't invent.
 - **Al's pre-Hallpass baseline metrics** are still needed for a flat-line-then-spike chart.
