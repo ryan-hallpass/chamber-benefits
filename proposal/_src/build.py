@@ -9,6 +9,7 @@ SITEIMG=open(os.path.join(HERE,'site.b64')).read()
 HIRINGIMG=open(os.path.join(HERE,'hiring.b64')).read()
 LIBIMG=open(os.path.join(HERE,'library.b64')).read()
 EAEVENTS=open(os.path.join(HERE,'eaevents.b64')).read()
+DISPIMG=open(os.path.join(HERE,'display.b64')).read()
 EADINE=open(os.path.join(HERE,'eadine.b64')).read()
 
 CSS = """
@@ -474,13 +475,18 @@ slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; To
 </div>''')
 
 # 12 INITIATIVE 02a — DISTRIBUTION SOLUTION (cream)
-slide(12,'fitc900',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(12,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+<div class="two-col-tight" style="align-items:start;margin-top:0">
+<div>
 <h2 class="display-sm" data-reveal data-delay="1">Put the card everywhere<br>visitors <em>already are.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Branded countertop take-one displays, prominent at every front desk</li>
 <li data-reveal data-delay="3">Widen the net beyond hotels &mdash; Airbnbs, Lake Murray Lodge, the Convention Center, Hardy Murphy Coliseum</li>
 <li data-reveal data-delay="4">New signups per week becomes a number we watch and report</li>
-</ul>''')
+</ul>
+</div>
+<div class="email-card" data-reveal data-delay="3"><img style="height:auto" src="data:image/jpeg;base64,%s" alt="Branded Ardmore Means More countertop take-one display holding discount cards"><div class="email-card-cap">The take-one display &mdash; concept</div></div>
+</div>''' % DISPIMG)
 
 slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
