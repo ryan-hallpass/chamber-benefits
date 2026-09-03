@@ -82,7 +82,7 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (16 slides)
+### Current structure (17 slides)
 
 ```
 01  Cover — "People are already watching Ardmore. Let's keep building momentum."
@@ -94,7 +94,7 @@ slide 10's email card is the actual newsletter screenshot extracted from it
 07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (dark)
 08  01 Ardmore Means More Social — stepped pillar walk-through (sage)
 09  02 Tourism Card Measurement & Reporting
-10  03 Event Promotion Email Campaign                         (sage)
+10  03 Ardmore Event Promotion                         (sage)
 11  04 Chamber Member Learning Library
 12  05 Employment in Ardmore Email                            (dark)
 13  06 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (cream)

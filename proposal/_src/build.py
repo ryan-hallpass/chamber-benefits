@@ -397,7 +397,7 @@ slide(6,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Comin
 <div class="init-list">
 <div class="init-row" data-reveal data-delay="1"><div class="init-n">01</div><div class="init-t">Ardmore Means More Social</div></div>
 <div class="init-row" data-reveal data-delay="2"><div class="init-n">02</div><div class="init-t">Tourism Card Measurement &amp; Reporting</div></div>
-<div class="init-row" data-reveal data-delay="3"><div class="init-n">03</div><div class="init-t">Event Promotion Email Campaign</div></div>
+<div class="init-row" data-reveal data-delay="3"><div class="init-n">03</div><div class="init-t">Ardmore Event Promotion</div></div>
 <div class="init-row" data-reveal data-delay="4"><div class="init-n">04</div><div class="init-t">Chamber Member Learning Library</div></div>
 <div class="init-row" data-reveal data-delay="5"><div class="init-n">05</div><div class="init-t">Employment in Ardmore Email</div></div>
 <div class="init-row" data-reveal data-delay="6"><div class="init-n">06</div><div class="init-t">Explore Ardmore, Rebuilt</div></div>
@@ -460,7 +460,7 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measuremen
 </div>''')
 
 # 11 INITIATIVE 03
-slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
+slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Ardmore Event Promotion</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
@@ -547,7 +547,7 @@ slide(16,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
 <div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
-<ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Card Measurement &amp; Reporting</li><li>Event Promotion Email Campaign</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
+<ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Card Measurement &amp; Reporting</li><li>Ardmore Event Promotion</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
 <div class="price-card" data-reveal data-delay="3"><p class="price-tier">The Program + Explore Ardmore</p>
 <div class="price-amount">$233,000</div><p class="price-period">$16,600 per month, plus a one-time site rebuild</p>
 <ul class="price-items"><li>All five initiatives, unchanged</li><li>exploreardmore.com rebuilt on the Ardmore Means More brand</li><li>Kept current automatically by the program&rsquo;s content, events and directory work</li></ul></div>
