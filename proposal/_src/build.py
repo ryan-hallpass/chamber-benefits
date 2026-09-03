@@ -76,6 +76,7 @@ padding:15px 0 15px 30px;position:relative;border-bottom:1px solid var(--rule)}
 .phase-title{font-family:var(--serif);font-size:18px;margin-bottom:6px}
 .phase-body{font-size:13px;line-height:1.6;font-weight:300;opacity:.7}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
+.price-grid--two{grid-template-columns:repeat(2,1fr)}
 .price-card{background:var(--cream);padding:36px 30px;display:flex;flex-direction:column}
 .price-card--featured{background:var(--ink);color:var(--cream)}
 .price-tier{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.5;margin-bottom:16px}
@@ -428,30 +429,28 @@ slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 
 # 14 INVESTMENT
 slide(14,'',u'''<p class="eyebrow" data-reveal>Investment</p>
-<h2 class="display-sm" data-reveal data-delay="1">One operation. Five initiatives.</h2>
-<div class="price-grid">
-<div class="price-card" data-reveal data-delay="2"><p class="price-tier">Initiative 01</p>
-<div class="price-amount">$121,000</div><p class="price-period">Ardmore Means More social</p>
-<ul class="price-items"><li>Content production &amp; publishing &mdash; $98,000</li><li>Three content production shoots &mdash; $23,000</li></ul></div>
-<div class="price-card price-card--featured" data-reveal data-delay="3"><p class="price-tier">Initiatives 02 &amp; 03</p>
-<div class="price-amount">$46,800</div><p class="price-period">Tourism card measurement &amp; event email</p>
-<ul class="price-items"><li>Discount card tracking &amp; attribution</li><li>CRM and marketing automation</li><li><em>What&rsquo;s Happening Around Ardmore</em> weekly email</li><li>Analytics dashboard &amp; reporting</li><li>Per-business data feed</li></ul></div>
-<div class="price-card" data-reveal data-delay="4"><p class="price-tier">Initiatives 04 &amp; 05</p>
-<div class="price-amount">$31,200</div><p class="price-period">Learning library &amp; employment email</p>
-<ul class="price-items"><li>Chamber Member Learning Library &mdash; $16,800</li><li>Employment in Ardmore Email &mdash; $14,400</li></ul></div>
+<h2 class="display-sm" data-reveal data-delay="1">Five initiatives. <em>One program.</em></h2>
+<div class="price-grid price-grid--two">
+<div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
+<div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
+<ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Card Measurement &amp; Reporting</li><li>Event Promotion Email Campaign</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
+<div class="price-card" data-reveal data-delay="3"><p class="price-tier">The Program + Campaign Video</p>
+<div class="price-amount">$214,200</div><p class="price-period">$17,850 per month</p>
+<ul class="price-items"><li>All five initiatives, unchanged</li><li>Two 2&ndash;5 minute campaign videos</li></ul></div>
 </div>
-<div class="total-bar" data-reveal data-delay="5">
-<div><span class="lbl">Total annual investment</span><div class="amt">$199,200</div></div>
-<div class="sub">$16,600 per month &middot; October 1, 2026 through September 30, 2027</div></div>
-<p class="body wide" data-reveal data-delay="6" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
+<div class="total-bar" data-reveal data-delay="4">
+<div><span class="lbl">Agreement term</span><div class="amt" style="font-size:24px">Twelve months</div></div>
+<div class="sub">October 1, 2026 through September 30, 2027</div></div>
+<p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 15 CLOSING
 slide(15,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<p class="body" data-reveal data-delay="3">The next production trip is on the calendar at Andrea&rsquo;s encouragement &mdash; before this agreement would even begin. The audience is already built. The only open question is what we point it at over the next twelve months.</p>
-<p class="body" data-reveal data-delay="4">Let&rsquo;s walk through the hiring board while we&rsquo;re together &mdash; it already works, and thirty minutes with it open will say more than this deck can.</p>
-<p class="body" data-reveal data-delay="5" style="opacity:1;margin-top:30px">
+<p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>
+<p class="body" data-reveal data-delay="4">The next production trip is on the calendar at Andrea&rsquo;s encouragement &mdash; before this agreement would even begin. The audience is already built. The only open question is what we point it at over the next twelve months.</p>
+<p class="body" data-reveal data-delay="5">Let&rsquo;s walk through the hiring board while we&rsquo;re together &mdash; it already works, and thirty minutes with it open will say more than this deck can.</p>
+<p class="body" data-reveal data-delay="6" style="opacity:1;margin-top:30px">
 <strong style="font-family:var(--serif);font-size:20px;font-weight:400">Ryan McNeill</strong><br>
 <span style="font-size:13px;opacity:.7">Hall Pass Digital, LLC &middot; ryan@hallpassdigital.com</span></p>
 <div class="big-arrow">&rarr;</div>''')
