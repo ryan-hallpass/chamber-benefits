@@ -145,8 +145,8 @@ fill:var(--ink);opacity:.4;text-anchor:middle}
 .vs-viz{border-top:1px solid var(--rule);align-self:stretch;display:flex;align-items:center;gap:18px;padding-left:32px}
 .vs-viz-bars{flex:1;display:flex;flex-direction:column;gap:6px}
 .vs-viz-bars span{display:block;height:14px}
-.vs-bar-b{background:var(--ink);opacity:.35;min-width:6px}
-.vs-bar-a{background:var(--sage);width:100%}
+.vs-bar-b{background:var(--ink);opacity:.35;width:7px}
+.vs-bar-a{background:var(--sage)}
 .vs-viz-x{font-family:var(--serif);font-size:27px;color:var(--sage);white-space:nowrap}
 .july-note{margin-top:26px;padding:16px 20px;background:var(--sage-wash);border-left:3px solid var(--sage);
 font-size:15px;font-weight:300;max-width:800px;line-height:1.6}
@@ -387,11 +387,11 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <div class="vs-head vs-head--now" data-step="1">One year later</div>
 <div class="vs-head"></div>
 <div class="vs-label">Video views</div><div class="vs-before">98K</div><div class="vs-after" data-step="1">1.4M</div>
-<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div><span class="vs-viz-x">&asymp;14&times;</span></div>
+<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b"></span><span class="vs-bar-a" style="width:33%"></span></div><span class="vs-viz-x">&asymp;14&times;</span></div>
 <div class="vs-label">Engagements</div><div class="vs-before">7K</div><div class="vs-after" data-step="1">100K</div>
-<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div><span class="vs-viz-x">&asymp;14&times;</span></div>
+<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b"></span><span class="vs-bar-a" style="width:33%"></span></div><span class="vs-viz-x">&asymp;14&times;</span></div>
 <div class="vs-label">Followers gained</div><div class="vs-before">258</div><div class="vs-after" data-step="1">~11,000</div>
-<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b" style="width:2.4%"></span><span class="vs-bar-a"></span></div><span class="vs-viz-x">&asymp;43&times;</span></div>
+<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b"></span><span class="vs-bar-a" style="width:100%"></span></div><span class="vs-viz-x">&asymp;43&times;</span></div>
 </div>
 <div class="july-note" data-step="2">&hellip;and <b>~2,000</b> of those new followers arrived in July alone.</div>
 <p class="srcnote" data-reveal data-delay="4">Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn; Hallpass posting began late November 2025. Current figures: Ardmore Means More channels, cumulative to date.</p>''')
