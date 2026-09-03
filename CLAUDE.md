@@ -90,15 +90,15 @@ slide 10's email card is the actual newsletter screenshot extracted from it
 03  The Audience .......... "Where we stand today" — cumulative + local/outside (sage)
 04  What We've Built ...... Q1 vs Q2 small multiples          (dark)
 05  The Momentum .......... projection chart                  (sage)
-06  Why This Has Worked ... three boxes, no body copy
-07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
-08  Proposed Initiatives for the Coming Year — numbered list
-09  01 Ardmore Means More Social                              (sage)
-10  02 Tourism Card Measurement & Reporting
-11  03 Event Promotion Email Campaign                         (sage)
-12  04 Chamber Member Learning Library
-13  05 Employment in Ardmore Email                            (dark)
-14  Implementation — three phases                             (sage)
+06  Proposed Initiatives for the Coming Year — numbered list
+07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (dark)
+08  01 Ardmore Means More Social                              (sage)
+09  02 Tourism Card Measurement & Reporting
+10  03 Event Promotion Email Campaign                         (sage)
+11  04 Chamber Member Learning Library
+12  05 Employment in Ardmore Email                            (dark)
+13  Implementation — three phases                             (sage)
+14  Why This Has Worked ... three boxes, no body copy         (dark)
 15  Investment
 16  Next Step                                                 (dark)
 ```
@@ -107,7 +107,7 @@ slide 10's email card is the actual newsletter screenshot extracted from it
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,13,16}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,7,12,14,16}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.

@@ -45,6 +45,7 @@ display:flex;justify-content:space-between;align-items:center;font-size:10px;let
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
 .card{background:var(--cream);padding:32px 28px}
 .slide--sage .card{background:var(--warm-white)}
+.slide--dark .card{color:var(--ink)}
 .card-num{font-family:var(--serif);font-size:48px;color:var(--sage);opacity:.7;line-height:1;margin-bottom:14px}
 .card-title{font-family:var(--serif);font-size:17px;margin-bottom:10px}
 .card-body{font-size:13px;line-height:1.6;font-weight:300;opacity:.7}
@@ -119,8 +120,10 @@ border-radius:50%;background:var(--sage);opacity:.15}
 text-transform:uppercase;fill:var(--ink);opacity:.55;text-anchor:middle}
 .fw-arc{fill:none;stroke:var(--sage);stroke-width:2}
 .fw-mid{font-family:var(--serif);font-style:italic;font-size:19px;fill:var(--sage);text-anchor:middle}
+.slide--dark .fw-mid{fill:var(--sage-light)}
 .fw-midsub{font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
 fill:var(--ink);opacity:.4;text-anchor:middle}
+.slide--dark .fw-midsub{fill:var(--cream);opacity:.55}
 .chart{display:block;width:100%;height:auto;margin-top:26px;max-width:760px}
 .chart--wide{max-width:1010px}
 .baseline-strip{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-top:26px;
@@ -234,7 +237,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,13,16}
+DARK={4,7,12,14,16}
 print('module ready')
 
 
@@ -385,26 +388,10 @@ slide(5,'slide--sage',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 </div>
 <p class="srcnote" data-reveal data-delay="7">Projection assumes the Q2 pace holds. Directional, not guaranteed.</p>''' % CHART_PROJ)
 
-# 06 WHY IT WORKS (three boxes)
-slide(6,'',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
-<div class="card-grid why-grid">
-<div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
-<div class="card-title">An outsider perspective</div></div>
-<div class="card" data-reveal data-delay="2"><div class="card-num">02</div>
-<div class="card-title">Engaging storytelling</div></div>
-<div class="card" data-reveal data-delay="3"><div class="card-num">03</div>
-<div class="card-title">Consistency</div></div>
-</div>''')
-
-
 print('1-6 staged')
 
-slide(7,'slide--sage',u'''<p class="eyebrow" data-reveal>How This Proposal Is Structured</p>
-<h2 class="display-sm" data-reveal data-delay="1">Three distinct organizations.<br>The actions of one <em>benefit all.</em></h2>
-<div class="fly-wrap" data-reveal data-delay="2">%s</div>''' % FLY)
-
-# 08 PROPOSED INITIATIVES
-slide(8,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
+# 06 PROPOSED INITIATIVES (cream)
+slide(6,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
 <div class="init-list">
 <div class="init-row" data-reveal data-delay="1"><div class="init-n">01</div><div class="init-t">Ardmore Means More Social</div></div>
 <div class="init-row" data-reveal data-delay="2"><div class="init-n">02</div><div class="init-t">Tourism Card Measurement &amp; Reporting</div></div>
@@ -413,10 +400,15 @@ slide(8,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Comin
 <div class="init-row" data-reveal data-delay="5"><div class="init-n">05</div><div class="init-t">Employment in Ardmore Email</div></div>
 </div>''')
 
+# 07 HOW THIS PROPOSAL IS STRUCTURED — FLYWHEEL (dark)
+slide(7,'slide--dark',u'''<p class="eyebrow" data-reveal>How This Proposal Is Structured</p>
+<h2 class="display-sm" data-reveal data-delay="1">Three distinct organizations.<br>The actions of one <em>benefit all.</em></h2>
+<div class="fly-wrap" data-reveal data-delay="2">%s</div>''' % FLY)
+
 # 09 INITIATIVE 01
-slide(9,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
+slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
 <h2 class="display-sm" data-reveal data-delay="1">Continue to grow our reach on<br><em>Ardmore Means More</em> social media.</h2>
-<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">The business and organization features keep running. Layered on top, the next phase of content:</p>
+<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Opportunities for future content:</p>
 <div class="pillar-grid" data-reveal data-delay="3">
 <div class="pillar"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
 <div class="pillar"><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
@@ -429,7 +421,7 @@ slide(9,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Mean
 </div>''')
 
 # 10 INITIATIVE 02
-slide(10,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
+slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Turn the tourism card into<br>a channel we can <em>measure.</em></h2>
@@ -465,7 +457,7 @@ slide(10,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measureme
 </div>''')
 
 # 11 INITIATIVE 03
-slide(11,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
+slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
@@ -481,7 +473,7 @@ slide(11,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promo
 </div>''' % EMAILIMG)
 
 # 12 INITIATIVE 04
-slide(12,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
+slide(11,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
 <p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Members see tremendous individual benefit from a short list of basics. The library teaches the 20% of digital marketing that drives 80% of the results &mdash; the 80/20 rule, applied business by business:</p>
 <div class="pillar-grid" data-reveal data-delay="3" style="grid-template-columns:repeat(3,1fr);max-width:860px">
@@ -498,7 +490,7 @@ slide(12,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learnin
 </ul>''')
 
 # 13 INITIATIVE 05
-slide(13,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment in Ardmore Email</p>
+slide(12,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">A weekly hiring email plus a searchable Chamber-owned job board</li>
@@ -512,7 +504,7 @@ slide(13,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment 
 </div>''')
 
 # 14 IMPLEMENTATION
-slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
+slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -522,6 +514,17 @@ slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <div><div class="phase-title">Activation</div><p class="phase-body">Property and workforce content in rotation. First <em>What&rsquo;s Happening</em> emails out. Offer tracking running. First monthly dashboard delivered. Shoot one executed. Training library published with its first scorecard run, and the weekly hiring email in production.</p></div></div>
 <div class="phase-item" data-reveal data-delay="5"><div class="phase-label">Phase 03<br>Ongoing</div>
 <div><div class="phase-title">Growth &amp; optimization</div><p class="phase-body">Shoots two and three. Monthly reporting and optimization. Quarterly library additions and scorecard re-runs. Weekly hiring collection. Per-business engagement data delivered into the Annual Visibility Report and the Chamber rollup.</p></div></div>
+</div>''')
+
+# 14 WHY THIS HAS WORKED (three boxes, dark)
+slide(14,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+<div class="card-grid why-grid">
+<div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
+<div class="card-title">An outsider perspective</div></div>
+<div class="card" data-reveal data-delay="2"><div class="card-num">02</div>
+<div class="card-title">Engaging storytelling</div></div>
+<div class="card" data-reveal data-delay="3"><div class="card-num">03</div>
+<div class="card-title">Consistency</div></div>
 </div>''')
 
 # 15 INVESTMENT
