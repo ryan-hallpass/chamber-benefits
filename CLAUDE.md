@@ -130,6 +130,10 @@ rule `rgba(26,26,24,.12)`. Playfair Display (serif) + DM Sans (sans).
 Scroll reveal via `[data-reveal]` + `data-delay` and an IntersectionObserver.
 Keyboard nav for presenting: `→` `PgDn` `Space` next slide, `←` `PgUp` `Shift+Space`
 previous (`↑`/`↓` stay native scroll so tall slides remain reachable).
+**Stepped pillars:** on a slide whose `.pillar-grid` has a `.pillar--active` in the
+markup (slide 08 only), next/prev keys step the sage highlight through the pillars
+(covered ones get `.pillar--done`, faded) before the deck advances. Grids without an
+initial active pillar (slide 12's library grid) are not stepped.
 **Slide-fit guarantee:** `slide()` wraps content in `<div class="fit">`; a script
 zoom-shrinks any slide whose content is taller than the viewport (desktop only,
 >700px; floor 0.5). `.chart` is capped at `max-width:760px` so chart SVGs stop

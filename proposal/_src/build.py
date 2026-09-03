@@ -133,8 +133,10 @@ padding:14px 20px;max-width:760px;border:1px dashed rgba(26,26,24,.25)}
 .bl-stat{font-size:13px;opacity:.75;white-space:nowrap}
 .bl-stat b{font-family:var(--serif);font-weight:400;font-size:22px;margin-right:6px}
 .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;max-width:1020px}
-.pillar{border:1px solid var(--rule);background:var(--warm-white);padding:15px 17px;font-size:12.5px;line-height:1.45;opacity:.85}
+.pillar{border:1px solid var(--rule);background:var(--warm-white);padding:15px 17px;font-size:12.5px;line-height:1.45;opacity:.85;transition:box-shadow .3s,opacity .3s}
 .pillar b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;margin-bottom:3px}
+.pillar--active{box-shadow:inset 0 0 0 2px var(--sage);opacity:1;background:#fff}
+.pillar--done{opacity:.32}
 .email-card{border:1px solid var(--rule);background:#fff;max-width:360px;justify-self:center;width:100%}
 .email-card img{display:block;width:100%;height:430px;object-fit:cover;object-position:top}
 .email-card-cap{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:10px 14px;border-top:1px solid var(--rule)}
@@ -410,7 +412,7 @@ slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Mean
 <h2 class="display-sm" data-reveal data-delay="1">Continue to grow our reach on<br><em>Ardmore Means More</em> social media.</h2>
 <p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Opportunities for future content:</p>
 <div class="pillar-grid" data-reveal data-delay="3">
-<div class="pillar"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
+<div class="pillar pillar--active"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
 <div class="pillar"><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
 <div class="pillar"><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment &mdash; riding the buzz, not waiting for announcements</div>
 <div class="pillar"><b>Doing-business Q&amp;As</b>Common questions answered &mdash; ADA, incentives, properties, development opportunities, doing business in Ardmore</div>
@@ -569,11 +571,21 @@ HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Communi
  '(function(){var sl=[].slice.call(document.querySelectorAll(".cover-hero,.slide"));'
  'function cur(){var y=window.scrollY+window.innerHeight*.3,i=0;'
  'sl.forEach(function(s,k){if(s.offsetTop<=y)i=k});return i}'
+ 'function step(d){var s=sl[cur()],it=s?s.querySelectorAll(".pillar"):[];if(!it.length)return false;'
+ 'var idx=-1;it.forEach(function(p,i){if(p.classList.contains("pillar--active"))idx=i});'
+ 'if(idx<0)return false;'
+ 'if(d>0){if(idx>=it.length-1)return false;'
+ 'it[idx].classList.remove("pillar--active");it[idx].classList.add("pillar--done");'
+ 'it[idx+1].classList.add("pillar--active");return true}'
+ 'if(idx<=0)return false;'
+ 'it[idx].classList.remove("pillar--active");'
+ 'it[idx-1].classList.remove("pillar--done");it[idx-1].classList.add("pillar--active");return true}'
  'document.addEventListener("keydown",function(ev){'
  'if(ev.metaKey||ev.ctrlKey||ev.altKey)return;var k=ev.key,d=0;'
  'if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!ev.shiftKey))d=1;'
  'else if(k==="ArrowLeft"||k==="PageUp"||(k===" "&&ev.shiftKey))d=-1;'
  'else return;ev.preventDefault();'
+ 'if(step(d))return;'
  'var i=Math.max(0,Math.min(sl.length-1,cur()+d));'
  'sl[i].scrollIntoView({behavior:"smooth"})})})();'
  '(function(){var sl=[].slice.call(document.querySelectorAll(".slide"));'
