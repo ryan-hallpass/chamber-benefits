@@ -112,6 +112,9 @@ slide 10's email card is the actual newsletter screenshot extracted from it
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
 - Reordering slides means renumbering every `slide()` call after the move. Do the
   renumber with a mapping applied in one pass, or numbers will collide.
+- **Two-column slides:** the right-column visual must TOP-ALIGN with the headline —
+  put the `h2` inside the left column (eyebrow stays full-width above) and use
+  `align-items:start;margin-top:0` on the `.two-col-tight` wrapper. Ryan's rule, 2026-09-03.
 - After any structural change, screenshot with Playwright before claiming it works.
   Force `[data-reveal]` elements visible first and wait ~2.5s for staggered delays:
   ```js

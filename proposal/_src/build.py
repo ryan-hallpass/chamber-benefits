@@ -423,9 +423,9 @@ slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Mean
 
 # 09 INITIATIVE 02
 slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
-<h2 class="display-sm" data-reveal data-delay="1">Turn the tourism card into<br>a channel we can <em>measure.</em></h2>
-<div class="two-col-tight" style="align-items:start">
+<div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
+<h2 class="display-sm" data-reveal data-delay="1">Turn the tourism card into<br>a channel we can <em>measure.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Track scans, offer claims and referral traffic business by business</li>
 <li data-reveal data-delay="3">Separate visitor spending from resident spending</li>
@@ -459,9 +459,9 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measuremen
 
 # 10 INITIATIVE 03
 slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
-<h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
-<div class="two-col-tight" style="align-items:start">
+<div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
+<h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Events collected automatically from venues and public calendars</li>
 <li data-reveal data-delay="3">One email, segmented for residents and for visitors</li>
