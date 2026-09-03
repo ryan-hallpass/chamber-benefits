@@ -254,7 +254,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,10,13,15,17,19,21,23}
+DARK={4,8,10,14,16,18,20,22,24}
 print('module ready')
 
 
@@ -441,60 +441,43 @@ slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; 
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; and brings visitors <em>back.</em></h2>''')
 
 slide(11,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
-<div class="two-col-tight" style="align-items:start;margin-top:0">
-<div>
-<h2 class="display-sm" data-reveal data-delay="1">The card already collects.<br>Now let&rsquo;s put it <em>to work.</em></h2>
-<ul class="init-bullets">
-<li data-reveal data-delay="2">Already wired up ahead of this proposal: every scan is tracked, and 50+ visitors have signed up</li>
-<li data-reveal data-delay="3">Today it all lands in a spreadsheet &mdash; and nothing happens next</li>
-<li data-reveal data-delay="4">New: subscribers, claimed offers and referral traffic, reported business by business</li>
-</ul>
-<p class="body" data-reveal data-delay="5" style="margin-top:26px">Visitor activity separated from resident activity, a live monthly dashboard in place of the spreadsheet &mdash; and every scan grows the list the weekly round-up is sent to.</p>
-<p class="srcnote" data-reveal data-delay="6">Dashboard figures are illustrative.</p>
-</div>
-<div class="dash" data-reveal data-delay="4">
-<div class="dash-head"><div><div class="dash-kicker">Tourism Card &middot; Monthly Report</div><div class="dash-title">March 2027</div></div><span class="dash-badge">Sample</span></div>
-<div class="dash-stats">
-<div class="dash-stat"><span>QR scans</span><b>1,284</b><i>&uarr; 18% vs Feb</i></div>
-<div class="dash-stat"><span>New subscribers</span><b>347</b><i>&uarr; 24% vs Feb</i></div>
-<div class="dash-stat"><span>Total list size</span><b>2,109</b><i>+347 this month</i></div>
-<div class="dash-stat"><span>Offers claimed</span><b>521</b><i>&uarr; 11% vs Feb</i></div>
-</div>
-<div class="dash-chart"><div class="dash-chart-t">QR scans &amp; new subscribers &mdash; first six months</div>
-<div class="dash-bars">
-<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:26px"></div><div class="dash-bar-b" style="height:8px"></div></div><span>Oct</span></div>
-<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:34px"></div><div class="dash-bar-b" style="height:10px"></div></div><span>Nov</span></div>
-<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:38px"></div><div class="dash-bar-b" style="height:11px"></div></div><span>Dec</span></div>
-<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:44px"></div><div class="dash-bar-b" style="height:13px"></div></div><span>Jan</span></div>
-<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:52px"></div><div class="dash-bar-b" style="height:14px"></div></div><span>Feb</span></div>
-<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:58px"></div><div class="dash-bar-b" style="height:15px"></div></div><span>Mar</span></div>
-</div></div>
-<div class="dash-row"><span>Two Frogs Grill</span><span>214 scans &middot; 63 claims</span></div>
-<div class="dash-row"><span>Hamburger Inn</span><span>168 scans &middot; 41 claims</span></div>
-<div class="dash-row"><span>Cafe Alley</span><span>129 scans &middot; 35 claims</span></div>
-</div>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:920px">The card is already collecting email addresses &mdash; but once they land in a spreadsheet, <em>nothing happens.</em></h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<div class="metric-strip metric-strip--two">
+<div class="metric" data-reveal data-delay="3"><div class="metric-value">50+</div><div class="metric-label">Visitor email addresses collected so far &mdash; wired up ahead of this proposal</div></div>
+<div class="metric" data-reveal data-delay="4"><div class="metric-value">0</div><div class="metric-label">Emails ever sent to that list</div></div>
 </div>''')
 
 slide(12,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
-<h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">Let&rsquo;s use this email list to bring visitors <em>back to Ardmore.</em></h2>
 <ul class="init-bullets">
-<li data-reveal data-delay="2">Events collected automatically from venues and public calendars</li>
-<li data-reveal data-delay="3">One email, segmented for residents and for visitors</li>
+<li data-reveal data-delay="2">A weekly <em>What&rsquo;s Happening Around Ardmore</em> round-up</li>
+<li data-reveal data-delay="3">Events collected automatically from venues and public calendars</li>
 <li data-reveal data-delay="4">Member events promoted alongside community events</li>
 </ul>
-<p class="body" data-reveal data-delay="5" style="margin-top:26px">Anchored by a stand-alone events website &mdash; every event in one place, linked from every email. Grown by every tourism-card scan, the list becomes promotional space the Chamber owns outright.</p>
-<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>
+<p class="body" data-reveal data-delay="5" style="margin-top:26px">Grown by every tourism-card scan, the list becomes promotional space the Chamber owns outright.</p>
 </div>
 <div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">What a send looks like</div></div>
 </div>''' % EMAILIMG)
 
+# 13 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
+slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:920px">&hellip;and we&rsquo;ll turn it into a stand-alone <em>What&rsquo;s Happening Around Ardmore</em> website.</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<ul class="init-bullets" style="margin-top:10px">
+<li data-reveal data-delay="3">Every event in one place, always current &mdash; linked from every email</li>
+<li data-reveal data-delay="4">Promoted continuously on Ardmore Means More social</li>
+<li data-reveal data-delay="5">Open to anyone searching for something to do in Ardmore</li>
+</ul>
+<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>''')
+
 # 12 INITIATIVE 04
-slide(13,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
+slide(14,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s hand every member the 20% of digital marketing that drives <em>80% of the results.</em></h2>''')
 
-slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
+slide(15,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
 <p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Members see tremendous individual benefit from a short list of basics. The library teaches the 20% of digital marketing that drives 80% of the results &mdash; the 80/20 rule, applied business by business:</p>
 <div class="pillar-grid" data-reveal data-delay="3" style="grid-template-columns:repeat(3,1fr);max-width:860px">
@@ -511,10 +494,10 @@ slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 </ul>''')
 
 # 13 INITIATIVE 05
-slide(15,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
+slide(16,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll put every open job in Ardmore in one place &mdash; in front of the people <em>ready to fill them.</em></h2>''')
 
-slide(16,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
+slide(17,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">A weekly hiring email plus a searchable Chamber-owned job board</li>
@@ -529,10 +512,10 @@ slide(16,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore 
 <p class="body" data-reveal data-delay="7" style="margin-top:24px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>''')
 
 # 14 IMPLEMENTATION
-slide(17,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(18,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s give visitors a front door as good as the Ardmore <em>we&rsquo;ve been showing them.</em></h2>''')
 
-slide(18,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">The visitor site isn&rsquo;t earning<br>what the brand <em>has built.</em></h2>
 <ul class="problem-list">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
@@ -544,7 +527,7 @@ slide(18,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 <p class="srcnote" data-reveal data-delay="7">Observations from exploreardmore.com, September 3, 2026.</p>''')
 
 # 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
-slide(19,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
+slide(20,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
@@ -558,7 +541,7 @@ slide(19,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
 # 21 IMPLEMENTATION (cream)
-slide(20,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
+slide(21,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -571,7 +554,7 @@ slide(20,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 </div>''')
 
 # 22 WHY THIS HAS WORKED (three boxes, dark)
-slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+slide(22,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
@@ -582,7 +565,7 @@ slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p
 </div>''')
 
 # 23 INVESTMENT
-slide(22,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(23,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">One program. <em>Everything connected.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
@@ -598,7 +581,7 @@ slide(22,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 24 CLOSING
-slide(23,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+slide(24,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>

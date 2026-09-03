@@ -82,7 +82,7 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (23 slides)
+### Current structure (24 slides)
 
 Each initiative is a dark title slide (big serif overview statement) followed by
 its detail slide(s) — initiative 02 has TWO detail slides. Detail slides
@@ -109,27 +109,34 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 08  T: Initiative 01 statement                                (dark)
 09  01 Ardmore Means More Social — stepped pillar walk-through (cream)
 10  T: Initiative 02 statement                                (dark)
-11  02 Tourism Card Marketing Engine — reframe + dashboard mock (sage)
-12  02 Tourism Card Marketing Engine — round-up email + events site (cream)
-13  T: Initiative 03 statement                                (dark)
-14  03 Chamber Member Learning Library — 80/20 grid           (sage)
-15  T: Initiative 04 statement                                (dark)
-16  04 Employment in Ardmore Email                            (cream)
-17  T: Initiative 05 statement                                (dark)
-18  05 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (sage)
-19  What These Initiatives Will Accomplish — 6 outcome cards
+11  02 PROBLEM: card collects emails, spreadsheet, nothing happens —
+    50+ collected / 0 sent metrics (dashboard mock REMOVED: wrong data) (sage)
+12  02 SOLUTION A: round-up email + email mockup image        (cream)
+13  02 SOLUTION B: stand-alone What's Happening website + domains (sage)
+14  T: Initiative 03 statement                                (dark)
+15  03 Chamber Member Learning Library — 80/20 grid           (sage)
+16  T: Initiative 04 statement                                (dark)
+17  04 Employment in Ardmore Email — links live prototype     (cream)
+18  T: Initiative 05 statement                                (dark)
+19  05 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (sage)
+20  What These Initiatives Will Accomplish — 6 outcome cards
     tied to the 2025 Economic Vision Plan                     (dark)
-20  Implementation — three phases                             (cream)
-21  Why This Has Worked ... three boxes, no body copy         (dark)
-22  Investment                                                (cream)
-23  Next Step                                                 (dark)
+21  Implementation — three phases                             (cream)
+22  Why This Has Worked ... three boxes, no body copy         (dark)
+23  Investment                                                (cream)
+24  Next Step                                                 (dark)
+
+**PENDING IMAGES from Ryan (2026-09-03, in production):** (1) a new example
+"What's Happening Around Ardmore" EMAIL image → replaces `email.b64` on slide 12
+(current image is the ATA-era mockup, serving as placeholder); (2) a WEBSITE
+mockup image → slide 13 (built text-only for now; convert to two-col when it lands).
 ```
 
 ### Rules when editing slides
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,8,10,13,15,17,19,21,23}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,8,10,14,16,18,20,22,24}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
