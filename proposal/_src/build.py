@@ -26,6 +26,8 @@ background-image:radial-gradient(circle,rgba(26,26,24,0.08) 1px,transparent 1px)
 background-size:24px 24px;pointer-events:none}
 .slide>*{position:relative;z-index:1}
 .fit{display:flow-root}
+.fitc900 .fit{max-width:900px;margin:0 auto;width:100%}
+.fitc1060 .fit{max-width:1060px;margin:0 auto;width:100%}
 .slide--dark{background:var(--ink);color:var(--cream)}
 .slide--dark::before{background-image:radial-gradient(circle,rgba(242,239,232,0.10) 1px,transparent 1px)}
 .slide--sage{background:var(--sage-wash)}
@@ -397,14 +399,14 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <p class="srcnote" data-reveal data-delay="4">Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn; Hallpass posting began late November 2025. Current figures: Ardmore Means More channels, cumulative to date.</p>''')
 
 # 03 THE AUDIENCE — OUTSIDE VS LOCAL (sage)
-slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
+slide(3,'slide--sage fitc900',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <h2 class="display-sm" data-reveal data-delay="1">Most of that audience<br><em>isn&rsquo;t from here.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div data-reveal data-delay="3">%s</div>
 <p class="body wide" data-reveal data-delay="4">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
 
 # 04 WHAT WE'VE BUILT — GROWTH (dark)
-slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
+slide(4,'slide--dark fitc1060',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div data-reveal data-delay="3">%s</div>
@@ -412,7 +414,7 @@ slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built<
 <p class="srcnote" data-reveal data-delay="5">Ardmore Means More channels, Q1 vs Q2 2026.</p>''' % CHART_GROWTH)
 
 # 05 MOMENTUM (sage)
-slide(5,'slide--sage',u'''<p class="eyebrow" data-reveal>The Momentum</p>
+slide(5,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 <h2 class="display-sm" data-reveal data-delay="1">Hold this pace and the audience<br><em>triples</em> in twelve months.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div data-reveal data-delay="3">%s</div>
@@ -425,7 +427,7 @@ slide(5,'slide--sage',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 print('1-6 staged')
 
 # 06 PROPOSED INITIATIVES (cream)
-slide(6,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
+slide(6,'fitc900',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
 <div class="init-list">
 <div class="init-row" data-reveal data-delay="1"><div class="init-n">01</div><div class="init-t">Ardmore Means More Social</div></div>
 <div class="init-row" data-reveal data-delay="2"><div class="init-n">02</div><div class="init-t">Tourism Card Marketing Engine</div></div>
@@ -460,7 +462,7 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Card Marketing Engine</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')
 
-slide(11,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
+slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
 <h2 class="display-sm" data-reveal data-delay="1" style="max-width:920px">The card is already collecting email addresses &mdash; but once they land in a spreadsheet, <em>nothing happens.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="metric-strip metric-strip--two">
@@ -528,7 +530,7 @@ slide(15,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 slide(16,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll put every open job in Ardmore in one place &mdash; in front of the people <em>ready to fill them.</em></h2>''')
 
-slide(17,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
+slide(17,'fitc900',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">Job opportunities were the <strong>top issue</strong> in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is visibility.</p>
@@ -567,7 +569,7 @@ slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 <p class="srcnote" data-reveal data-delay="6">Observations from exploreardmore.com, September 3, 2026.</p>''' % (EAEVENTS, EADINE))
 
 # 21 INITIATIVE 05b — SOLUTION (cream)
-slide(21,'',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(21,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">Rebuild it on the<br><em>Ardmore Means More</em> brand.</h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>

@@ -166,6 +166,11 @@ to the `.b64` files, rebuild.
 Cream `#F2EFE8` · ink `#1A1A18` · ink-soft `#3D3D38` · sage `#7A9E7E` ·
 sage-light `#B8D0BB` · sage-wash `#EAF0EB` · warm-white `#FAFAF7` ·
 rule `rgba(26,26,24,.12)`. Playfair Display (serif) + DM Sans (sans).
+**Centered content blocks:** slides whose content is narrower than the page get a
+`fitc900` or `fitc1060` class on the `slide()` cls argument — it centers the `.fit`
+block (max-width 900/1060) while text stays left-aligned inside. Applied to slides
+3, 4, 5, 6, 11, 17, 21. Full-width slides (two-col, pricing, vs-grid, pillar
+grids) and the photo-backed closing slide stay unclassed.
 **Cream-on-sage rule (Ryan, 2026-09-03):** any cream/warm-white panel sitting on a
 sage slide gets a 1px `var(--rule)` border — the fills are too close to read as a
 card without it (`.slide--sage .metric/.card` are covered globally; match this for
