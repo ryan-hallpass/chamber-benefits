@@ -107,6 +107,7 @@ border-radius:50%;background:var(--sage);opacity:.15}
 .metric-strip--four{grid-template-columns:repeat(4,1fr)}
 .metric-strip--two{grid-template-columns:repeat(2,1fr)}
 .metric{background:var(--cream);padding:28px 32px}
+.slide--sage .metric,.slide--sage .card{border:1px solid var(--rule)}
 .slide--dark .metric{background:rgba(242,239,232,.07)}
 .metric-value{font-family:var(--serif);font-size:40px;line-height:1;margin-bottom:6px}
 .slide--dark .metric-value{color:var(--sage-light)}
