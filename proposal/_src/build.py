@@ -8,6 +8,8 @@ EMAILIMG=open(os.path.join(HERE,'email.b64')).read()
 SITEIMG=open(os.path.join(HERE,'site.b64')).read()
 HIRINGIMG=open(os.path.join(HERE,'hiring.b64')).read()
 LIBIMG=open(os.path.join(HERE,'library.b64')).read()
+EAEVENTS=open(os.path.join(HERE,'eaevents.b64')).read()
+EADINE=open(os.path.join(HERE,'eadine.b64')).read()
 
 CSS = """
 :root{--cream:#F2EFE8;--ink:#1A1A18;--ink-soft:#3D3D38;--sage:#7A9E7E;--sage-light:#B8D0BB;
@@ -269,7 +271,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,10,14,16,19,21,23,25}
+DARK={4,8,10,14,16,19,22,24,26}
 print('module ready')
 
 
@@ -554,17 +556,28 @@ slide(19,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; 
 
 slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">ExploreArdmore.com isn&rsquo;t living up to<br>the reputation <em>that the brand has built.</em></h2>
-<ul class="problem-list">
+<ul class="problem-list" style="margin-top:22px">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
 <li data-reveal data-delay="3">Business photos are blurry and low-resolution &mdash; a first impression that undersells real places</li>
-<li data-reveal data-delay="4">The directory is a bare list that gives no reason to click through</li>
-<li data-reveal data-delay="5">The itineraries section &mdash; the heart of a visitor site &mdash; holds two articles</li>
+<li data-reveal data-delay="4">The directory is a bare list, and the itineraries section &mdash; the heart of a visitor site &mdash; holds two articles</li>
 </ul>
-<p class="body wide" data-reveal data-delay="6">Rebuild exploreardmore.com on the Ardmore Means More brand &mdash; fed by the content engine, the weekly events round-up and the directory work already in this program, so it stays current without anyone tending it by hand.</p>
-<p class="srcnote" data-reveal data-delay="7">Observations from exploreardmore.com, September 3, 2026.</p>''')
+<div class="two-col-tight" data-reveal data-delay="5" style="margin-top:24px">
+<div class="site-card"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="The Explore Ardmore events calendar showing the same Mahjong Mondays listing repeated on a single day"><div class="email-card-cap">The events calendar, today</div></div>
+<div class="site-card"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="A blurry low-resolution Applebee's stock photo on the Explore Ardmore dine page"><div class="email-card-cap">The dine page, today</div></div>
+</div>
+<p class="srcnote" data-reveal data-delay="6">Observations from exploreardmore.com, September 3, 2026.</p>''' % (EAEVENTS, EADINE))
+
+# 21 INITIATIVE 05b — SOLUTION (cream)
+slide(21,'',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+<h2 class="display-sm" data-reveal data-delay="1">Rebuild it on the<br><em>Ardmore Means More</em> brand.</h2>
+<ul class="init-bullets">
+<li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>
+<li data-reveal data-delay="3">Powered by the Chamber directory work we&rsquo;ve already built</li>
+<li data-reveal data-delay="4">Always current &mdash; no one has to tend it by hand</li>
+</ul>''')
 
 # 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
-slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
+slide(22,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
@@ -578,7 +591,7 @@ slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
 # 21 IMPLEMENTATION (cream)
-slide(22,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
+slide(23,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -591,7 +604,7 @@ slide(22,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 </div>''')
 
 # 22 WHY THIS HAS WORKED (three boxes, dark)
-slide(23,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
@@ -602,7 +615,7 @@ slide(23,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p
 </div>''')
 
 # 23 INVESTMENT
-slide(24,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(25,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">One program. <em>Everything connected.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
@@ -618,7 +631,7 @@ slide(24,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 24 CLOSING
-slide(25,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+slide(26,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>

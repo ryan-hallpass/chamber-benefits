@@ -82,7 +82,7 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (25 slides)
+### Current structure (26 slides)
 
 Each initiative is a dark title slide (big serif overview statement) followed by
 its detail slide(s) — initiative 02 has TWO detail slides. Detail slides
@@ -119,13 +119,15 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 17  04 PROBLEM: every job in one place headline + Vision Plan cite (cream)
 18  04 SOLUTION: bullets + working-prototype screenshot + live link (sage)
 19  T: Initiative 05 statement                                (dark)
-20  05 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (sage)
-21  What These Initiatives Will Accomplish — 6 outcome cards
+20  05 PROBLEM: audit bullets + live evidence screenshots
+    (events dupes + blurry dine page, from exploreardmore.com) (sage)
+21  05 SOLUTION: rebuild on the Ardmore Means More brand      (cream)
+22  What These Initiatives Will Accomplish — 6 outcome cards
     tied to the 2025 Economic Vision Plan                     (dark)
-22  Implementation — three phases                             (cream)
-23  Why This Has Worked ... three boxes, no body copy         (dark)
-24  Investment                                                (cream)
-25  Next Step                                                 (dark)
+23  Implementation — three phases                             (cream)
+24  Why This Has Worked ... three boxes, no body copy         (dark)
+25  Investment                                                (cream)
+26  Next Step                                                 (dark)
 
 **RESOLVED 2026-09-03:** Ryan built live examples in a separate repo
 (`ryan-hallpass/ardmore-events`): the stand-alone site at
@@ -142,7 +144,7 @@ to the `.b64` files, rebuild.
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,8,10,14,16,19,21,23,25}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,8,10,14,16,19,22,24,26}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
