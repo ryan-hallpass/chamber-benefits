@@ -239,7 +239,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,7,12,14,16}
+DARK={4,7,12,15,17}
 print('module ready')
 
 
@@ -400,6 +400,7 @@ slide(6,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Comin
 <div class="init-row" data-reveal data-delay="3"><div class="init-n">03</div><div class="init-t">Event Promotion Email Campaign</div></div>
 <div class="init-row" data-reveal data-delay="4"><div class="init-n">04</div><div class="init-t">Chamber Member Learning Library</div></div>
 <div class="init-row" data-reveal data-delay="5"><div class="init-n">05</div><div class="init-t">Employment in Ardmore Email</div></div>
+<div class="init-row" data-reveal data-delay="6"><div class="init-n">06</div><div class="init-t">Explore Ardmore, Rebuilt</div></div>
 </div>''')
 
 # 07 HOW THIS PROPOSAL IS STRUCTURED — FLYWHEEL (dark)
@@ -506,7 +507,18 @@ slide(12,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment 
 </div>''')
 
 # 14 IMPLEMENTATION
-slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
+slide(13,'',u'''<p class="eyebrow" data-reveal>06 &mdash; Explore Ardmore, Rebuilt</p>
+<h2 class="display-sm" data-reveal data-delay="1">The visitor site isn&rsquo;t earning<br>what the brand <em>has built.</em></h2>
+<ul class="problem-list">
+<li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
+<li data-reveal data-delay="3">Business photos are blurry and low-resolution &mdash; a first impression that undersells real places</li>
+<li data-reveal data-delay="4">The directory is a bare list that gives no reason to click through</li>
+<li data-reveal data-delay="5">The itineraries section &mdash; the heart of a visitor site &mdash; holds two articles</li>
+</ul>
+<p class="body wide" data-reveal data-delay="6">Rebuild exploreardmore.com on the Ardmore Means More brand &mdash; fed by the content engine, the weekly events round-up and the directory work already in this program, so it stays current without anyone tending it by hand.</p>
+<p class="srcnote" data-reveal data-delay="7">Observations from exploreardmore.com, September 3, 2026.</p>''')
+
+slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -519,7 +531,7 @@ slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 </div>''')
 
 # 14 WHY THIS HAS WORKED (three boxes, dark)
-slide(14,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+slide(15,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
@@ -530,15 +542,15 @@ slide(14,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p
 </div>''')
 
 # 15 INVESTMENT
-slide(15,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(16,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">Five initiatives. <em>One program.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
 <div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
 <ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Card Measurement &amp; Reporting</li><li>Event Promotion Email Campaign</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
-<div class="price-card" data-reveal data-delay="3"><p class="price-tier">The Program + Campaign Video</p>
-<div class="price-amount">$214,200</div><p class="price-period">$17,850 per month</p>
-<ul class="price-items"><li>All five initiatives, unchanged</li><li>Two 2&ndash;5 minute campaign videos</li></ul></div>
+<div class="price-card" data-reveal data-delay="3"><p class="price-tier">The Program + Explore Ardmore</p>
+<div class="price-amount">$233,000</div><p class="price-period">$16,600 per month, plus a one-time site rebuild</p>
+<ul class="price-items"><li>All five initiatives, unchanged</li><li>exploreardmore.com rebuilt on the Ardmore Means More brand</li><li>Kept current automatically by the program&rsquo;s content, events and directory work</li></ul></div>
 </div>
 <div class="total-bar" data-reveal data-delay="4">
 <div><span class="lbl">Agreement term</span><div class="amt" style="font-size:24px">Twelve months</div></div>
@@ -546,7 +558,7 @@ slide(15,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 16 CLOSING
-slide(16,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+slide(17,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>

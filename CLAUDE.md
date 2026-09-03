@@ -90,24 +90,25 @@ slide 10's email card is the actual newsletter screenshot extracted from it
 03  The Audience .......... "Where we stand today" — cumulative + local/outside (sage)
 04  What We've Built ...... Q1 vs Q2 small multiples          (dark)
 05  The Momentum .......... projection chart                  (sage)
-06  Proposed Initiatives for the Coming Year — numbered list
+06  Proposed Initiatives for the Coming Year — numbered list (six rows)
 07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (dark)
-08  01 Ardmore Means More Social                              (sage)
+08  01 Ardmore Means More Social — stepped pillar walk-through (sage)
 09  02 Tourism Card Measurement & Reporting
 10  03 Event Promotion Email Campaign                         (sage)
 11  04 Chamber Member Learning Library
 12  05 Employment in Ardmore Email                            (dark)
-13  Implementation — three phases                             (sage)
-14  Why This Has Worked ... three boxes, no body copy         (dark)
-15  Investment
-16  Next Step                                                 (dark)
+13  06 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (cream)
+14  Implementation — three phases                             (sage)
+15  Why This Has Worked ... three boxes, no body copy         (dark)
+16  Investment
+17  Next Step                                                 (dark)
 ```
 
 ### Rules when editing slides
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,7,12,14,16}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,7,12,15,17}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
@@ -182,6 +183,12 @@ Don't mix the two systems.
 - Real-world impact (from Al, anecdotal — no number to cite): featured businesses
   have reached out to say they saw increased attention and business after their
   features ran. OK to state qualitatively; do not attach a figure.
+- exploreardmore.com audit (Ryan, observed 2026-09-03): **16** copies of the same
+  Mahjong Mondays listing shown on one day of the events calendar; itineraries
+  section holds **2** articles; business photos blurry/low-res; bare directory.
+- **Explore Ardmore rebuild package: $233,000 total** = $199,200 program +
+  **$33,800** one-time site rebuild. The $214,200 campaign-video tier was DROPPED
+  from the deck 2026-09-03 (video option lives in the contract only).
 
 ### Dead ends — do not retry
 
