@@ -155,6 +155,18 @@ Don't mix the two systems.
 - Carter County lost roughly **a third** of manufacturing employment (Michelin wind-down)
 - Economic Vision Plan: **10.3%** increase in local business applications;
   Oklahoma committed **$1M** to entrepreneurship
+- **Pre-Hallpass baseline (from Al, received 2026-09-03):** Feb 2025 – Nov 2025
+  (9 months), ADA + ATA accounts, **Meta + LinkedIn only**: **98K** views,
+  **7K** engagements, **258** followers gained. Hallpass posting began late
+  Nov/Dec 2025. NOT apples-to-apples with Ardmore Means More totals (different
+  channel mix) — compare monthly rates and disclose the basis in a source note.
+  Monthly-rate contrast: ~10.9K views/mo then vs ~271K/mo in Q2 2026 (~25×);
+  ~29 followers/mo then vs ~2,000/mo now (~70×); ~780 engagements/mo vs ~14K/mo (~18×).
+- July 2026 (slow month, approval delays): ~2,000 new followers AND **12,300**
+  engagements (the follower figure is on slide 3; the engagement figure is spare)
+- Real-world impact (from Al, anecdotal — no number to cite): featured businesses
+  have reached out to say they saw increased attention and business after their
+  features ran. OK to state qualitatively; do not attach a figure.
 
 ### Dead ends — do not retry
 
@@ -196,7 +208,8 @@ has pricing on it. Keep it. The `hiring/` page also carries a `noindex` that sho
   Per-initiative pricing lives in the contract only.
 - If per-initiative pricing is ever wanted, the **$46,800** covering LOA sections 3–7
   needs splitting between initiatives 02 and 03. No agreed split exists — ask, don't invent.
-- **Al's pre-Hallpass baseline metrics** are still needed for a flat-line-then-spike chart.
+- ~~Al's pre-Hallpass baseline metrics~~ **RECEIVED 2026-09-03** (see Verified numbers).
+  Flat-line-then-spike chart now buildable; not yet added to a slide.
 - **ADA creative-reuse clause** — the 2025 contract barred reuse for any other client
   outright; the new draft softens it. Needs a decision.
 - A **speaker-notes companion** (one page per slide: the point, the number, the likely
