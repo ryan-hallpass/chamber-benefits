@@ -6,6 +6,7 @@ COVER=open(os.path.join(HERE,'cover.b64')).read()
 CLOSE=open(os.path.join(HERE,'close.b64')).read()
 EMAILIMG=open(os.path.join(HERE,'email.b64')).read()
 SITEIMG=open(os.path.join(HERE,'site.b64')).read()
+HIRINGIMG=open(os.path.join(HERE,'hiring.b64')).read()
 
 CSS = """
 :root{--cream:#F2EFE8;--ink:#1A1A18;--ink-soft:#3D3D38;--sage:#7A9E7E;--sage-light:#B8D0BB;
@@ -267,7 +268,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,10,14,16,18,20,22,24}
+DARK={4,8,10,14,16,19,21,23,25}
 print('module ready')
 
 
@@ -522,25 +523,30 @@ slide(16,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; 
 
 slide(17,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
-<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Job opportunities were the <strong>top issue</strong> in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is visibility.</p>
-<ul class="init-bullets" style="margin-top:24px">
-<li data-reveal data-delay="3">A weekly hiring email plus a searchable Chamber-owned job board</li>
-<li data-reveal data-delay="4">Openings collected automatically &mdash; no member posts anything</li>
-<li data-reveal data-delay="5">Surfaces which hiring businesses are not Chamber members yet</li>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="body wide" data-reveal data-delay="3">Job opportunities were the <strong>top issue</strong> in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is visibility.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
+
+# 18 INITIATIVE 04b — SOLUTION (sage)
+slide(18,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
+<div class="two-col-tight" style="align-items:start;margin-top:0">
+<div>
+<h2 class="display-sm" data-reveal data-delay="1">The solution is<br>already <em>built.</em></h2>
+<ul class="init-bullets">
+<li data-reveal data-delay="2">A weekly hiring email plus a searchable Chamber-owned job board</li>
+<li data-reveal data-delay="3">Openings collected automatically &mdash; no member posts anything</li>
+<li data-reveal data-delay="4">Surfaces which hiring businesses are not Chamber members yet</li>
 </ul>
-<div class="metric-strip">
-<div class="metric" data-reveal data-delay="6"><div class="metric-value">180+</div><div class="metric-label">Open positions found in a single week of testing</div></div>
-<div class="metric" data-reveal data-delay="6"><div class="metric-value">41</div><div class="metric-label">Employers hiring, from Mercy and Valero to Dollar General</div></div>
-<div class="metric" data-reveal data-delay="7"><div class="metric-value">Built</div><div class="metric-label">Working prototype, live and ready to demonstrate today</div></div>
+<p class="body" data-reveal data-delay="5" style="margin-top:26px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>
 </div>
-<p class="body" data-reveal data-delay="7" style="margin-top:24px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>
-<p class="srcnote" data-reveal data-delay="7">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
+<div class="site-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="The working Now Hiring in Ardmore job board prototype"><div class="email-card-cap">The working prototype</div></div>
+</div>''' % HIRINGIMG)
 
 # 14 IMPLEMENTATION
-slide(18,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(19,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s give visitors a front door as good as the Ardmore <em>we&rsquo;ve been showing them.</em></h2>''')
 
-slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">The visitor site isn&rsquo;t earning<br>what the brand <em>has built.</em></h2>
 <ul class="problem-list">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
@@ -552,7 +558,7 @@ slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 <p class="srcnote" data-reveal data-delay="7">Observations from exploreardmore.com, September 3, 2026.</p>''')
 
 # 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
-slide(20,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
+slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
@@ -566,7 +572,7 @@ slide(20,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
 # 21 IMPLEMENTATION (cream)
-slide(21,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
+slide(22,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -579,7 +585,7 @@ slide(21,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 </div>''')
 
 # 22 WHY THIS HAS WORKED (three boxes, dark)
-slide(22,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+slide(23,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
@@ -590,7 +596,7 @@ slide(22,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p
 </div>''')
 
 # 23 INVESTMENT
-slide(23,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(24,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">One program. <em>Everything connected.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
@@ -606,7 +612,7 @@ slide(23,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 24 CLOSING
-slide(24,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+slide(25,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>
