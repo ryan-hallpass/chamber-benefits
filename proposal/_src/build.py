@@ -234,7 +234,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={3,5,13,16}
+DARK={4,13,16}
 print('module ready')
 
 
@@ -353,17 +353,9 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <p class="body wide" data-reveal data-delay="6">A steady presence with modest reach &mdash; the ceiling of an organization talking about itself.</p>
 <p class="srcnote" data-reveal data-delay="7">Combined ADA + ATA accounts, Meta &amp; LinkedIn, Feb&ndash;Nov 2025. Hallpass posting began late November 2025.</p>''')
 
-# 03 WHAT WE'VE BUILT — GROWTH (dark)
-slide(3,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
-<h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<div data-reveal data-delay="3">%s</div>
-<p class="body wide" data-reveal data-delay="4">Not a spike from one lucky video. Views, engagement and audience growth all moved together, quarter over quarter, which is what sustained momentum looks like rather than a fluke.</p>
-<p class="srcnote" data-reveal data-delay="5">Ardmore Means More channels, Q1 vs Q2 2026.</p>''' % CHART_GROWTH)
-
-# 05 CUMULATIVE + REACH
-slide(4,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
-<h2 class="display-sm" data-reveal data-delay="1">1.4 million views &mdash; and most<br>of them <em>aren&rsquo;t from here.</em></h2>
+# 03 WHERE WE STAND TODAY — CUMULATIVE + REACH (sage)
+slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
+<h2 class="display-sm" data-reveal data-delay="1">Where we stand <em>today.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="metric-strip" style="margin-top:28px">
 <div class="metric" data-reveal data-delay="3"><div class="metric-value">1.4M</div><div class="metric-label">Cumulative organic video views to date</div></div>
@@ -373,8 +365,16 @@ slide(4,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <div data-reveal data-delay="6">%s</div>
 <p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
 
-# 05 MOMENTUM (dark)
-slide(5,'slide--dark',u'''<p class="eyebrow" data-reveal>The Momentum</p>
+# 04 WHAT WE'VE BUILT — GROWTH (dark)
+slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
+<h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<div data-reveal data-delay="3">%s</div>
+<p class="body wide" data-reveal data-delay="4">Not a spike from one lucky video. Views, engagement and audience growth all moved together, quarter over quarter, which is what sustained momentum looks like rather than a fluke.</p>
+<p class="srcnote" data-reveal data-delay="5">Ardmore Means More channels, Q1 vs Q2 2026.</p>''' % CHART_GROWTH)
+
+# 05 MOMENTUM (sage)
+slide(5,'slide--sage',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 <h2 class="display-sm" data-reveal data-delay="1">Hold this pace and the audience<br><em>triples</em> in twelve months.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div data-reveal data-delay="3">%s</div>
