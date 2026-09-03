@@ -360,7 +360,7 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 
 # 03 WHERE WE STAND TODAY — CUMULATIVE + REACH (sage)
 slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
-<h2 class="display-sm" data-reveal data-delay="1">Where we stand <em>today.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">Where we stand <em>one year later.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="metric-strip" style="margin-top:28px">
 <div class="metric" data-reveal data-delay="3"><div class="metric-value">1.4M</div><div class="metric-label">Cumulative organic video views to date</div></div>
