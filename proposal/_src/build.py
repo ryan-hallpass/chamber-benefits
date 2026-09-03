@@ -234,7 +234,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={2,4,12,15}
+DARK={3,5,13,16}
 print('module ready')
 
 
@@ -341,22 +341,28 @@ FLY = '''<svg class="flywheel" viewBox="0 -38 720 481" role="img"
 </svg>'''
 
 
-# 03 WHAT WE'VE BUILT — GROWTH (dark)
-slide(2,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
-<h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
-<div class="rule" data-reveal data-delay="2" style="margin:18px 0"></div>
-<div class="baseline-strip" data-reveal data-delay="3" style="margin-top:16px;max-width:1010px">
-<span class="bl-label">The nine months before this work<br>Feb &ndash; Nov 2025</span>
-<span class="bl-stat"><b>98K</b> views</span>
-<span class="bl-stat"><b>7K</b> engagements</span>
-<span class="bl-stat"><b>258</b> followers gained</span>
+# 02 THE STARTING POINT (cream)
+slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
+<h2 class="display-sm" data-reveal data-delay="1">The nine months<br><em>before this work.</em></h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<div class="metric-strip">
+<div class="metric" data-reveal data-delay="3"><div class="metric-value">98K</div><div class="metric-label">Total video views, February through November 2025</div></div>
+<div class="metric" data-reveal data-delay="4"><div class="metric-value">7K</div><div class="metric-label">Total engagements across both organizations</div></div>
+<div class="metric" data-reveal data-delay="5"><div class="metric-value">258</div><div class="metric-label">Followers gained in nine months</div></div>
 </div>
-<div data-reveal data-delay="4">%s</div>
-<p class="body wide" data-reveal data-delay="5">Not a spike from one lucky video. Views, engagement and audience growth all moved together, quarter over quarter, which is what sustained momentum looks like rather than a fluke.</p>
-<p class="srcnote" data-reveal data-delay="6">Ardmore Means More channels, Q1 vs Q2 2026. Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn, Feb&ndash;Nov 2025; regular posting began late November 2025.</p>''' % CHART_GROWTH)
+<p class="body wide" data-reveal data-delay="6">A steady presence with modest reach &mdash; the ceiling of an organization talking about itself.</p>
+<p class="srcnote" data-reveal data-delay="7">Combined ADA + ATA accounts, Meta &amp; LinkedIn, Feb&ndash;Nov 2025. Hallpass posting began late November 2025.</p>''')
 
-# 04 CUMULATIVE + REACH
-slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
+# 03 WHAT WE'VE BUILT — GROWTH (dark)
+slide(3,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
+<h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<div data-reveal data-delay="3">%s</div>
+<p class="body wide" data-reveal data-delay="4">Not a spike from one lucky video. Views, engagement and audience growth all moved together, quarter over quarter, which is what sustained momentum looks like rather than a fluke.</p>
+<p class="srcnote" data-reveal data-delay="5">Ardmore Means More channels, Q1 vs Q2 2026.</p>''' % CHART_GROWTH)
+
+# 05 CUMULATIVE + REACH
+slide(4,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <h2 class="display-sm" data-reveal data-delay="1">1.4 million views &mdash; and most<br>of them <em>aren&rsquo;t from here.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="metric-strip" style="margin-top:28px">
@@ -367,8 +373,8 @@ slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <div data-reveal data-delay="6">%s</div>
 <p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
 
-# 04 MOMENTUM (dark)
-slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>The Momentum</p>
+# 05 MOMENTUM (dark)
+slide(5,'slide--dark',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 <h2 class="display-sm" data-reveal data-delay="1">Hold this pace and the audience<br><em>triples</em> in twelve months.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div data-reveal data-delay="3">%s</div>
@@ -379,8 +385,8 @@ slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 </div>
 <p class="srcnote" data-reveal data-delay="7">Projection assumes the Q2 pace holds. Directional, not guaranteed.</p>''' % CHART_PROJ)
 
-# 05 WHY IT WORKS (three boxes)
-slide(5,'',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+# 06 WHY IT WORKS (three boxes)
+slide(6,'',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
@@ -393,12 +399,12 @@ slide(5,'',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 
 print('1-6 staged')
 
-slide(6,'slide--sage',u'''<p class="eyebrow" data-reveal>How This Proposal Is Structured</p>
+slide(7,'slide--sage',u'''<p class="eyebrow" data-reveal>How This Proposal Is Structured</p>
 <h2 class="display-sm" data-reveal data-delay="1">Three distinct organizations.<br>The actions of one <em>benefit all.</em></h2>
 <div class="fly-wrap" data-reveal data-delay="2">%s</div>''' % FLY)
 
-# 07 PROPOSED INITIATIVES
-slide(7,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
+# 08 PROPOSED INITIATIVES
+slide(8,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
 <div class="init-list">
 <div class="init-row" data-reveal data-delay="1"><div class="init-n">01</div><div class="init-t">Ardmore Means More Social</div></div>
 <div class="init-row" data-reveal data-delay="2"><div class="init-n">02</div><div class="init-t">Tourism Card Measurement &amp; Reporting</div></div>
@@ -407,8 +413,8 @@ slide(7,'',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Comin
 <div class="init-row" data-reveal data-delay="5"><div class="init-n">05</div><div class="init-t">Employment in Ardmore Email</div></div>
 </div>''')
 
-# 08 INITIATIVE 01
-slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
+# 09 INITIATIVE 01
+slide(9,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
 <h2 class="display-sm" data-reveal data-delay="1">Continue to grow our reach on<br><em>Ardmore Means More</em> social media.</h2>
 <p class="body wide" data-reveal data-delay="2" style="margin-top:26px">The business and organization features keep running. Layered on top, the next phase of content:</p>
 <div class="pillar-grid" data-reveal data-delay="3">
@@ -422,8 +428,8 @@ slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Mean
 <div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work &mdash; keeping the outsider perspective that made this succeed</div>
 </div>''')
 
-# 09 INITIATIVE 02
-slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
+# 10 INITIATIVE 02
+slide(10,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Turn the tourism card into<br>a channel we can <em>measure.</em></h2>
@@ -458,8 +464,8 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measuremen
 </div>
 </div>''')
 
-# 10 INITIATIVE 03
-slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
+# 11 INITIATIVE 03
+slide(11,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
@@ -474,8 +480,8 @@ slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promo
 <div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">What a send looks like</div></div>
 </div>''' % EMAILIMG)
 
-# 11 INITIATIVE 04
-slide(11,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
+# 12 INITIATIVE 04
+slide(12,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
 <p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Members see tremendous individual benefit from a short list of basics. The library teaches the 20% of digital marketing that drives 80% of the results &mdash; the 80/20 rule, applied business by business:</p>
 <div class="pillar-grid" data-reveal data-delay="3" style="grid-template-columns:repeat(3,1fr);max-width:860px">
@@ -491,8 +497,8 @@ slide(11,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learnin
 <li data-reveal data-delay="5">Re-scored quarterly, so improvement is visible and reportable</li>
 </ul>''')
 
-# 12 INITIATIVE 05
-slide(12,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment in Ardmore Email</p>
+# 13 INITIATIVE 05
+slide(13,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">A weekly hiring email plus a searchable Chamber-owned job board</li>
@@ -505,8 +511,8 @@ slide(12,'slide--dark',u'''<p class="eyebrow" data-reveal>05 &mdash; Employment 
 <div class="metric" data-reveal data-delay="7"><div class="metric-value">Built</div><div class="metric-label">Working prototype, live and ready to demonstrate today</div></div>
 </div>''')
 
-# 13 IMPLEMENTATION
-slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
+# 14 IMPLEMENTATION
+slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -518,8 +524,8 @@ slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <div><div class="phase-title">Growth &amp; optimization</div><p class="phase-body">Shoots two and three. Monthly reporting and optimization. Quarterly library additions and scorecard re-runs. Weekly hiring collection. Per-business engagement data delivered into the Annual Visibility Report and the Chamber rollup.</p></div></div>
 </div>''')
 
-# 14 INVESTMENT
-slide(14,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+# 15 INVESTMENT
+slide(15,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">Five initiatives. <em>One program.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
@@ -534,8 +540,8 @@ slide(14,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <div class="sub">October 1, 2026 through September 30, 2027</div></div>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
-# 15 CLOSING
-slide(15,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+# 16 CLOSING
+slide(16,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>

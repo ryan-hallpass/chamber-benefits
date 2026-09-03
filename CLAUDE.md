@@ -82,31 +82,32 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (15 slides)
+### Current structure (16 slides)
 
 ```
 01  Cover — "People are already watching Ardmore. Let's keep building momentum."
-02  What We've Built ...... Q1 vs Q2 small multiples          (dark)
-03  The Audience .......... cumulative views + local/outside  (sage)
-04  The Momentum .......... projection chart                  (dark)
-05  Why This Has Worked ... three boxes, no body copy
-06  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
-07  Proposed Initiatives for the Coming Year — numbered list
-08  01 Ardmore Means More Social                              (sage)
-09  02 Tourism Card Measurement & Reporting
-10  03 Event Promotion Email Campaign                         (sage)
-11  04 Chamber Member Learning Library
-12  05 Employment in Ardmore Email                            (dark)
-13  Implementation — three phases                             (sage)
-14  Investment
-15  Next Step                                                 (dark)
+02  The Starting Point .... pre-Hallpass baseline metric strip (cream)
+03  What We've Built ...... Q1 vs Q2 small multiples          (dark)
+04  The Audience .......... cumulative views + local/outside  (sage)
+05  The Momentum .......... projection chart                  (dark)
+06  Why This Has Worked ... three boxes, no body copy
+07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
+08  Proposed Initiatives for the Coming Year — numbered list
+09  01 Ardmore Means More Social                              (sage)
+10  02 Tourism Card Measurement & Reporting
+11  03 Event Promotion Email Campaign                         (sage)
+12  04 Chamber Member Learning Library
+13  05 Employment in Ardmore Email                            (dark)
+14  Implementation — three phases                             (sage)
+15  Investment
+16  Next Step                                                 (dark)
 ```
 
 ### Rules when editing slides
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={2,4,12,15}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={3,5,13,16}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
@@ -219,10 +220,9 @@ has pricing on it. Keep it. The `hiring/` page also carries a `noindex` that sho
 - If per-initiative pricing is ever wanted, the **$46,800** covering LOA sections 3–7
   needs splitting between initiatives 02 and 03. No agreed split exists — ask, don't invent.
 - ~~Al's pre-Hallpass baseline metrics~~ **RECEIVED + SHIPPED 2026-09-03** (see Verified
-  numbers). Rendered as a dashed "nine months before this work" baseline strip on slide 02
-  (not a chart), with the channel-mix caveat in the source note. Slide 03 gained the
-  real-world-impact sentence; slide 08 replaced its bullets with an 8-item content-pillar
-  grid from Al's list (`.pillar-grid`).
+  numbers). Now its own slide 02 "The Starting Point" (cream, metric strip), with the
+  channel-mix caveat in the source note. Slide 04 has the real-world-impact sentence;
+  slide 09 has the 8-item content-pillar grid from Al's list (`.pillar-grid`).
 - **ADA creative-reuse clause** — the 2025 contract barred reuse for any other client
   outright; the new draft softens it. Needs a decision.
 - A **speaker-notes companion** (one page per slide: the point, the number, the likely
