@@ -183,14 +183,14 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">Ardmore Chamber of Commerce</p>
-    <h1>Every job open in Ardmore, <em>in one place</em>.</h1>
-    <p class="lede">We collect openings from Ardmore-area employers every week so you don't have to check twenty different sites. Updated every Tuesday.</p>
-    <p class="updated">Last updated Tuesday, August 25, 2026</p>
+    <h1>Ardmore jobs, <em>in one place</em>.</h1>
+    <p class="lede">We collect verified openings from Ardmore-area employers every week so you don't have to check twenty different sites.</p>
+    <p class="updated">Last updated Friday, September 4, 2026</p>
     <div class="stats">
-      <div class="stat"><div class="n">180+</div><div class="l">Open positions</div></div>
-      <div class="stat"><div class="n">41</div><div class="l">Employers hiring</div></div>
-      <div class="stat"><div class="n">23</div><div class="l">Posted this week</div></div>
-      <div class="stat"><div class="n">14</div><div class="l">List a wage</div></div>
+      <div class="stat"><div class="n" id="openCount">—</div><div class="l">Open positions</div></div>
+      <div class="stat"><div class="n" id="employerCount">—</div><div class="l">Employers hiring</div></div>
+      <div class="stat"><div class="n" id="newCount">—</div><div class="l">Posted this week</div></div>
+      <div class="stat"><div class="n" id="payCount">—</div><div class="l">List a wage</div></div>
     </div>
   </div>
 </section>
@@ -242,7 +242,7 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
       <div class="about-card"><h3>Free to browse, free to post</h3><p>No account, no login, no fee. Chamber members can have openings featured at no cost.</p></div>
       <div class="about-card"><h3>★ marks a Chamber member</h3><p>Businesses that invest in the Ardmore Chamber are marked so you can see who's backing the local business community.</p></div>
     </div>
-    <p style="font-size:.82rem;color:var(--ink-3);margin-top:22px">Preview build: this page carries the listings verified on 25 August 2026. The live feed carries all current openings.</p>
+    <p style="font-size:.82rem;color:var(--ink-3);margin-top:22px">Preview build: these listings were verified against public employer career pages on 3–4 September 2026. Openings can close without notice.</p>
   </div>
 </section>
 
@@ -263,56 +263,234 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
 </footer>
 
 <script>
+const NEW_SINCE="2026-08-29";
+const shortDate=iso=>iso?new Date(iso+"T12:00:00Z").toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:"UTC"}):undefined;
+const jobs=(rows,d)=>rows.map(([t,id,type,posted,pay,detail,cat])=>({
+  t,e:d.e,m:d.m,c:cat||d.c,type:type||undefined,posted:shortDate(posted),
+  new:posted&&posted>=NEW_SINCE?1:undefined,pay:pay||undefined,
+  req:detail||(d.req&&id?d.req+id:undefined),u:d.base+(id||"")
+}));
+
 const JOBS = [
- {t:"Dentist",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$150,000–$180,000/yr",type:"Full time",posted:"Aug 24",new:1,u:"https://buildinghealthypeople.apscareerportal.com/jobs/3562868"},
- {t:"Family Medicine Physician",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$325,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3315699"},
- {t:"Extended Hours Family Medicine Physician",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$325,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3315758"},
- {t:"Medical Director",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$350,000/yr",type:"Full time",posted:"May 5",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3393847"},
- {t:"Pediatrician",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$250,000–$300,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/2908336"},
- {t:"Family Practice Nurse Practitioner",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$115,000–$145,000/yr",type:"Full time",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3315741"},
- {t:"Licensed Practical Nurse (LPN)",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$17–$28/hr",type:"Full time",posted:"Jul 31",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3278366"},
- {t:"Dental Patient Financial Specialist",e:"Good Shepherd Community Clinic",m:1,c:"health",pay:"$17–$28/hr",type:"Full time",posted:"Aug 11",u:"https://buildinghealthypeople.apscareerportal.com/jobs/3541263"},
- {t:"Registered Nurse — Emergency Department, Nights",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR260227",u:"https://careers.mercy.net/jobs/JR260227"},
- {t:"Registered Nurse — Med/Surg, 2nd Floor, Nights",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR260816",u:"https://careers.mercy.net/jobs/JR260816"},
- {t:"Surgical Technologist II",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR263290",u:"https://careers.mercy.net/jobs/JR263290"},
- {t:"Physical Therapy Assistant",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR260276",u:"https://careers.mercy.net/jobs/JR260276"},
- {t:"Advanced Certified Medical Assistant",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR261847",u:"https://careers.mercy.net/jobs/JR261847"},
- {t:"Patient Services Representative — Breast Surgery Clinic",e:"Mercy Hospital Ardmore",m:1,c:"health",type:"Full time",req:"JR265140",u:"https://careers.mercy.net/jobs/JR265140"},
- {t:"Counselor I/II — Adults",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Ardmore Clinic",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs/211198"},
- {t:"Crisis Intervention Specialist",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Partial remote",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs"},
- {t:"School Based Behavioral Health Coach II",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Ardmore Clinic",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs"},
- {t:"Care Coordinator — Adult",e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",type:"Ardmore Clinic",u:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs"},
- {t:"New Graduate Registered Nurse (RN)",e:"Fresenius Medical Care",m:0,c:"health",posted:"Aug 20",new:1,u:"#"},
- {t:"Staff Project Engineer",e:"Valero Ardmore Refinery",m:1,c:"trades",posted:"Aug 22",new:1,req:"26001BT",u:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job=26001BT"},
- {t:"Senior Reliability Engineer",e:"Valero Ardmore Refinery",m:1,c:"trades",posted:"Aug 21",new:1,req:"26001BS",u:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job=26001BS"},
- {t:"Senior Electrical Engineer",e:"Valero Ardmore Refinery",m:1,c:"trades",req:"26001A5",u:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job=26001A5"},
- {t:"Maintenance Supervisor — 3rd Shift",e:"EJ Ardmore Foundry",m:1,c:"trades",posted:"Aug 20",new:1,req:"2349",u:"https://myjobs.adp.com/externalej/"},
- {t:"Product Health Technician",e:"Warren Power & Machinery",m:1,c:"trades",posted:"Aug 19",new:1,u:"#"},
- {t:"Class A CDL Truck Driver — Fresh",e:"Dollar General Distribution Center",m:1,c:"logistics",type:"Full time",req:"225313",u:"https://careers.dollargeneral.com/jobs/225313"},
- {t:"General Warehouse Worker — Perishable DC",e:"Dollar General Distribution Center",m:1,c:"logistics",type:"Full time",req:"220615",u:"https://careers.dollargeneral.com/jobs/220615"},
- {t:"HR Assistant — Distribution Center",e:"Dollar General Distribution Center",m:1,c:"logistics",type:"Full time",req:"366078",u:"https://careers.dollargeneral.com/jobs/366078"},
- {t:"Garage Technician Level II",e:"Dot Foods",m:0,c:"logistics",posted:"Aug 21",new:1,u:"https://careers.dotfoods.com/jobs/623747874-garage-technician-level-ii"},
- {t:"Warehouse Worker",e:"Dot Foods",m:0,c:"logistics",posted:"Jul 26",u:"https://careers.dotfoods.com/jobs/127272838-warehouse-worker"},
- {t:"Parcel Handler",e:"Dot Foods",m:0,c:"logistics",type:"Full time",u:"https://careers.dotfoods.com/jobs/582322468-parcel-handler"},
- {t:"Truck Driver",e:"Dot Foods",m:0,c:"logistics",u:"https://careers.dotfoods.com/jobs/127280666-truck-driver"},
- {t:"Truck Driver Student",e:"Dot Foods",m:0,c:"logistics",u:"https://careers.dotfoods.com/jobs/127280649-truck-driver-student"},
- {t:"Truck Driver",e:"Roehl Transport",m:0,c:"logistics",posted:"Aug 24",new:1,u:"#"},
- {t:"Elementary Classroom Teacher (FY27)",e:"Ardmore City Schools",m:1,c:"education",type:"OK certification required",req:"JobID 295",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
- {t:"Early Childhood Teacher",e:"Ardmore City Schools",m:1,c:"education",type:"Will Rogers Elementary",req:"JobID 313",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
- {t:"Paraprofessional",e:"Ardmore City Schools",m:1,c:"education",type:"Support staff",req:"JobID 294",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
- {t:"Secretary",e:"Ardmore City Schools",m:1,c:"education",posted:"Jul 30",req:"JobID 325",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
- {t:"Cook / Cashier",e:"Ardmore City Schools",m:1,c:"education",type:"Child Nutrition",req:"JobID 180",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
- {t:"ESL Tutor",e:"Ardmore City Schools",m:1,c:"education",req:"JobID 249",u:"https://www.applitrack.com/ardmoreschools/onlineapp/"},
- {t:"Bus Drivers",e:"Plainview Public Schools",m:1,c:"education",type:"Training available",u:"https://www.plainview.k12.ok.us/employment"},
- {t:"Encumbrance Clerk",e:"Plainview Public Schools",m:1,c:"education",posted:"Aug 11",new:1,u:"https://www.plainview.k12.ok.us/employment"},
- {t:"Special Education Para-Professional",e:"Plainview Public Schools",m:1,c:"education",u:"https://www.plainview.k12.ok.us/employment"},
- {t:"Custodians",e:"Plainview Public Schools",m:1,c:"education",u:"https://www.plainview.k12.ok.us/employment"},
- {t:"Maintenance Assistant",e:"Plainview Public Schools",m:1,c:"education",u:"https://www.plainview.k12.ok.us/employment"},
- {t:"Clerk / Deputy",e:"Carter County Court Clerk's Office",m:0,c:"education",type:"Apply by Oct 1",new:1,u:"https://www.cartercountyok.us/job_openings/index.php"},
- {t:"Retail Stocking Associate",e:"Burlington",m:0,c:"retail",type:"Part time",posted:"Aug 23",new:1,u:"#"},
- {t:"Merchandising Assistant Manager",e:"Dollar Tree",m:0,c:"retail",posted:"Aug 21",new:1,u:"#"},
- {t:"Photo Specialist",e:"Walgreens",m:0,c:"retail",posted:"Aug 20",new:1,u:"#"}
+ ...jobs([
+  ["Dental Patient Financial Specialist","3541263","Full time","2026-08-11","$17–$28/hr"],
+  ["Dentist","3562868","Full time","2026-08-24","$150,000–$180,000/yr"],
+  ["Family Medicine Physician","3315699","Full time","2026-03-16","$250,000–$325,000/yr"],
+  ["Family Practice Nurse Practitioner","3315741","Full time","2026-03-16","$115,000–$145,000/yr"],
+  ["Family Practice Physician Associate","3315757","Full time","2026-03-16","$115,000–$145,000/yr"],
+  ["Licensed Practical Nurse — Extended Care Clinic","3523991","Full time","2026-07-31","$17–$28/hr"],
+  ["Licensed Practical Nurse (LPN)","3278366","Full time","2026-02-17","$17–$28/hr"],
+  ["Medical Director","3393847","Full time","2026-05-05","$250,000–$350,000/yr"],
+  ["Pediatrician","2908336","Full time","2025-04-01","$250,000–$300,000/yr"],
+  ["Registered / Certified Medical Assistant","3115265","Full time","2025-09-23","$15–$21/hr"],
+  ["Staff Accountant","3526661","Full time","2026-08-03"]
+ ],{e:"Good Shepherd Community Clinic",m:1,c:"health",base:"https://buildinghealthypeople.apscareerportal.com/jobs/"}),
+
+ ...jobs([
+  ["$200,000 Loan Repayment — Primary Care","JR258360","Full time","2026-07-31"],
+  ["Medical Assistant","JR265564","Full time","2026-08-11"],
+  ["Advanced Certified Medical Assistant","JR261847","Full time","2026-08-04"],
+  ["Physical Therapy Assistant","JR260276","Full time","2026-07-07"],
+  ["Registered Nurse — GIG ICU/IMC PRN","JR264388","Part time / PRN","2026-08-10"],
+  ["Registered Nurse — Emergency Department, Nights","JR260227","Full time","2026-07-09"],
+  ["Registered Nurse — Med/Surg 2nd Floor, Nights","JR260816","Full time","2026-08-17"],
+  ["Surgical Technologist II","JR263290","Full time","2026-07-24"],
+  ["Registered Respiratory Therapist","JR254327","Part time / PRN","2026-06-30"],
+  ["Environmental Services Technician","JR260397","Part time / PRN","2026-07-16"],
+  ["Manager — Supply Chain","JR259189","Full time","2026-06-30"],
+  ["Registered Nurse — Senior Behavioral Health","JR252199","Part time / PRN","2026-07-22"],
+  ["Advanced Radiologic Technologist","JR258607","Part time / PRN","2026-06-30"],
+  ["Physical Therapist — Weekend","JR254347","Part time / PRN","2026-06-30"],
+  ["Nurse Practitioner or Physician Assistant — Gastroenterology","JR233137","Full time","2026-07-29"],
+  ["Physical Therapist — Weekend","JR262182","Part time / PRN","2026-07-16"],
+  ["X-Ray, CT, MRI — GIG / Flex / PRN","JR231797","Part time / PRN","2026-07-14"],
+  ["CT Technologist — Monday–Thursday Nights","JR244207","Full time","2026-06-30"],
+  ["Clinical Pharmacy Coordinator","JR265318","Full time","2026-08-11"],
+  ["Certified Occupational Therapy Assistant","JR251108","Part time / PRN","2026-06-30"],
+  ["Registered Nurse — Float Pool","JR265516","Full time","2026-08-31"],
+  ["Registered Nurse — Weekend Med/Surg Nights","JR261279","Full time","2026-07-08"],
+  ["Speech Therapist","JR264843","Part time / PRN","2026-08-04"],
+  ["Clinical Pharmacist — Hospital","JR260163","Part time / PRN","2026-07-07"],
+  ["Respiratory Care Coordinator","JR265996","Full time","2026-08-18"],
+  ["CV Sonographer","JR245123","Full time","2026-06-30"],
+  ["Registered Respiratory Therapist","JR255277","Full time","2026-06-30"],
+  ["Nurse Manager — Dialysis and Float Pool","JR256486","Full time","2026-07-08"],
+  ["Physical Therapist — Outpatient","JR251325","Full time","2026-07-24"],
+  ["Physical Therapist — Outpatient Therapy","JR262658","Full time","2026-07-24"],
+  ["Social Worker II — Inpatient Care Management","JR262852","Full time","2026-07-21"],
+  ["Environmental Services Technician","JR267330","Full time","2026-09-02"],
+  ["CV Sonographer","JR252740","Part time / PRN","2026-06-30"],
+  ["Patient Care Associate — Med/Surg Nights","JR255195","Full time","2026-09-03"],
+  ["Occupational Therapist — Inpatient Rehab","JR245452","Full time","2026-08-20"],
+  ["Registered Nurse — ICU/IMC Nights","JR263074","Full time","2026-08-11"],
+  ["Physician Assistant or Nurse Practitioner — Emergency Medicine","JR233500","Full time","2026-08-05"],
+  ["Registered Respiratory Therapist — Weekend","JR266706","Full time","2026-09-02"],
+  ["Physical Therapist","JR254082","Part time / PRN","2026-06-30"],
+  ["Social Worker II — Acute Adult Geriatric Psychiatry","JR262050","Full time","2026-07-21"],
+  ["CT Technologist — Weekend Program","JR260232","Full time","2026-07-01"],
+  ["CT Technologist — Weekend Program, Days","JR260231","Full time","2026-07-31"],
+  ["Clinical Pharmacist — Retail","JR257528","Part time / PRN","2026-06-30"],
+  ["Physician — Emergency Medicine","JR231408","Full time","2026-08-28"],
+  ["Patient Access Representative","JR261405","Full time","2026-09-03"],
+  ["Physical Therapy Assistant","JR262042","Part time / PRN","2026-07-16"],
+  ["Physical Therapist — Outpatient Therapy","JR251318","Full time","2026-06-30"],
+  ["Nuclear Medicine Technologist — GIG / Flex / PRN","JR231781","Part time / PRN","2026-07-14"],
+  ["Advanced Radiology Intern","JR258438","Part time / PRN","2026-07-01"],
+  ["Registered Nurse — Med/Surg Nights","JR261285","Full time","2026-07-10"],
+  ["Chief Nursing Officer","JR261073","Full time","2026-07-20"],
+  ["Physician Assistant or Nurse Practitioner — Emergency Medicine","JR239794","Part time / PRN","2026-07-28"],
+  ["Certified Occupational Therapy Assistant","JR258847","Part time / PRN","2026-07-07"],
+  ["Medical Assistant — Cancer Center Infusion Services","JR263951","Full time","2026-08-19"],
+  ["Ultrasound Technologist — GIG / Flex / PRN","JR231789","Part time / PRN","2026-07-14"],
+  ["Respiratory Therapist — GIG / Flex / PRN","JR252308","Part time / PRN","2026-07-08"],
+  ["Lab Support Technician III","JR265708","Full time","2026-08-24"],
+  ["Radiologic Technologist — Ortho Spine Clinic","JR263552","Full time","2026-08-31"],
+  ["Physical Therapy Assistant","JR254116","Part time / PRN","2026-06-30"],
+  ["Advanced Radiologic Technologist","JR264354","Full time","2026-08-17"],
+  ["Social Worker I — Inpatient Care Management","JR260553","Full time","2026-07-17"],
+  ["Polysomnographic Technician","JR265681","Full time","2026-08-24"],
+  ["Clinical Pharmacist — Hospital, 7 On / 7 Off","JR260510","Full time","2026-08-03"]
+ ],{e:"Mercy",m:1,c:"health",base:"https://careers.mercy.net/jobs/",req:"Req. "}),
+
+ ...jobs([
+  ["Revenue Cycle Specialist","215688","Ardmore"],
+  ["Crisis Intervention Specialist — 11 p.m.–7 a.m. Rotation","215523","Remote / Ardmore"],
+  ["Crisis Intervention Specialist — 3–11 p.m. Rotation","215463","Remote / Ardmore"],
+  ["Crisis Intervention Specialist — 7 a.m.–3 p.m. Rotation","215423","Remote / Ardmore"],
+  ["Performance Improvement Specialist — Crisis","214555","Ardmore"],
+  ["Peer Recovery Support Specialist — 7 p.m.–7 a.m.","214849","Ardmore"],
+  ["Care Coordinator — Float, Crisis Stabilization Unit","214531","Ardmore"],
+  ["Graphic Designer","214308","Full time"],
+  ["Marketing Coordinator","214280","Ardmore"],
+  ["Human Resources Payroll Coordinator","214132","Full time"],
+  ["Care Coordinator — REACH","214002","Ardmore"],
+  ["Manager of Continuous Quality Improvement","213963","Ardmore"],
+  ["Psych Tech — 8 p.m.–8 a.m. Rotation","213495","Ardmore"],
+  ["Benefit and Leave Management Coordinator","211382","Ardmore"],
+  ["Counselor I/II — Adults","211198","Ardmore","","$78,332–$91,228/yr"],
+  ["School Based Behavioral Health Coach II","210221","Ardmore"],
+  ["Coverage Care Coordinator","210087","Ardmore"],
+  ["Crisis Intervention Specialist — Friday–Wednesday","206679","Remote / Ardmore"]
+ ],{e:"Lighthouse Behavioral Wellness Centers",m:1,c:"health",base:"https://www.paycomonline.net/v4/ats/web.php/portal/5DF361FEC8F01C5FCC99125349DFC1E3/jobs/",req:"Job "}),
+
+ ...jobs([
+  ["New Graduate Registered Nurse (RN)","new-graduate-registered-nurse-rn/job/914F775978CAD9A88ED9000CF18D3B02","Ardmore clinic"],
+ ],{e:"Fresenius Medical Care",m:0,c:"health",base:"https://jobs.freseniusmedicalcare.com/"}),
+
+ ...jobs([
+  ["Staff Project Engineer","26001BT","Full time","2026-08-22","","26001BT"],
+  ["Senior Reliability Engineer","26001BS","Full time","2026-08-21","","26001BS"],
+  ["Senior Electrical Engineer","26001A5","Full time","","","26001A5"]
+ ],{e:"Valero Ardmore Refinery",m:1,c:"trades",base:"https://valero.taleo.net/careersection/2/jobdetail.ftl?job="}),
+
+ ...jobs([
+  ["Maintenance Supervisor — 3rd Shift","","Full time","2026-08-20","","Req. 2349"]
+ ],{e:"EJ Ardmore Foundry",m:1,c:"trades",base:"https://myjobs.adp.com/externalej/"}),
+ ...jobs([
+  ["Product Health Technician","","Full time","2026-09-03"]
+ ],{e:"Warren CAT",m:1,c:"trades",base:"https://www.warrencat.com/careers/"}),
+
+ ...jobs([
+  ["Sales Associate","123672","Part time","","","Store 02223","retail"],
+  ["Lead Sales Associate","123676","Part time","","","Store 02223","retail"],
+  ["Assistant Store Manager","123675","Full time","","","Store 02223","retail"],
+  ["Lead Sales Associate","106516","Full time","","","Store 02223","retail"],
+  ["Lead Sales Associate","109741","Full time","","","Store 08057","retail"],
+  ["Assistant Store Manager","88497","Full time","","","Store 08057","retail"],
+  ["Sales Associate","88496","Part time","","","Store 08057","retail"],
+  ["Lead Sales Associate","88498","Part time","","","Store 08057","retail"],
+  ["Assistant Store Manager","245482","Full time","","","Store 23533","retail"],
+  ["Lead Sales Associate","245682","Full time","","","Store 23533","retail"],
+  ["Sales Associate","245451","Part time","","","Store 23533","retail"],
+  ["Lead Sales Associate","245546","Part time","","","Store 23533","retail"],
+  ["Sales Associate","80078","Part time","","","Store 03506","retail"],
+  ["Lead Sales Associate","80080","Part time","","","Store 03506","retail"],
+  ["Assistant Store Manager","80079","Full time","","","Store 03506","retail"],
+  ["Lead Sales Associate","107297","Full time","","","Store 03506","retail"],
+  ["Sales Associate","114364","Part time","","","Store 14445","retail"],
+  ["Assistant Store Manager","114365","Full time","","","Store 14445","retail"],
+  ["Lead Sales Associate","114366","Full time","","","Store 14445","retail"],
+  ["Lead Sales Associate","114367","Part time","","","Store 14445","retail"],
+  ["Lead Sales Associate","189475","Part time","","","Store 20336","retail"],
+  ["Sales Associate","189450","Part time","","","Store 20336","retail"],
+  ["Lead Sales Associate","189458","Full time","","","Store 20336","retail"],
+  ["Assistant Store Manager","189465","Full time","","","Store 20336","retail"],
+  ["Sales Associate","359819","Part time","","","Store 31668","retail"],
+  ["Lead Sales Associate","359835","Full time","","","Store 31668","retail"],
+  ["Assistant Store Manager","359884","Full time","","","Store 31668","retail"],
+  ["Lead Sales Associate","359810","Part time","","","Store 31668","retail"],
+  ["Lead Sales Associate","248055","Part time","","","Store 23764","retail"],
+  ["Sales Associate","248054","Part time","","","Store 23764","retail"],
+  ["Assistant Store Manager","248039","Full time","","","Store 23764","retail"],
+  ["Lead Sales Associate","248030","Full time","","","Store 23764","retail"],
+  ["Store Manager","365165","Full time","2026-07-23","","Store 10979","retail"],
+  ["Assistant Store Manager","95515","Full time","","","Store 10979","retail"],
+  ["Lead Sales Associate","111650","Full time","","","Store 10979","retail"],
+  ["Sales Associate","95514","Part time","","","Store 10979","retail"],
+  ["Lead Sales Associate","95516","Part time","","","Store 10979","retail"],
+  ["HR Assistant — Distribution Center","366078","Full time","2026-08-07","","Fresh DC","logistics"],
+  ["General Warehouse Worker — Perishable Distribution Center","220615","Full time","","","Fresh DC","logistics"],
+  ["General Warehouse","64398","Full time","","","Distribution Center","logistics"],
+  ["Class A CDL Truck Driver — Fresh","225313","Full time","","","Fresh DC","logistics"],
+  ["HR Generalist — Distribution Center","358406","Full time","2026-04-02","","Distribution Center","logistics"],
+  ["Class A CDL Truck Driver","177589","Full time","","","Distribution Center","logistics"]
+ ],{e:"Dollar General",m:1,c:"retail",base:"https://careers.dollargeneral.com/jobs/",req:"Req. "}),
+
+ ...jobs([
+  ["Supply Chain Internship — Operations","656913219-supply-chain-internship-operations","Summer 2027","2026-09-01","$16–$18/hr"],
+  ["Warehouse Worker","127272838-warehouse-worker","Ardmore","2026-08-04"],
+  ["Garage Technician Level II","623747874-garage-technician-level-ii","Ardmore","2026-08-04"],
+  ["Warehouse Support","563473460-warehouse-support","Wednesday–Saturday","2026-08-04"],
+  ["Parcel Handler","582322468-parcel-handler","Ardmore","2026-08-04"],
+  ["Truck Driver Student","127280649-truck-driver-student","CDL training","","$800–$1,519/wk"],
+  ["Truck Driver","127280666-truck-driver","Full or part time","","Up to $79,000/yr"]
+ ],{e:"Dot Foods",m:0,c:"logistics",base:"https://careers.dotfoods.com/jobs/"}),
+ ...jobs([
+  ["Truck Driver","","Ardmore area"]
+ ],{e:"Roehl Transport",m:0,c:"logistics",base:"https://www.roehl.jobs/"}),
+
+ ...jobs([
+  ["504 Compliance Coordinator","318","Part time","2026-06-04"],
+  ["Cook / Cashier","180","Child Nutrition","2025-06-17"],
+  ["Early Childhood Teacher(s)","313","FY27","2026-05-20"],
+  ["Elementary Classroom Teacher","295","FY27","2026-03-23"],
+  ["Custodian(s)","202","Support staff","2025-06-17"],
+  ["Maintenance / Grounds Crew","204","Support staff","2025-06-17"],
+  ["Business Office Specialist","319","FY27","2026-06-04"],
+  ["Operations / Maintenance Secretary","325","Support staff","2026-07-30"],
+  ["Secretary","330","Support staff","2026-09-02"],
+  ["Special Education Teacher — Grades K–12","296","FY27","2026-03-23"],
+  ["Substitute","329","FY27","2026-08-25"],
+  ["Paraprofessional(s)","294","FY27","2026-03-23"],
+  ["Teacher Assistant(s)","293","FY27","2026-03-23"],
+  ["Bus Driver","195","Support staff","2025-06-17"],
+  ["Part-Time ELL Tutor","249","Part time","2026-06-11"],
+  ["Indian Education Tutor","276","Part time","2026-06-11"]
+ ],{e:"Ardmore City Schools",m:1,c:"education",base:"https://www.applitrack.com/ardmoreschools/onlineapp/default.aspx?AppliTrackLayoutMode=detail&AppliTrackViewPosting=1&AppliTrackJobId=",req:"JobID "}),
+ ...jobs([
+  ["Custodians","","Support staff","2026-06-01"],
+  ["Special Education Para-Professional","","Support staff","2026-06-01"],
+  ["Bus Driver(s)","","Training available","2026-06-01"],
+  ["Maintenance Assistant","","Support staff","2026-06-01"],
+  ["Encumbrance Clerk","","Support staff","2026-08-11"]
+ ],{e:"Plainview Public Schools",m:1,c:"education",base:"https://www.plainview.k12.ok.us/employment"}),
+ ...jobs([
+  ["Treasurer Deputy","","Apply by Sep 18","2026-09-03"]
+ ],{e:"Carter County Treasurer's Office",m:0,c:"education",base:"https://www.cartercountyok.us/job_openings/index.php"}),
+
+ ...jobs([
+  ["Retail Stocking Associate","","Part time","2026-09-03","$12.50/hr"]
+ ],{e:"Burlington",m:0,c:"retail",base:"https://www.burlington.com/careers"}),
+ ...jobs([
+  ["Photo Specialist","","Ardmore"],
+  ["Pharmacy Customer Service Associate","","Ardmore"]
+ ],{e:"Walgreens",m:0,c:"retail",base:"https://jobs.walgreens.com/en/search-jobs/Ardmore%2C%2BOK/1242-19097/4/6252001-4544379-4532398-4529469/34x17426/-97x14363/50/2"})
 ];
+
+document.getElementById('openCount').textContent=JOBS.length;
+document.getElementById('employerCount').textContent=new Set(JOBS.map(j=>j.e)).size;
+document.getElementById('newCount').textContent=JOBS.filter(j=>j.new).length;
+document.getElementById('payCount').textContent=JOBS.filter(j=>j.pay).length;
 const CATS={health:"Healthcare & Clinical",trades:"Trades & Industrial",logistics:"Logistics & Driving",education:"Schools & Public Service",retail:"Retail & Service"};
 const grid=document.getElementById('grid'),countEl=document.getElementById('count'),emptyEl=document.getElementById('empty');
 let cat='all',memOnly=false,q='';
