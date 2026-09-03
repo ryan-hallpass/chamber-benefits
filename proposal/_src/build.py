@@ -130,7 +130,7 @@ fill:var(--ink);opacity:.4;text-anchor:middle}
 .slide--dark .fw-midsub{fill:var(--cream);opacity:.55}
 .deck-link{color:var(--sage);font-weight:400;text-decoration:underline;text-underline-offset:3px}
 .slide--dark .deck-link{color:var(--sage-light)}
-.vs-grid{display:grid;grid-template-columns:170px 1fr 1fr;margin-top:34px;max-width:840px}
+.vs-grid{display:grid;grid-template-columns:150px 1fr 1fr 250px;margin-top:34px;max-width:1080px}
 .vs-head{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:0 0 12px;text-align:center}
 .vs-head:first-child{text-align:left}
 .vs-head--now{opacity:1;color:var(--sage);font-weight:500}
@@ -138,10 +138,12 @@ fill:var(--ink);opacity:.4;text-anchor:middle}
 .vs-before{font-family:var(--serif);font-size:32px;opacity:.92;padding:20px 12px;border-top:1px solid var(--rule);align-self:center;text-align:center;transition:opacity .6s ease}
 .vs-grid:has([data-step].step-on) .vs-before{opacity:.4}
 .vs-after{font-family:var(--serif);font-size:42px;padding:16px 12px;border-top:1px solid var(--rule);align-self:center;text-align:center}
-.vs-bars{grid-column:2/4;display:flex;flex-direction:column;gap:4px;padding:2px 12px 20px}
-.vs-bars span{display:block;height:5px}
+.vs-viz{border-top:1px solid var(--rule);align-self:stretch;display:flex;align-items:center;gap:16px;padding-left:32px}
+.vs-viz-bars{flex:1;display:flex;flex-direction:column;gap:4px}
+.vs-viz-bars span{display:block;height:5px}
 .vs-bar-b{background:var(--ink);opacity:.35}
 .vs-bar-a{background:var(--sage);width:100%}
+.vs-viz-x{font-family:var(--serif);font-size:19px;color:var(--sage);white-space:nowrap}
 .july-note{margin-top:26px;padding:16px 20px;background:var(--sage-wash);border-left:3px solid var(--sage);
 font-size:15px;font-weight:300;max-width:800px;line-height:1.6}
 .july-note b{font-family:var(--serif);font-weight:400;font-size:20px}
@@ -380,12 +382,13 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <div class="vs-head"></div>
 <div class="vs-head">Feb &ndash; Nov 2025 &middot; nine months</div>
 <div class="vs-head vs-head--now" data-step="1">One year later</div>
+<div class="vs-head"></div>
 <div class="vs-label">Video views</div><div class="vs-before">98K</div><div class="vs-after" data-step="1">1.4M</div>
-<div class="vs-bars" data-step="1"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div>
+<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div><span class="vs-viz-x">&asymp;14&times;</span></div>
 <div class="vs-label">Engagements</div><div class="vs-before">7K</div><div class="vs-after" data-step="1">100K</div>
-<div class="vs-bars" data-step="1"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div>
+<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div><span class="vs-viz-x">&asymp;14&times;</span></div>
 <div class="vs-label">Followers gained</div><div class="vs-before">258</div><div class="vs-after" data-step="1">~11,000</div>
-<div class="vs-bars" data-step="1"><span class="vs-bar-b" style="width:2.4%"></span><span class="vs-bar-a"></span></div>
+<div class="vs-viz" data-step="1"><div class="vs-viz-bars"><span class="vs-bar-b" style="width:2.4%"></span><span class="vs-bar-a"></span></div><span class="vs-viz-x">&asymp;43&times;</span></div>
 </div>
 <div class="july-note" data-step="2">&hellip;and <b>~2,000</b> of those new followers arrived in July alone.</div>
 <p class="srcnote" data-reveal data-delay="4">Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn; Hallpass posting began late November 2025. Current figures: Ardmore Means More channels, cumulative to date.</p>''')
