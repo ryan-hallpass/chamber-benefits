@@ -411,14 +411,14 @@ slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Mean
 <h2 class="display-sm" data-reveal data-delay="1">Continue to grow our reach on<br><em>Ardmore Means More</em> social media.</h2>
 <p class="body wide" data-reveal data-delay="2" style="margin-top:26px">The business and organization features keep running. Layered on top, the next phase of content:</p>
 <div class="pillar-grid" data-reveal data-delay="3">
-<div class="pillar"><b>Property highlights</b>Available sites, made discoverable</div>
-<div class="pillar"><b>The Michelin site</b>Told as an opportunity story</div>
-<div class="pillar"><b>Growth updates</b>CORI, Paradise Alley, PREP projects</div>
-<div class="pillar"><b>Doing-business Q&amp;As</b>Incentives, sites, infrastructure</div>
-<div class="pillar"><b>Jobs &amp; workforce</b>Employers and the people behind them</div>
-<div class="pillar"><b>Education &amp; talent</b>The pipeline behind the workforce</div>
-<div class="pillar"><b>Arts &amp; quality of life</b>The story that recruits talent</div>
-<div class="pillar"><b>A face for ADA</b>A human voice for economic development</div>
+<div class="pillar"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
+<div class="pillar"><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
+<div class="pillar"><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment &mdash; riding the buzz, not waiting for announcements</div>
+<div class="pillar"><b>Doing-business Q&amp;As</b>Common questions answered &mdash; ADA, incentives, properties, development opportunities, doing business in Ardmore</div>
+<div class="pillar"><b>Jobs &amp; workforce</b>Employers, career opportunities, workforce development and the people behind Ardmore&rsquo;s industries</div>
+<div class="pillar"><b>Education &amp; talent</b>How education and training support the next generation of Ardmore&rsquo;s workforce</div>
+<div class="pillar"><b>Arts &amp; quality of life</b>The quality-of-life story that attracts businesses &mdash; and the people those businesses need to recruit</div>
+<div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work &mdash; keeping the outsider perspective that made this succeed</div>
 </div>''')
 
 # 09 INITIATIVE 02
