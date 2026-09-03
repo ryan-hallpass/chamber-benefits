@@ -104,6 +104,7 @@ border-radius:50%;background:var(--sage);opacity:.15}
 .feature-body{font-size:13.5px;line-height:1.65;opacity:.75;margin-top:14px}
 .metric-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
 .metric-strip--four{grid-template-columns:repeat(4,1fr)}
+.metric-strip--two{grid-template-columns:repeat(2,1fr)}
 .metric{background:var(--cream);padding:28px 32px}
 .slide--dark .metric{background:rgba(242,239,232,.07)}
 .metric-value{font-family:var(--serif);font-size:40px;line-height:1;margin-bottom:6px}
@@ -385,10 +386,9 @@ slide(5,'slide--sage',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 <h2 class="display-sm" data-reveal data-delay="1">Hold this pace and the audience<br><em>triples</em> in twelve months.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div data-reveal data-delay="3">%s</div>
-<div class="metric-strip" style="margin-top:24px">
+<div class="metric-strip metric-strip--two" style="margin-top:24px">
 <div class="metric" data-reveal data-delay="4"><div class="metric-value">3.25M</div><div class="metric-label">Additional video views over the next twelve months</div></div>
 <div class="metric" data-reveal data-delay="5"><div class="metric-value">24,000</div><div class="metric-label">Additional followers at the current monthly pace</div></div>
-<div class="metric" data-reveal data-delay="6"><div class="metric-value">0</div><div class="metric-label">Of that happens if the content stops</div></div>
 </div>
 <p class="srcnote" data-reveal data-delay="7">Projection assumes the Q2 pace holds. Directional, not guaranteed.</p>''' % CHART_PROJ)
 
