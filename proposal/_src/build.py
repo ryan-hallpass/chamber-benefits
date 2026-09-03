@@ -373,7 +373,7 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <div class="vs-label">Engagements</div><div class="vs-before">7K</div><div class="vs-after" data-step="1">100K</div>
 <div class="vs-label">Followers gained</div><div class="vs-before">258</div><div class="vs-after" data-step="1">~11,000</div>
 </div>
-<div class="july-note" data-step="2">&hellip;and <b>~2,000</b> of those new followers arrived in July alone &mdash; roughly the current monthly pace.</div>
+<div class="july-note" data-step="2">&hellip;and <b>~2,000</b> of those new followers arrived in July alone.</div>
 <p class="srcnote" data-reveal data-delay="4">Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn; Hallpass posting began late November 2025. Current figures: Ardmore Means More channels, cumulative to date.</p>''')
 
 # 03 THE AUDIENCE — OUTSIDE VS LOCAL (sage)
