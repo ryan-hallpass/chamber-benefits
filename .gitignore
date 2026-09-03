@@ -19,3 +19,9 @@ brochure/package-lock.json
 brochure/shot.mjs
 brochure/_shot-*.png
 brochure/og.html
+
+# Proposal build intermediates
+proposal/_src/proposal.html
+
+# Scratch for files the sandbox cannot delete
+_to_delete/
