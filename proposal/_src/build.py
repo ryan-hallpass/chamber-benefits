@@ -126,6 +126,8 @@ text-transform:uppercase;fill:var(--ink);opacity:.55;text-anchor:middle}
 .fw-midsub{font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
 fill:var(--ink);opacity:.4;text-anchor:middle}
 .slide--dark .fw-midsub{fill:var(--cream);opacity:.55}
+.deck-link{color:var(--sage);font-weight:400;text-decoration:underline;text-underline-offset:3px}
+.slide--dark .deck-link{color:var(--sage-light)}
 .chart{display:block;width:100%;height:auto;margin-top:26px;max-width:760px}
 .chart--wide{max-width:1010px}
 .baseline-strip{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-top:26px;
@@ -516,7 +518,8 @@ slide(16,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore 
 <div class="metric" data-reveal data-delay="5"><div class="metric-value">180+</div><div class="metric-label">Open positions found in a single week of testing</div></div>
 <div class="metric" data-reveal data-delay="6"><div class="metric-value">41</div><div class="metric-label">Employers hiring, from Mercy and Valero to Dollar General</div></div>
 <div class="metric" data-reveal data-delay="7"><div class="metric-value">Built</div><div class="metric-label">Working prototype, live and ready to demonstrate today</div></div>
-</div>''')
+</div>
+<p class="body" data-reveal data-delay="7" style="margin-top:24px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>''')
 
 # 14 IMPLEMENTATION
 slide(17,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
