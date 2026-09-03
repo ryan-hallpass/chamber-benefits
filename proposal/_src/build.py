@@ -405,12 +405,14 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measuremen
 
 # 10 INITIATIVE 03
 slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
-<h2 class="display-sm" data-reveal data-delay="1">A weekly <em>What&rsquo;s Happening<br>Around Ardmore</em> email.</h2>
+<h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Events collected automatically from venues and public calendars</li>
 <li data-reveal data-delay="3">One email, segmented for residents and for visitors</li>
 <li data-reveal data-delay="4">Member events promoted alongside community events</li>
-</ul>''')
+</ul>
+<p class="body wide" data-reveal data-delay="5" style="margin-top:26px">Anchored by a stand-alone events website &mdash; every event in one place, linked from every email.</p>
+<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>''')
 
 # 11 INITIATIVE 04
 slide(11,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
