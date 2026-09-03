@@ -82,7 +82,7 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (23 slides)
+### Current structure (24 slides)
 
 Each initiative is a PAIR: a dark title slide (big serif overview statement) then
 the detail slide. Title slides are dark; detail slides alternate cream/sage.
@@ -107,17 +107,19 @@ the detail slide. Title slides are dark; detail slides alternate cream/sage.
 17  05 Employment in Ardmore Email                            (cream)
 18  T: Initiative 06 statement                                (dark)
 19  06 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (sage)
-20  Implementation — three phases                             (cream)
-21  Why This Has Worked ... three boxes, no body copy         (dark)
-22  Investment                                                (cream)
-23  Next Step                                                 (dark)
+20  What These Initiatives Will Accomplish — 6 outcome cards
+    tied to the 2025 Economic Vision Plan                     (dark)
+21  Implementation — three phases                             (cream)
+22  Why This Has Worked ... three boxes, no body copy         (dark)
+23  Investment                                                (cream)
+24  Next Step                                                 (dark)
 ```
 
 ### Rules when editing slides
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,8,10,12,14,16,18,21,23}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,8,10,12,14,16,18,20,22,24}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
