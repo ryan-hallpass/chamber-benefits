@@ -7,6 +7,7 @@ CLOSE=open(os.path.join(HERE,'close.b64')).read()
 EMAILIMG=open(os.path.join(HERE,'email.b64')).read()
 SITEIMG=open(os.path.join(HERE,'site.b64')).read()
 HIRINGIMG=open(os.path.join(HERE,'hiring.b64')).read()
+LIBIMG=open(os.path.join(HERE,'library.b64')).read()
 
 CSS = """
 :root{--cream:#F2EFE8;--ink:#1A1A18;--ink-soft:#3D3D38;--sage:#7A9E7E;--sage-light:#B8D0BB;
@@ -502,20 +503,25 @@ slide(14,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; 
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s hand every member the 20% of digital marketing that drives <em>80% of the results.</em></h2>''')
 
 slide(15,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
+<div class="two-col-tight" style="align-items:start;margin-top:0">
+<div>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
-<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Members see tremendous individual benefit from a short list of basics. The library teaches the 20% of digital marketing that drives 80% of the results &mdash; the 80/20 rule, applied business by business:</p>
-<div class="pillar-grid" data-reveal data-delay="3" style="grid-template-columns:repeat(3,1fr);max-width:860px">
+<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Members see tremendous individual benefit from a short list of basics. The library teaches the 20%% of digital marketing that drives 80%% of the results &mdash; the 80/20 rule, applied business by business:</p>
+<ul class="init-bullets" style="margin-top:14px">
+<li data-reveal data-delay="3">A digital readiness score for every member business</li>
+<li data-reveal data-delay="4">Re-scored quarterly, so improvement is visible and reportable</li>
+</ul>
+</div>
+<div class="site-card" data-reveal data-delay="3"><img src="data:image/jpeg;base64,%s" alt="The Ardmore Chamber Learning Library concept, with lessons on Google Business Profile, customer reviews, social media and SEO"><div class="email-card-cap">The learning library &mdash; concept</div></div>
+</div>
+<div class="pillar-grid" data-reveal data-delay="5" style="grid-template-columns:repeat(6,1fr);max-width:none;margin-top:22px">
 <div class="pillar"><b>Google Business Profile</b>Build it, keep it current</div>
 <div class="pillar"><b>Reviews &amp; reputation</b>Ask, respond, repeat</div>
 <div class="pillar"><b>Social media basics</b>What to post, and how often</div>
 <div class="pillar"><b>A website that gets found</b>Practical SEO, no jargon</div>
 <div class="pillar"><b>AI that saves time</b>Automate the routine parts</div>
 <div class="pillar"><b>Own your audience</b>Email list fundamentals</div>
-</div>
-<ul class="init-bullets" style="margin-top:10px">
-<li data-reveal data-delay="4">A digital readiness score for every member business</li>
-<li data-reveal data-delay="5">Re-scored quarterly, so improvement is visible and reportable</li>
-</ul>''')
+</div>''' % LIBIMG)
 
 # 13 INITIATIVE 05
 slide(16,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
