@@ -122,6 +122,7 @@ text-transform:uppercase;fill:var(--ink);opacity:.55;text-anchor:middle}
 .fw-midsub{font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
 fill:var(--ink);opacity:.4;text-anchor:middle}
 .chart{display:block;width:100%;height:auto;margin-top:26px;max-width:760px}
+.chart--wide{max-width:1010px}
 .baseline-strip{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-top:26px;
 padding:14px 20px;max-width:760px;border:1px dashed rgba(26,26,24,.25)}
 .slide--dark .baseline-strip{border-color:rgba(242,239,232,.3)}
@@ -239,23 +240,23 @@ print('module ready')
 
 # ---------------- CHARTS ----------------
 def panel(px, title, v1, v2, l1, l2, delta):
-    h2 = 145.0
-    h1 = 145.0 * v1 / v2
-    y1, y2 = 225 - h1, 225 - h2
-    return ('<text class="ch-title" x="%d" y="24">%s</text>'
-      '<text class="ch-delta" x="%d" y="52">%s</text>'
-      '<line class="ch-axis" x1="%d" y1="225" x2="%d" y2="225"/>'
+    h2 = 132.0
+    h1 = 132.0 * v1 / v2
+    y1, y2 = 208 - h1, 208 - h2
+    return ('<text class="ch-title" x="%d" y="20">%s</text>'
+      '<text class="ch-delta" x="%d" y="46">%s</text>'
+      '<line class="ch-axis" x1="%d" y1="208" x2="%d" y2="208"/>'
       '<rect class="bar-before" x="%d" y="%.1f" width="54" height="%.1f" rx="3"/>'
       '<rect class="bar-after" x="%d" y="%.1f" width="54" height="%.1f" rx="3"/>'
       '<text class="ch-val" x="%d" y="%.1f">%s</text>'
       '<text class="ch-val up" x="%d" y="%.1f">%s</text>'
-      '<text class="ch-tick" x="%d" y="246">Q1</text>'
-      '<text class="ch-tick" x="%d" y="246">Q2</text>') % (
+      '<text class="ch-tick" x="%d" y="228">Q1</text>'
+      '<text class="ch-tick" x="%d" y="228">Q2</text>') % (
       px+104, title, px+104, delta, px+22, px+186,
       px+50, y1, h1, px+124, y2, h2,
       px+77, y1-11, l1, px+151, y2-11, l2, px+77, px+151)
 
-CHART_GROWTH = ('<svg class="chart" viewBox="0 0 760 262" role="img" aria-label="Quarter one versus quarter two: '
+CHART_GROWTH = ('<svg class="chart chart--wide" viewBox="0 0 760 240" role="img" aria-label="Quarter one versus quarter two: '
  'video views rose from 391,350 to 813,870, engagements from 20,670 to 42,410, and new followers from about 3,000 to about 6,000.">'
  + panel(0,   'Short-form video views', 391350, 813870, '391,350', '813,870', '&#8593; 108%')
  + panel(253, 'Engagements',            20670,  42410,  '20,670',  '42,410',  '&#8593; 105%')
@@ -343,8 +344,8 @@ FLY = '''<svg class="flywheel" viewBox="0 -38 720 481" role="img"
 # 03 WHAT WE'VE BUILT — GROWTH (dark)
 slide(2,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every number roughly<br><em>doubled</em> in a single quarter.</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<div class="baseline-strip" data-reveal data-delay="3">
+<div class="rule" data-reveal data-delay="2" style="margin:18px 0"></div>
+<div class="baseline-strip" data-reveal data-delay="3" style="margin-top:16px;max-width:1010px">
 <span class="bl-label">The nine months before this work<br>Feb &ndash; Nov 2025</span>
 <span class="bl-stat"><b>98K</b> views</span>
 <span class="bl-stat"><b>7K</b> engagements</span>
