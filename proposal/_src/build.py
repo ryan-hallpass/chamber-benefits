@@ -360,7 +360,7 @@ slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <div class="metric-strip" style="margin-top:28px">
 <div class="metric" data-reveal data-delay="3"><div class="metric-value">1.4M</div><div class="metric-label">Cumulative organic video views to date</div></div>
 <div class="metric" data-reveal data-delay="4"><div class="metric-value">100K</div><div class="metric-label">Cumulative engagements</div></div>
-<div class="metric" data-reveal data-delay="5"><div class="metric-value">~2,000</div><div class="metric-label">New followers added in July alone &mdash; a slow month for approvals</div></div>
+<div class="metric" data-reveal data-delay="5"><div class="metric-value">~2,000</div><div class="metric-label">New followers added in July alone</div></div>
 </div>
 <div data-reveal data-delay="6">%s</div>
 <p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
