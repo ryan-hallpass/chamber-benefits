@@ -134,7 +134,7 @@ fill:var(--ink);opacity:.4;text-anchor:middle}
 .slide--dark .fw-midsub{fill:var(--cream);opacity:.55}
 .deck-link{color:var(--sage);font-weight:400;text-decoration:underline;text-underline-offset:3px}
 .slide--dark .deck-link{color:var(--sage-light)}
-.vs-grid{display:grid;grid-template-columns:150px 1fr 1fr 250px;margin-top:34px;max-width:1080px}
+.vs-grid{display:grid;grid-template-columns:150px 1fr 1fr 490px;margin-top:34px}
 .vs-head{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:0 0 12px;text-align:center}
 .vs-head:first-child{text-align:left}
 .vs-head--now{opacity:1;color:var(--sage);font-weight:500}
