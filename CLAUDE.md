@@ -88,7 +88,7 @@ Each initiative is a dark title slide (big serif overview statement) followed by
 its detail slide(s) — initiative 02 has TWO detail slides. Detail slides
 alternate cream/sage.
 
-**Initiatives 02+03 were MERGED 2026-09-03** into "02 — Tourism Card Marketing
+**Initiatives 02+03 were MERGED 2026-09-03** into "02 — Tourism Marketing
 Engine" (Ryan's call): scan tracking was already wired up pre-proposal for the
 dead ATA deal and **50+ visitors have already signed up**, but scans land in a
 spreadsheet and nothing happens next — so "we'll track scans" wasn't new value.

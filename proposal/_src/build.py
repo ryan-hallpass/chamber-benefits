@@ -430,7 +430,7 @@ print('1-6 staged')
 slide(6,'fitc900',u'''<p class="eyebrow" data-reveal>Proposed Initiatives for the Coming Year</p>
 <div class="init-list">
 <div class="init-row" data-reveal data-delay="1"><div class="init-n">01</div><div class="init-t">Ardmore Means More Social</div></div>
-<div class="init-row" data-reveal data-delay="2"><div class="init-n">02</div><div class="init-t">Tourism Card Marketing Engine</div></div>
+<div class="init-row" data-reveal data-delay="2"><div class="init-n">02</div><div class="init-t">Tourism Marketing Engine</div></div>
 <div class="init-row" data-reveal data-delay="3"><div class="init-n">03</div><div class="init-t">Chamber Member Learning Library</div></div>
 <div class="init-row" data-reveal data-delay="4"><div class="init-n">04</div><div class="init-t">Employment in Ardmore Email</div></div>
 <div class="init-row" data-reveal data-delay="5"><div class="init-n">05</div><div class="init-t">Explore Ardmore, Rebuilt</div></div>
@@ -459,10 +459,10 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 </div>''')
 
 # 10 INITIATIVE 02
-slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Card Marketing Engine</p>
+slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')
 
-slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
+slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display-sm" data-reveal data-delay="1">Two things are holding<br>the card <em>back.</em></h2>
 <ul class="problem-list" style="margin-top:26px">
 <li data-reveal data-delay="2">New signups aren&rsquo;t coming in steadily &mdash; a distribution problem: the cards aren&rsquo;t displayed prominently, and they&rsquo;re in too few places</li>
@@ -474,7 +474,7 @@ slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; To
 </div>''')
 
 # 12 INITIATIVE 02a — DISTRIBUTION SOLUTION (cream)
-slide(12,'fitc900',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
+slide(12,'fitc900',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display-sm" data-reveal data-delay="1">Put the card everywhere<br>visitors <em>already are.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Branded countertop take-one displays, prominent at every front desk</li>
@@ -482,7 +482,7 @@ slide(12,'fitc900',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Ma
 <li data-reveal data-delay="4">New signups per week becomes a number we watch and report</li>
 </ul>''')
 
-slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
+slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Let&rsquo;s use this email list to bring visitors <em>back to Ardmore.</em></h2>
@@ -498,7 +498,7 @@ slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Car
 </div>''' % EMAILIMG)
 
 # 13 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
-slide(14,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
+slide(14,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">&hellip;and we&rsquo;ll turn it into a stand-alone <em>What&rsquo;s Happening Around Ardmore</em> website.</h2>
@@ -608,7 +608,7 @@ slide(24,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">Growth &mdash; The Program</p>
 <div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
-<ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Card Marketing Engine</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
+<ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Marketing Engine</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
 <div class="price-card" data-reveal data-delay="3"><p class="price-tier">Accelerate &mdash; Program + Explore Ardmore</p>
 <div class="price-amount">$233,000</div><p class="price-period">$16,600 per month, plus the site rebuild</p>
 <ul class="price-items"><li>The full program, unchanged</li><li>exploreardmore.com rebuilt on the Ardmore Means More brand</li><li>Kept current automatically by the program&rsquo;s content, events and directory work</li><li>Site rebuild billed in two payments &mdash; half at kickoff, half at launch</li></ul></div>
