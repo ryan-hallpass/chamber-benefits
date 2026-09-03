@@ -82,33 +82,42 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (17 slides)
+### Current structure (23 slides)
+
+Each initiative is a PAIR: a dark title slide (big serif overview statement) then
+the detail slide. Title slides are dark; detail slides alternate cream/sage.
 
 ```
 01  Cover — "People are already watching Ardmore. Let's keep building momentum."
 02  The Starting Point .... pre-Hallpass baseline metric strip (cream)
-03  The Audience .......... "Where we stand today" — cumulative + local/outside (sage)
+03  The Audience .......... "Where we stand one year later" (sage)
 04  What We've Built ...... Q1 vs Q2 small multiples          (dark)
 05  The Momentum .......... projection chart                  (sage)
-06  Proposed Initiatives for the Coming Year — numbered list (six rows)
-07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (dark)
-08  01 Ardmore Means More Social — stepped pillar walk-through (sage)
-09  02 Tourism Card Measurement & Reporting
-10  03 Ardmore Event Promotion                         (sage)
-11  04 Chamber Member Learning Library
-12  05 Employment in Ardmore Email                            (dark)
-13  06 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (cream)
-14  Implementation — three phases                             (sage)
-15  Why This Has Worked ... three boxes, no body copy         (dark)
-16  Investment
-17  Next Step                                                 (dark)
+06  Proposed Initiatives for the Coming Year — six rows       (cream)
+07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
+08  T: Initiative 01 statement                                (dark)
+09  01 Ardmore Means More Social — stepped pillar walk-through (cream)
+10  T: Initiative 02 statement                                (dark)
+11  02 Tourism Card Measurement & Reporting — dashboard mock  (sage)
+12  T: Initiative 03 statement                                (dark)
+13  03 Ardmore Event Promotion — email mock + domains         (cream)
+14  T: Initiative 04 statement                                (dark)
+15  04 Chamber Member Learning Library — 80/20 grid           (sage)
+16  T: Initiative 05 statement                                (dark)
+17  05 Employment in Ardmore Email                            (cream)
+18  T: Initiative 06 statement                                (dark)
+19  06 Explore Ardmore, Rebuilt — site audit + rebuild pitch  (sage)
+20  Implementation — three phases                             (cream)
+21  Why This Has Worked ... three boxes, no body copy         (dark)
+22  Investment                                                (cream)
+23  Next Step                                                 (dark)
 ```
 
 ### Rules when editing slides
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,7,12,15,17}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,8,10,12,14,16,18,21,23}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
@@ -132,9 +141,9 @@ Scroll reveal via `[data-reveal]` + `data-delay` and an IntersectionObserver.
 Keyboard nav for presenting: `→` `PgDn` `Space` next slide, `←` `PgUp` `Shift+Space`
 previous (`↑`/`↓` stay native scroll so tall slides remain reachable).
 **Stepped pillars:** on a slide whose `.pillar-grid` has a `.pillar--active` in the
-markup (slide 08 only), next/prev keys step the sage highlight through the pillars
+markup (slide 09 only), next/prev keys step the sage highlight through the pillars
 (covered ones get `.pillar--done`, faded) before the deck advances. Grids without an
-initial active pillar (slide 12's library grid) are not stepped.
+initial active pillar (slide 15's library grid) are not stepped.
 **Slide-fit guarantee:** `slide()` wraps content in `<div class="fit">`; a script
 zoom-shrinks any slide whose content is taller than the viewport (desktop only,
 >700px; floor 0.5). `.chart` is capped at `max-width:760px` so chart SVGs stop
