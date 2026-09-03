@@ -5,6 +5,7 @@ LOGO=open(os.path.join(HERE,'hp.b64')).read()
 COVER=open(os.path.join(HERE,'cover.b64')).read()
 CLOSE=open(os.path.join(HERE,'close.b64')).read()
 EMAILIMG=open(os.path.join(HERE,'email.b64')).read()
+SITEIMG=open(os.path.join(HERE,'site.b64')).read()
 
 CSS = """
 :root{--cream:#F2EFE8;--ink:#1A1A18;--ink-soft:#3D3D38;--sage:#7A9E7E;--sage-light:#B8D0BB;
@@ -129,11 +130,17 @@ fill:var(--ink);opacity:.4;text-anchor:middle}
 .deck-link{color:var(--sage);font-weight:400;text-decoration:underline;text-underline-offset:3px}
 .slide--dark .deck-link{color:var(--sage-light)}
 .vs-grid{display:grid;grid-template-columns:170px 1fr 1fr;margin-top:34px;max-width:840px}
-.vs-head{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:0 0 12px}
+.vs-head{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:0 0 12px;text-align:center}
+.vs-head:first-child{text-align:left}
 .vs-head--now{opacity:1;color:var(--sage);font-weight:500}
 .vs-label{font-size:12px;letter-spacing:.04em;opacity:.55;padding:24px 16px 24px 0;border-top:1px solid var(--rule);align-self:center}
-.vs-before{font-family:var(--serif);font-size:32px;opacity:.4;padding:20px 24px 20px 0;border-top:1px solid var(--rule);align-self:center}
-.vs-after{font-family:var(--serif);font-size:42px;padding:16px 0;border-top:1px solid var(--rule);align-self:center}
+.vs-before{font-family:var(--serif);font-size:32px;opacity:.92;padding:20px 12px;border-top:1px solid var(--rule);align-self:center;text-align:center;transition:opacity .6s ease}
+.vs-grid:has([data-step].step-on) .vs-before{opacity:.4}
+.vs-after{font-family:var(--serif);font-size:42px;padding:16px 12px;border-top:1px solid var(--rule);align-self:center;text-align:center}
+.vs-bars{grid-column:2/4;display:flex;flex-direction:column;gap:4px;padding:2px 12px 20px}
+.vs-bars span{display:block;height:5px}
+.vs-bar-b{background:var(--ink);opacity:.35}
+.vs-bar-a{background:var(--sage);width:100%}
 .july-note{margin-top:26px;padding:16px 20px;background:var(--sage-wash);border-left:3px solid var(--sage);
 font-size:15px;font-weight:300;max-width:800px;line-height:1.6}
 .july-note b{font-family:var(--serif);font-weight:400;font-size:20px}
@@ -155,6 +162,9 @@ padding:14px 20px;max-width:760px;border:1px dashed rgba(26,26,24,.25)}
 .email-card{border:1px solid var(--rule);background:#fff;max-width:360px;justify-self:center;width:100%}
 .email-card img{display:block;width:100%;height:430px;object-fit:cover;object-position:top}
 .email-card-cap{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:10px 14px;border-top:1px solid var(--rule)}
+.site-card{border:1px solid var(--rule);background:#fff;width:100%}
+.site-card img{display:block;width:100%;height:auto}
+.site-card .email-card-cap{border-top:1px solid var(--rule)}
 .dash{background:#fff;border:1px solid var(--rule);padding:20px 22px;font-size:12px}
 .dash-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid var(--rule)}
 .dash-kicker{font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.45;margin-bottom:3px}
@@ -370,8 +380,11 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <div class="vs-head">Feb &ndash; Nov 2025 &middot; nine months</div>
 <div class="vs-head vs-head--now" data-step="1">One year later</div>
 <div class="vs-label">Video views</div><div class="vs-before">98K</div><div class="vs-after" data-step="1">1.4M</div>
+<div class="vs-bars" data-step="1"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div>
 <div class="vs-label">Engagements</div><div class="vs-before">7K</div><div class="vs-after" data-step="1">100K</div>
+<div class="vs-bars" data-step="1"><span class="vs-bar-b" style="width:7%"></span><span class="vs-bar-a"></span></div>
 <div class="vs-label">Followers gained</div><div class="vs-before">258</div><div class="vs-after" data-step="1">~11,000</div>
+<div class="vs-bars" data-step="1"><span class="vs-bar-b" style="width:2.4%"></span><span class="vs-bar-a"></span></div>
 </div>
 <div class="july-note" data-step="2">&hellip;and <b>~2,000</b> of those new followers arrived in July alone.</div>
 <p class="srcnote" data-reveal data-delay="4">Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn; Hallpass posting began late November 2025. Current figures: Ardmore Means More channels, cumulative to date.</p>''')
@@ -458,20 +471,26 @@ slide(12,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing
 <li data-reveal data-delay="4">Member events promoted alongside community events</li>
 </ul>
 <p class="body" data-reveal data-delay="5" style="margin-top:26px">Grown by every tourism-card scan, the list becomes promotional space the Chamber owns outright.</p>
+<p class="body" data-reveal data-delay="6" style="margin-top:18px">See the example: <a class="deck-link" href="https://ryan-hallpass.github.io/ardmore-events/email.html" target="_blank" rel="noopener">the first issue, live</a></p>
 </div>
-<div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">What a send looks like</div></div>
+<div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">Issue 01 &mdash; what a send looks like</div></div>
 </div>''' % EMAILIMG)
 
 # 13 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
 slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Marketing Engine</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:920px">&hellip;and we&rsquo;ll turn it into a stand-alone <em>What&rsquo;s Happening Around Ardmore</em> website.</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<ul class="init-bullets" style="margin-top:10px">
-<li data-reveal data-delay="3">Every event in one place, always current &mdash; linked from every email</li>
-<li data-reveal data-delay="4">Promoted continuously on Ardmore Means More social</li>
-<li data-reveal data-delay="5">Open to anyone searching for something to do in Ardmore</li>
+<div class="two-col-tight" style="align-items:start;margin-top:0">
+<div>
+<h2 class="display-sm" data-reveal data-delay="1">&hellip;and we&rsquo;ll turn it into a stand-alone <em>What&rsquo;s Happening Around Ardmore</em> website.</h2>
+<ul class="init-bullets">
+<li data-reveal data-delay="2">Every event in one place, always current &mdash; linked from every email</li>
+<li data-reveal data-delay="3">Promoted continuously on Ardmore Means More social</li>
+<li data-reveal data-delay="4">Open to anyone searching for something to do in Ardmore</li>
 </ul>
-<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>''')
+<p class="body" data-reveal data-delay="5" style="margin-top:26px">See the example: <a class="deck-link" href="https://ryan-hallpass.github.io/ardmore-events/" target="_blank" rel="noopener">the working site, live</a></p>
+<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>
+</div>
+<div class="site-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="The stand-alone Ardmore Means More Events website"><div class="email-card-cap">The stand-alone site</div></div>
+</div>''' % SITEIMG)
 
 # 12 INITIATIVE 04
 slide(14,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>

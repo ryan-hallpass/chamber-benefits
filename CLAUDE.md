@@ -126,10 +126,15 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 23  Investment                                                (cream)
 24  Next Step                                                 (dark)
 
-**PENDING IMAGES from Ryan (2026-09-03, in production):** (1) a new example
-"What's Happening Around Ardmore" EMAIL image → replaces `email.b64` on slide 12
-(current image is the ATA-era mockup, serving as placeholder); (2) a WEBSITE
-mockup image → slide 13 (built text-only for now; convert to two-col when it lands).
+**RESOLVED 2026-09-03:** Ryan built live examples in a separate repo
+(`ryan-hallpass/ardmore-events`): the stand-alone site at
+https://ryan-hallpass.github.io/ardmore-events/ and the email example at
+https://ryan-hallpass.github.io/ardmore-events/email.html — "Ardmore Means More
+Events" brand (navy/coral). `email.b64` (680w JPEG, top 1500px of the email) and
+`site.b64` (1100w JPEG, above-the-fold) are screenshots of those pages; slides
+12/13 embed them and link "See the example" to the live URLs. To refresh after
+Ryan updates the pages: re-screenshot with Playwright, `sips` to JPEG, re-encode
+to the `.b64` files, rebuild.
 ```
 
 ### Rules when editing slides
