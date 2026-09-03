@@ -453,7 +453,7 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 <div class="pillar"><b>Jobs &amp; workforce</b>Employers, career opportunities, workforce development and the people behind Ardmore&rsquo;s industries</div>
 <div class="pillar"><b>Education &amp; talent</b>How education and training support the next generation of Ardmore&rsquo;s workforce</div>
 <div class="pillar"><b>Arts &amp; quality of life</b>The quality-of-life story that attracts businesses &mdash; and the people those businesses need to recruit</div>
-<div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work &mdash; keeping the outsider perspective that made this succeed</div>
+<div class="pillar"><b>A face for ADA</b>A recognizable human connection to ADA&rsquo;s work</div>
 </div>''')
 
 # 10 INITIATIVE 02
