@@ -271,7 +271,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,10,14,16,19,22,24,26}
+DARK={4,8,10,14,16,19,22,24}
 print('module ready')
 
 
@@ -590,40 +590,15 @@ slide(22,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 </div>
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
-# 21 IMPLEMENTATION (cream)
-slide(23,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
-<h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<div class="phase-list">
-<div class="phase-item" data-reveal data-delay="3"><div class="phase-label">Phase 01<br>Days 1&ndash;30</div>
-<div><div class="phase-title">Setup, without a gap in publishing</div><p class="phase-body">Content continues uninterrupted while the CRM and automation platform are stood up, the measurement framework and dashboard are built, the training library is first recorded, and the job collection pipeline goes in. Pre-production on the first shoot.</p></div></div>
-<div class="phase-item" data-reveal data-delay="4"><div class="phase-label">Phase 02<br>Days 31&ndash;90</div>
-<div><div class="phase-title">Activation</div><p class="phase-body">Property and workforce content in rotation. First <em>What&rsquo;s Happening</em> emails out. Offer tracking running. First monthly dashboard delivered. Shoot one executed. Training library published with its first scorecard run, and the weekly hiring email in production.</p></div></div>
-<div class="phase-item" data-reveal data-delay="5"><div class="phase-label">Phase 03<br>Ongoing</div>
-<div><div class="phase-title">Growth &amp; optimization</div><p class="phase-body">Shoots two and three. Monthly reporting and optimization. Quarterly library additions and scorecard re-runs. Weekly hiring collection. Per-business engagement data delivered into the Annual Visibility Report and the Chamber rollup.</p></div></div>
-</div>''')
-
-# 22 WHY THIS HAS WORKED (three boxes, dark)
-slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
-<div class="card-grid why-grid">
-<div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
-<div class="card-title">An outsider perspective</div></div>
-<div class="card" data-reveal data-delay="2"><div class="card-num">02</div>
-<div class="card-title">Engaging storytelling</div></div>
-<div class="card" data-reveal data-delay="3"><div class="card-num">03</div>
-<div class="card-title">Consistency</div></div>
-</div>''')
-
-# 23 INVESTMENT
-slide(25,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(23,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">One program. <em>Everything connected.</em></h2>
 <div class="price-grid price-grid--two">
-<div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
+<div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">Growth &mdash; The Program</p>
 <div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
 <ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Card Marketing Engine</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
-<div class="price-card" data-reveal data-delay="3"><p class="price-tier">The Program + Explore Ardmore</p>
-<div class="price-amount">$233,000</div><p class="price-period">$16,600 per month, plus a one-time site rebuild</p>
-<ul class="price-items"><li>The full program, unchanged</li><li>exploreardmore.com rebuilt on the Ardmore Means More brand</li><li>Kept current automatically by the program&rsquo;s content, events and directory work</li></ul></div>
+<div class="price-card" data-reveal data-delay="3"><p class="price-tier">Accelerate &mdash; Program + Explore Ardmore</p>
+<div class="price-amount">$233,000</div><p class="price-period">$16,600 per month, plus the site rebuild</p>
+<ul class="price-items"><li>The full program, unchanged</li><li>exploreardmore.com rebuilt on the Ardmore Means More brand</li><li>Kept current automatically by the program&rsquo;s content, events and directory work</li><li>Site rebuild billed in two payments &mdash; half at kickoff, half at launch</li></ul></div>
 </div>
 <div class="total-bar" data-reveal data-delay="4">
 <div><span class="lbl">Agreement term</span><div class="amt" style="font-size:24px">Twelve months</div></div>
@@ -631,7 +606,7 @@ slide(25,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 24 CLOSING
-slide(26,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+slide(24,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>

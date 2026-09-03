@@ -82,7 +82,7 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (26 slides)
+### Current structure (24 slides)
 
 Each initiative is a dark title slide (big serif overview statement) followed by
 its detail slide(s) — initiative 02 has TWO detail slides. Detail slides
@@ -124,10 +124,12 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 21  05 SOLUTION: rebuild on the Ardmore Means More brand      (cream)
 22  What These Initiatives Will Accomplish — 6 outcome cards
     tied to the 2025 Economic Vision Plan                     (dark)
-23  Implementation — three phases                             (cream)
-24  Why This Has Worked ... three boxes, no body copy         (dark)
-25  Investment                                                (cream)
-26  Next Step                                                 (dark)
+23  Investment — "Growth" $199,200 / "Accelerate" $233,000    (cream)
+24  Next Step                                                 (dark)
+
+(The Implementation three-phase slide and the Why This Has Worked slide were CUT
+2026-09-03 per Ryan — their content survives only in git history; the phase plan
+is speaker-notes material now.)
 
 **RESOLVED 2026-09-03:** Ryan built live examples in a separate repo
 (`ryan-hallpass/ardmore-events`): the stand-alone site at
@@ -144,7 +146,7 @@ to the `.b64` files, rebuild.
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,8,10,14,16,19,22,24,26}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,8,10,14,16,19,22,24}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
