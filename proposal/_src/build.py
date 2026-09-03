@@ -4,6 +4,7 @@ os.chdir(HERE)
 LOGO=open(os.path.join(HERE,'hp.b64')).read()
 COVER=open(os.path.join(HERE,'cover.b64')).read()
 CLOSE=open(os.path.join(HERE,'close.b64')).read()
+EMAILIMG=open(os.path.join(HERE,'email.b64')).read()
 
 CSS = """
 :root{--cream:#F2EFE8;--ink:#1A1A18;--ink-soft:#3D3D38;--sage:#7A9E7E;--sage-light:#B8D0BB;
@@ -19,6 +20,7 @@ margin-bottom:2px;background:var(--warm-white);overflow:hidden;display:flex;flex
 background-image:radial-gradient(circle,rgba(26,26,24,0.08) 1px,transparent 1px);
 background-size:24px 24px;pointer-events:none}
 .slide>*{position:relative;z-index:1}
+.fit{display:flow-root}
 .slide--dark{background:var(--ink);color:var(--cream)}
 .slide--dark::before{background-image:radial-gradient(circle,rgba(242,239,232,0.10) 1px,transparent 1px)}
 .slide--sage{background:var(--sage-wash)}
@@ -129,6 +131,30 @@ padding:14px 20px;max-width:760px;border:1px dashed rgba(26,26,24,.25)}
 .pillar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;max-width:1020px}
 .pillar{border:1px solid var(--rule);background:var(--warm-white);padding:15px 17px;font-size:12.5px;line-height:1.45;opacity:.85}
 .pillar b{display:block;font-family:var(--serif);font-weight:400;font-size:16px;margin-bottom:3px}
+.email-card{border:1px solid var(--rule);background:#fff;max-width:360px;justify-self:center;width:100%}
+.email-card img{display:block;width:100%;height:430px;object-fit:cover;object-position:top}
+.email-card-cap{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:10px 14px;border-top:1px solid var(--rule)}
+.dash{background:#fff;border:1px solid var(--rule);padding:20px 22px;font-size:12px}
+.dash-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;margin-bottom:14px;border-bottom:1px solid var(--rule)}
+.dash-kicker{font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.45;margin-bottom:3px}
+.dash-title{font-size:14px;font-weight:500}
+.dash-badge{background:var(--sage-wash);color:var(--sage);font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px}
+.dash-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.dash-stat{background:var(--sage-wash);padding:10px 12px}
+.dash-stat span{display:block;font-size:9.5px;opacity:.55;margin-bottom:4px}
+.dash-stat b{display:block;font-family:var(--serif);font-weight:400;font-size:21px;line-height:1;color:var(--ink)}
+.dash-stat i{display:block;font-style:normal;font-size:9.5px;color:var(--sage);margin-top:4px}
+.dash-chart{background:var(--warm-white);border:1px solid var(--rule);padding:12px 14px;margin-bottom:14px}
+.dash-chart-t{font-size:10.5px;font-weight:500;margin-bottom:10px}
+.dash-bars{display:flex;align-items:flex-end;gap:6px;height:72px}
+.dash-bar{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.dash-bar-stack{width:100%;height:60px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px}
+.dash-bar-stack div{width:60%}
+.dash-bar-a{background:var(--sage)}
+.dash-bar-b{background:var(--sage-light)}
+.dash-bar span{font-size:8.5px;opacity:.4}
+.dash-row{display:flex;justify-content:space-between;padding:8px 2px;border-top:1px solid var(--rule);font-size:11.5px}
+.dash-row span:last-child{opacity:.55}
 .ch-title{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.16em;
 text-transform:uppercase;fill:var(--ink);opacity:.45;text-anchor:middle}
 .ch-val{font-family:var(--serif);font-size:19px;fill:var(--ink);text-anchor:middle}
@@ -194,6 +220,7 @@ transition:opacity 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16
 @media (max-width:700px){
 .slide{padding:56px 26px;min-height:auto}
 .card-grid,.price-grid,.metric-strip,.two-col,.two-col-tight,.diagram,.pillar-grid{grid-template-columns:1fr}
+.dash-stats{grid-template-columns:repeat(2,1fr)}.email-card{justify-self:start}
 .diagram{gap:14px}.dgap{transform:rotate(90deg);padding:8px 0}
 .phase-item{grid-template-columns:1fr;gap:10px}
 .display{font-size:32px}.slide-footer{position:static;margin-top:40px}
@@ -397,22 +424,54 @@ slide(8,'slide--sage',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Mean
 # 09 INITIATIVE 02
 slide(9,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Card Measurement &amp; Reporting</p>
 <h2 class="display-sm" data-reveal data-delay="1">Turn the tourism card into<br>a channel we can <em>measure.</em></h2>
+<div class="two-col-tight" style="align-items:start">
+<div>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Track scans, offer claims and referral traffic business by business</li>
 <li data-reveal data-delay="3">Separate visitor spending from resident spending</li>
 <li data-reveal data-delay="4">Report real numbers back to each participating business</li>
-</ul>''')
+</ul>
+<p class="body" data-reveal data-delay="5" style="margin-top:26px">Every scan also grows the email list &mdash; the same list the weekly round-up is sent to. Measurement here feeds everything else.</p>
+<p class="srcnote" data-reveal data-delay="6">Dashboard figures are illustrative.</p>
+</div>
+<div class="dash" data-reveal data-delay="4">
+<div class="dash-head"><div><div class="dash-kicker">Tourism Card &middot; Monthly Report</div><div class="dash-title">March 2027</div></div><span class="dash-badge">Sample</span></div>
+<div class="dash-stats">
+<div class="dash-stat"><span>QR scans</span><b>1,284</b><i>&uarr; 18% vs Feb</i></div>
+<div class="dash-stat"><span>New subscribers</span><b>347</b><i>&uarr; 24% vs Feb</i></div>
+<div class="dash-stat"><span>Total list size</span><b>2,109</b><i>+347 this month</i></div>
+<div class="dash-stat"><span>Offers claimed</span><b>521</b><i>&uarr; 11% vs Feb</i></div>
+</div>
+<div class="dash-chart"><div class="dash-chart-t">QR scans &amp; new subscribers &mdash; first six months</div>
+<div class="dash-bars">
+<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:26px"></div><div class="dash-bar-b" style="height:8px"></div></div><span>Oct</span></div>
+<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:34px"></div><div class="dash-bar-b" style="height:10px"></div></div><span>Nov</span></div>
+<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:38px"></div><div class="dash-bar-b" style="height:11px"></div></div><span>Dec</span></div>
+<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:44px"></div><div class="dash-bar-b" style="height:13px"></div></div><span>Jan</span></div>
+<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:52px"></div><div class="dash-bar-b" style="height:14px"></div></div><span>Feb</span></div>
+<div class="dash-bar"><div class="dash-bar-stack"><div class="dash-bar-a" style="height:58px"></div><div class="dash-bar-b" style="height:15px"></div></div><span>Mar</span></div>
+</div></div>
+<div class="dash-row"><span>Two Frogs Grill</span><span>214 scans &middot; 63 claims</span></div>
+<div class="dash-row"><span>Hamburger Inn</span><span>168 scans &middot; 41 claims</span></div>
+<div class="dash-row"><span>Cafe Alley</span><span>129 scans &middot; 35 claims</span></div>
+</div>
+</div>''')
 
 # 10 INITIATIVE 03
 slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promotion Email Campaign</p>
 <h2 class="display-sm" data-reveal data-delay="1">A weekly round-up of<br><em>what&rsquo;s happening around Ardmore.</em></h2>
+<div class="two-col-tight" style="align-items:start">
+<div>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Events collected automatically from venues and public calendars</li>
 <li data-reveal data-delay="3">One email, segmented for residents and for visitors</li>
 <li data-reveal data-delay="4">Member events promoted alongside community events</li>
 </ul>
-<p class="body wide" data-reveal data-delay="5" style="margin-top:26px">Anchored by a stand-alone events website &mdash; every event in one place, linked from every email.</p>
-<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>''')
+<p class="body" data-reveal data-delay="5" style="margin-top:26px">Anchored by a stand-alone events website &mdash; every event in one place, linked from every email. Grown by every tourism-card scan, the list becomes promotional space the Chamber owns outright.</p>
+<p class="srcnote" data-reveal data-delay="6">Candidate domains: ardmoremeansmore.com &middot; ardmorecalendar.com &middot; eventsardmore.com &mdash; all available to register.</p>
+</div>
+<div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">What a send looks like</div></div>
+</div>''' % EMAILIMG)
 
 # 11 INITIATIVE 04
 slide(11,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
@@ -502,10 +561,11 @@ HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Communi
  '(function(){var sl=[].slice.call(document.querySelectorAll(".slide"));'
  'function fit(){if(window.innerWidth<=700)return sl.forEach(function(s){var c=s.querySelector(".fit");if(c)c.style.zoom=""});'
  'sl.forEach(function(s){var c=s.querySelector(".fit");if(!c)return;c.style.zoom=1;'
- 'var cs=getComputedStyle(s),avail=window.innerHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom),h=c.offsetHeight;'
+ 'var cs=getComputedStyle(s),avail=window.innerHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom)-3,h=c.offsetHeight;'
  'if(h>avail)c.style.zoom=Math.max(.5,avail/h)})}'
- 'fit();window.addEventListener("resize",fit);window.addEventListener("load",fit);'
- 'if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>') % (CSS, '\n'.join(S))
+ 'function refit(){requestAnimationFrame(function(){requestAnimationFrame(fit)})}'
+ 'fit();window.addEventListener("resize",fit);window.addEventListener("load",refit);'
+ 'if(document.fonts&&document.fonts.ready)document.fonts.ready.then(refit)})();</script>') % (CSS, '\n'.join(S))
 open('proposal.html','w').write(HTML)
 i=HTML.find('<style>')
 open(os.path.join(HERE,'..','index.html'),'w').write('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'

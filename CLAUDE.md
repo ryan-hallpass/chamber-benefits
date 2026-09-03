@@ -73,7 +73,14 @@ python3 build.py          # writes ../index.html
 
 `build.py` is a single self-contained script: CSS block → chart SVGs → `slide()` calls
 in order → assembly. Photos are base64-inlined from the `.png` files and `.b64` files
-beside it, so the output is one ~800KB standalone HTML file with no external assets.
+beside it, so the output is one ~945KB standalone HTML file with no external assets.
+
+Slides 09 and 10 recreate material from the dead ATA proposal
+(`~/Downloads/ata_index_15.html`, the never-executed $46,800 LOA): slide 09's
+dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palette
+(paid-social panel dropped — out of scope here — replaced with per-business rows);
+slide 10's email card is the actual newsletter screenshot extracted from it
+(`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
 ### Current structure (15 slides)
 
