@@ -82,7 +82,7 @@ beside it, so the output is one ~800KB standalone HTML file with no external ass
 02  What We've Built ...... Q1 vs Q2 small multiples          (dark)
 03  The Audience .......... cumulative views + local/outside  (sage)
 04  The Momentum .......... projection chart                  (dark)
-05  Why It Works .......... three boxes, no body copy
+05  Why This Has Worked ... three boxes, no body copy
 06  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
 07  Proposed Initiatives for the Coming Year — numbered list
 08  01 Ardmore Means More Social                              (sage)

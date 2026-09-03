@@ -337,7 +337,7 @@ slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>The Momentum</p>
 <p class="srcnote" data-reveal data-delay="7">Projection assumes the Q2 pace holds. Directional, not guaranteed.</p>''' % CHART_PROJ)
 
 # 05 WHY IT WORKS (three boxes)
-slide(5,'',u'''<p class="eyebrow" data-reveal>Why It Works</p>
+slide(5,'',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
