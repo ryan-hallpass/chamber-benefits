@@ -241,7 +241,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,10,12,14,16,18,21,23}
+DARK={4,8,10,12,14,16,18,20,22,24}
 print('module ready')
 
 
@@ -538,7 +538,22 @@ slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>06 &mdash; Explore Ard
 <p class="body wide" data-reveal data-delay="6">Rebuild exploreardmore.com on the Ardmore Means More brand &mdash; fed by the content engine, the weekly events round-up and the directory work already in this program, so it stays current without anyone tending it by hand.</p>
 <p class="srcnote" data-reveal data-delay="7">Observations from exploreardmore.com, September 3, 2026.</p>''')
 
-slide(20,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
+# 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
+slide(20,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
+<h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
+<p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These six initiatives are the execution.</p>
+<div class="card-grid" style="margin-top:28px">
+<div class="card" data-reveal data-delay="3"><div class="card-title">Top of mind, out of market</div><div class="card-body">Site selectors and entrepreneurs evaluate communities online &mdash; anonymously, long before they make contact. The audience we&rsquo;ve built keeps Ardmore in that conversation.</div></div>
+<div class="card" data-reveal data-delay="3"><div class="card-title">A clear sense of place</div><div class="card-body">The plan names the lack of &ldquo;a clear sense of who Ardmore is&rdquo; as a core weakness. A year of storytelling &mdash; and a rebuilt visitor site &mdash; is the answer.</div></div>
+<div class="card" data-reveal data-delay="4"><div class="card-title">Stronger small businesses</div><div class="card-body">Diversifying beyond one large employer starts with the businesses already here. Training, visibility and measurable foot traffic, for all 587 members.</div></div>
+<div class="card" data-reveal data-delay="4"><div class="card-title">Talent that stays</div><div class="card-body">The plan lists &ldquo;loss of talent to larger cities&rdquo; as a threat. Every open job in Ardmore, in one place, gives people a reason to stay &mdash; or come back.</div></div>
+<div class="card" data-reveal data-delay="5"><div class="card-title">Tourism assets, put to work</div><div class="card-body">&ldquo;Underutilized tourism assets&rdquo; is the plan&rsquo;s phrase. The discount card, the weekly round-up and a rebuilt Explore Ardmore put them in front of visitors.</div></div>
+<div class="card" data-reveal data-delay="5"><div class="card-title">Progress the board can report</div><div class="card-body">The plan asks each organization to track and share its metrics annually. The measurement layer delivers the Chamber&rsquo;s numbers &mdash; no added staff time.</div></div>
+</div>
+<p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
+
+# 21 IMPLEMENTATION (cream)
+slide(21,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <h2 class="display-sm" data-reveal data-delay="1">Nothing pauses.</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <div class="phase-list">
@@ -550,8 +565,8 @@ slide(20,'',u'''<p class="eyebrow" data-reveal>Implementation</p>
 <div><div class="phase-title">Growth &amp; optimization</div><p class="phase-body">Shoots two and three. Monthly reporting and optimization. Quarterly library additions and scorecard re-runs. Weekly hiring collection. Per-business engagement data delivered into the Annual Visibility Report and the Chamber rollup.</p></div></div>
 </div>''')
 
-# 14 WHY THIS HAS WORKED (three boxes, dark)
-slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
+# 22 WHY THIS HAS WORKED (three boxes, dark)
+slide(22,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p>
 <div class="card-grid why-grid">
 <div class="card" data-reveal data-delay="1"><div class="card-num">01</div>
 <div class="card-title">An outsider perspective</div></div>
@@ -561,8 +576,8 @@ slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Why This Has Worked</p
 <div class="card-title">Consistency</div></div>
 </div>''')
 
-# 15 INVESTMENT
-slide(22,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+# 23 INVESTMENT
+slide(23,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">Five initiatives. <em>One program.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">The Program</p>
@@ -577,8 +592,8 @@ slide(22,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <div class="sub">October 1, 2026 through September 30, 2027</div></div>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
-# 16 CLOSING
-slide(23,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+# 24 CLOSING
+slide(24,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>
