@@ -476,10 +476,18 @@ slide(10,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Event Promo
 # 11 INITIATIVE 04
 slide(11,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Chamber Member Learning Library</p>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
-<ul class="init-bullets">
-<li data-reveal data-delay="2">Twelve modules &mdash; search, reviews, social media, practical AI</li>
-<li data-reveal data-delay="3">A digital readiness score for every member business</li>
-<li data-reveal data-delay="4">Re-scored quarterly, so improvement is visible and reportable</li>
+<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Members see tremendous individual benefit from a short list of basics. The library teaches the 20% of digital marketing that drives 80% of the results &mdash; the 80/20 rule, applied business by business:</p>
+<div class="pillar-grid" data-reveal data-delay="3" style="grid-template-columns:repeat(3,1fr);max-width:860px">
+<div class="pillar"><b>Google Business Profile</b>Build it, keep it current</div>
+<div class="pillar"><b>Reviews &amp; reputation</b>Ask, respond, repeat</div>
+<div class="pillar"><b>Social media basics</b>What to post, and how often</div>
+<div class="pillar"><b>A website that gets found</b>Practical SEO, no jargon</div>
+<div class="pillar"><b>AI that saves time</b>Automate the routine parts</div>
+<div class="pillar"><b>Own your audience</b>Email list fundamentals</div>
+</div>
+<ul class="init-bullets" style="margin-top:10px">
+<li data-reveal data-delay="4">A digital readiness score for every member business</li>
+<li data-reveal data-delay="5">Re-scored quarterly, so improvement is visible and reportable</li>
 </ul>''')
 
 # 12 INITIATIVE 05
