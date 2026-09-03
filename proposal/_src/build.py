@@ -103,6 +103,7 @@ border-radius:50%;background:var(--sage);opacity:.15}
 .feature-title em{font-style:italic;color:var(--sage-light)}
 .feature-body{font-size:13.5px;line-height:1.65;opacity:.75;margin-top:14px}
 .metric-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
+.metric-strip--four{grid-template-columns:repeat(4,1fr)}
 .metric{background:var(--cream);padding:28px 32px}
 .slide--dark .metric{background:rgba(242,239,232,.07)}
 .metric-value{font-family:var(--serif);font-size:40px;line-height:1;margin-bottom:6px}
@@ -362,10 +363,11 @@ slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
 <h2 class="display-sm" data-reveal data-delay="1">Where we stand <em>one year later.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<div class="metric-strip" style="margin-top:28px">
+<div class="metric-strip metric-strip--four" style="margin-top:28px">
 <div class="metric" data-reveal data-delay="3"><div class="metric-value">1.4M</div><div class="metric-label">Cumulative organic video views to date</div></div>
 <div class="metric" data-reveal data-delay="4"><div class="metric-value">100K</div><div class="metric-label">Cumulative engagements</div></div>
-<div class="metric" data-reveal data-delay="5"><div class="metric-value">~2,000</div><div class="metric-label">New followers added in July alone</div></div>
+<div class="metric" data-reveal data-delay="5"><div class="metric-value">~11,000</div><div class="metric-label">New followers gained since launch</div></div>
+<div class="metric" data-reveal data-delay="6"><div class="metric-value">~2,000</div><div class="metric-label">Of them added in July alone</div></div>
 </div>
 <div data-reveal data-delay="6">%s</div>
 <p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)

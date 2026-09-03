@@ -189,6 +189,11 @@ Don't mix the two systems.
   ~29 followers/mo then vs ~2,000/mo now (~70×); ~780 engagements/mo vs ~14K/mo (~18×).
 - July 2026 (slow month, approval delays): ~2,000 new followers AND **12,300**
   engagements (the follower figure is on slide 3; the engagement figure is spare)
+- **~11,000 cumulative new followers since launch** (slide 3) is DERIVED, not from
+  Al directly: his per-quarter gains ~3,000 (Q1) + ~6,000 (Q2) + ~2,000 (July).
+  Conservative alternative if challenged: ~9,000 through Q2. His Q1/Q2 follower
+  figures are per-quarter GAINS, not account totals (consistent with his ~2,000/mo
+  pace and the 24,000/yr projection).
 - Real-world impact (from Al, anecdotal — no number to cite): featured businesses
   have reached out to say they saw increased attention and business after their
   features ran. OK to state qualitatively; do not attach a figure.
