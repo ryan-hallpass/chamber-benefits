@@ -553,7 +553,7 @@ slide(19,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; 
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s give visitors a front door as good as the Ardmore <em>we&rsquo;ve been showing them.</em></h2>''')
 
 slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
-<h2 class="display-sm" data-reveal data-delay="1">The visitor site isn&rsquo;t earning<br>what the brand <em>has built.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">ExploreArdmore.com isn&rsquo;t living up to<br>the reputation <em>that the brand has built.</em></h2>
 <ul class="problem-list">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
 <li data-reveal data-delay="3">Business photos are blurry and low-resolution &mdash; a first impression that undersells real places</li>
