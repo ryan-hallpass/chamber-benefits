@@ -499,17 +499,19 @@ slide(16,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; 
 
 slide(17,'',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
-<ul class="init-bullets">
-<li data-reveal data-delay="2">A weekly hiring email plus a searchable Chamber-owned job board</li>
-<li data-reveal data-delay="3">Openings collected automatically &mdash; no member posts anything</li>
-<li data-reveal data-delay="4">Surfaces which hiring businesses are not Chamber members yet</li>
+<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Job opportunities were the <strong>top issue</strong> in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is visibility.</p>
+<ul class="init-bullets" style="margin-top:24px">
+<li data-reveal data-delay="3">A weekly hiring email plus a searchable Chamber-owned job board</li>
+<li data-reveal data-delay="4">Openings collected automatically &mdash; no member posts anything</li>
+<li data-reveal data-delay="5">Surfaces which hiring businesses are not Chamber members yet</li>
 </ul>
 <div class="metric-strip">
-<div class="metric" data-reveal data-delay="5"><div class="metric-value">180+</div><div class="metric-label">Open positions found in a single week of testing</div></div>
+<div class="metric" data-reveal data-delay="6"><div class="metric-value">180+</div><div class="metric-label">Open positions found in a single week of testing</div></div>
 <div class="metric" data-reveal data-delay="6"><div class="metric-value">41</div><div class="metric-label">Employers hiring, from Mercy and Valero to Dollar General</div></div>
 <div class="metric" data-reveal data-delay="7"><div class="metric-value">Built</div><div class="metric-label">Working prototype, live and ready to demonstrate today</div></div>
 </div>
-<p class="body" data-reveal data-delay="7" style="margin-top:24px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>''')
+<p class="body" data-reveal data-delay="7" style="margin-top:24px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>
+<p class="srcnote" data-reveal data-delay="7">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
 
 # 14 IMPLEMENTATION
 slide(18,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
