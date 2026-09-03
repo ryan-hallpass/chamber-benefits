@@ -607,7 +607,7 @@ slide(23,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 
 # 24 CLOSING
 slide(24,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
-<h2 class="display" data-reveal data-delay="1">The cameras are<br><em>already booked.</em></h2>
+<h2 class="display" data-reveal data-delay="1">Let&rsquo;s build the brand<br><em>worthy of Ardmore.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>
 <p class="body" data-reveal data-delay="4">The next production trip is on the calendar at Andrea&rsquo;s encouragement &mdash; before this agreement would even begin. The audience is already built. The only open question is what we point it at over the next twelve months.</p>
