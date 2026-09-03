@@ -550,10 +550,9 @@ slide(18,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; 
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll put every open job in Ardmore in one place &mdash; in front of the people <em>ready to fill them.</em></h2>''')
 
 slide(19,'fitc900',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
-<h2 class="display-sm" data-reveal data-delay="1">Every job open in Ardmore,<br><em>in one place.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">Job opportunities were the top issue in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is <em>visibility.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<p class="body wide" data-reveal data-delay="3">Job opportunities were the <strong>top issue</strong> in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is visibility.</p>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
+<p class="srcnote" data-reveal data-delay="3">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
 
 # 18 INITIATIVE 04b — SOLUTION (sage)
 slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
