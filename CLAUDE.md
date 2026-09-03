@@ -98,8 +98,10 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 
 ```
 01  Cover — "People are already watching Ardmore. Let's keep building momentum."
-02  The Starting Point .... pre-Hallpass baseline metric strip (cream)
-03  The Audience .......... "Where we stand one year later" (sage)
+02  The Starting Point .... before/after comparison, STEPPED REVEAL (cream):
+    arrives showing only the nine-months-before column; 1st → reveals the
+    one-year-later column; 2nd → reveals the ~2,000-in-July callout; 3rd → advances
+03  The Audience .......... outside (61%) vs local (39%) reach bars (sage)
 04  What We've Built ...... Q1 vs Q2 small multiples          (dark)
 05  The Momentum .......... projection chart                  (sage)
 06  Proposed Initiatives for the Coming Year — six rows       (cream)
@@ -153,7 +155,12 @@ previous (`↑`/`↓` stay native scroll so tall slides remain reachable).
 **Stepped pillars:** on a slide whose `.pillar-grid` has a `.pillar--active` in the
 markup (slide 09 only), next/prev keys step the sage highlight through the pillars
 (covered ones get `.pillar--done`, faded) before the deck advances. Grids without an
-initial active pillar (slide 15's library grid) are not stepped.
+initial active pillar (the library grid) are not stepped.
+**Generic reveal steps:** elements with `data-step="N"` start hidden (opacity 0);
+next/prev keys reveal/unreveal them group by group (all elements sharing N appear
+together, ascending) before the deck advances. Used on slide 02's before/after.
+⚠ Stepped content is INVISIBLE in a PDF export or plain scroll-through — don't put
+anything on a `data-step` that must survive printing without also handling print CSS.
 **Slide-fit guarantee:** `slide()` wraps content in `<div class="fit">`; a script
 zoom-shrinks any slide whose content is taller than the viewport (desktop only,
 >700px; floor 0.5). `.chart` is capped at `max-width:760px` so chart SVGs stop

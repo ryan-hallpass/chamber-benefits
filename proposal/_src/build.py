@@ -128,6 +128,17 @@ fill:var(--ink);opacity:.4;text-anchor:middle}
 .slide--dark .fw-midsub{fill:var(--cream);opacity:.55}
 .deck-link{color:var(--sage);font-weight:400;text-decoration:underline;text-underline-offset:3px}
 .slide--dark .deck-link{color:var(--sage-light)}
+.vs-grid{display:grid;grid-template-columns:170px 1fr 1fr;margin-top:34px;max-width:840px}
+.vs-head{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;padding:0 0 12px}
+.vs-head--now{opacity:1;color:var(--sage);font-weight:500}
+.vs-label{font-size:12px;letter-spacing:.04em;opacity:.55;padding:24px 16px 24px 0;border-top:1px solid var(--rule);align-self:center}
+.vs-before{font-family:var(--serif);font-size:32px;opacity:.4;padding:20px 24px 20px 0;border-top:1px solid var(--rule);align-self:center}
+.vs-after{font-family:var(--serif);font-size:42px;padding:16px 0;border-top:1px solid var(--rule);align-self:center}
+.july-note{margin-top:26px;padding:16px 20px;background:var(--sage-wash);border-left:3px solid var(--sage);
+font-size:15px;font-weight:300;max-width:800px;line-height:1.6}
+.july-note b{font-family:var(--serif);font-weight:400;font-size:20px}
+[data-step]{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+[data-step].step-on{opacity:1;transform:none}
 .chart{display:block;width:100%;height:auto;margin-top:26px;max-width:760px}
 .chart--wide{max-width:1010px}
 .baseline-strip{display:flex;align-items:center;gap:32px;flex-wrap:wrap;margin-top:26px;
@@ -350,30 +361,27 @@ FLY = '''<svg class="flywheel" viewBox="0 -38 720 481" role="img"
 </svg>'''
 
 
-# 02 THE STARTING POINT (cream)
+# 02 THE STARTING POINT — BEFORE/AFTER, stepped reveal (cream)
 slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
-<h2 class="display-sm" data-reveal data-delay="1">The nine months<br><em>before this work.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">The nine months before this work<br>&mdash; and <em>one year later.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<div class="metric-strip">
-<div class="metric" data-reveal data-delay="3"><div class="metric-value">98K</div><div class="metric-label">Total video views, February through November 2025</div></div>
-<div class="metric" data-reveal data-delay="4"><div class="metric-value">7K</div><div class="metric-label">Total engagements across both organizations</div></div>
-<div class="metric" data-reveal data-delay="5"><div class="metric-value">258</div><div class="metric-label">Followers gained in nine months</div></div>
+<div class="vs-grid" data-reveal data-delay="3">
+<div class="vs-head"></div>
+<div class="vs-head">Feb &ndash; Nov 2025 &middot; nine months</div>
+<div class="vs-head vs-head--now" data-step="1">One year later</div>
+<div class="vs-label">Video views</div><div class="vs-before">98K</div><div class="vs-after" data-step="1">1.4M</div>
+<div class="vs-label">Engagements</div><div class="vs-before">7K</div><div class="vs-after" data-step="1">100K</div>
+<div class="vs-label">Followers gained</div><div class="vs-before">258</div><div class="vs-after" data-step="1">~11,000</div>
 </div>
-<p class="body wide" data-reveal data-delay="6">A steady presence with modest reach &mdash; the ceiling of an organization talking about itself.</p>
-<p class="srcnote" data-reveal data-delay="7">Combined ADA + ATA accounts, Meta &amp; LinkedIn, Feb&ndash;Nov 2025. Hallpass posting began late November 2025.</p>''')
+<div class="july-note" data-step="2">&hellip;and <b>~2,000</b> of those new followers arrived in July alone &mdash; roughly the current monthly pace.</div>
+<p class="srcnote" data-reveal data-delay="4">Baseline: combined ADA + ATA accounts, Meta &amp; LinkedIn; Hallpass posting began late November 2025. Current figures: Ardmore Means More channels, cumulative to date.</p>''')
 
-# 03 WHERE WE STAND TODAY — CUMULATIVE + REACH (sage)
+# 03 THE AUDIENCE — OUTSIDE VS LOCAL (sage)
 slide(3,'slide--sage',u'''<p class="eyebrow" data-reveal>The Audience</p>
-<h2 class="display-sm" data-reveal data-delay="1">Where we stand <em>one year later.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">Most of that audience<br><em>isn&rsquo;t from here.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<div class="metric-strip metric-strip--four" style="margin-top:28px">
-<div class="metric" data-reveal data-delay="3"><div class="metric-value">1.4M</div><div class="metric-label">Cumulative organic video views to date</div></div>
-<div class="metric" data-reveal data-delay="4"><div class="metric-value">100K</div><div class="metric-label">Cumulative engagements</div></div>
-<div class="metric" data-reveal data-delay="5"><div class="metric-value">~11,000</div><div class="metric-label">New followers gained since launch</div></div>
-<div class="metric" data-reveal data-delay="6"><div class="metric-value">~2,000</div><div class="metric-label">Of them added in July alone</div></div>
-</div>
-<div data-reveal data-delay="6">%s</div>
-<p class="body wide" data-reveal data-delay="7">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
+<div data-reveal data-delay="3">%s</div>
+<p class="body wide" data-reveal data-delay="4">Roughly six in ten of the people engaging with Ardmore content have never been part of the local audience. The reach is extending into Dallas and Oklahoma City &mdash; which means this isn&rsquo;t Ardmore talking to itself. It&rsquo;s Ardmore being discovered. And featured businesses feel it &mdash; owners report new customers after their videos run.</p>''' % CHART_REACH)
 
 # 04 WHAT WE'VE BUILT — GROWTH (dark)
 slide(4,'slide--dark',u'''<p class="eyebrow" data-reveal>What We&rsquo;ve Built</p>
@@ -616,15 +624,24 @@ HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Communi
  '(function(){var sl=[].slice.call(document.querySelectorAll(".cover-hero,.slide"));'
  'function cur(){var y=window.scrollY+window.innerHeight*.3,i=0;'
  'sl.forEach(function(s,k){if(s.offsetTop<=y)i=k});return i}'
- 'function step(d){var s=sl[cur()],it=s?s.querySelectorAll(".pillar"):[];if(!it.length)return false;'
- 'var idx=-1;it.forEach(function(p,i){if(p.classList.contains("pillar--active"))idx=i});'
- 'if(idx<0)return false;'
- 'if(d>0){if(idx>=it.length-1)return false;'
+ 'function gstep(s,d){var els=[].slice.call(s.querySelectorAll("[data-step]"));if(!els.length)return false;'
+ 'var vals=[];els.forEach(function(e){var v=+e.getAttribute("data-step");if(vals.indexOf(v)<0)vals.push(v)});'
+ 'vals.sort(function(a,b){return a-b});'
+ 'function grp(v){return els.filter(function(e){return +e.getAttribute("data-step")===v})}'
+ 'function on(v){return grp(v)[0].classList.contains("step-on")}'
+ 'if(d>0){for(var i=0;i<vals.length;i++){if(!on(vals[i])){grp(vals[i]).forEach(function(e){e.classList.add("step-on")});return true}}return false}'
+ 'for(var j=vals.length-1;j>=0;j--){if(on(vals[j])){grp(vals[j]).forEach(function(e){e.classList.remove("step-on")});return true}}return false}'
+ 'function step(d){var s=sl[cur()];if(!s)return false;'
+ 'var it=s.querySelectorAll(".pillar");'
+ 'if(it.length){var idx=-1;it.forEach(function(p,i){if(p.classList.contains("pillar--active"))idx=i});'
+ 'if(idx>=0){'
+ 'if(d>0){if(idx<it.length-1){'
  'it[idx].classList.remove("pillar--active");it[idx].classList.add("pillar--done");'
- 'it[idx+1].classList.add("pillar--active");return true}'
- 'if(idx<=0)return false;'
+ 'it[idx+1].classList.add("pillar--active");return true}}'
+ 'else if(idx>0){'
  'it[idx].classList.remove("pillar--active");'
- 'it[idx-1].classList.remove("pillar--done");it[idx-1].classList.add("pillar--active");return true}'
+ 'it[idx-1].classList.remove("pillar--done");it[idx-1].classList.add("pillar--active");return true}}}'
+ 'return gstep(s,d)}'
  'document.addEventListener("keydown",function(ev){'
  'if(ev.metaKey||ev.ctrlKey||ev.altKey)return;var k=ev.key,d=0;'
  'if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!ev.shiftKey))d=1;'
