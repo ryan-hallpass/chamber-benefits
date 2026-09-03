@@ -611,7 +611,6 @@ slide(24,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next St
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="3">Last year across the two organizations: <strong>$150,000</strong> with ADA plus the <strong>$46,800</strong> tourism engagement &mdash; <strong>$196,800</strong>. This ask: <strong>$199,200</strong>. Essentially flat, restructured.</p>
 <p class="body" data-reveal data-delay="4">The audience is already built. The only open question is what we point it at over the next twelve months.</p>
-<p class="body" data-reveal data-delay="5">Let&rsquo;s walk through the hiring board while we&rsquo;re together &mdash; it already works, and thirty minutes with it open will say more than this deck can.</p>
 <p class="body" data-reveal data-delay="6" style="opacity:1;margin-top:30px">
 <strong style="font-family:var(--serif);font-size:20px;font-weight:400">Ryan McNeill</strong><br>
 <span style="font-size:13px;opacity:.7">Hall Pass Digital, LLC &middot; ryan@hallpassdigital.com</span></p>
