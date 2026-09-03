@@ -119,6 +119,12 @@ rule `rgba(26,26,24,.12)`. Playfair Display (serif) + DM Sans (sans).
 Scroll reveal via `[data-reveal]` + `data-delay` and an IntersectionObserver.
 Keyboard nav for presenting: `→` `PgDn` `Space` next slide, `←` `PgUp` `Shift+Space`
 previous (`↑`/`↓` stay native scroll so tall slides remain reachable).
+**Slide-fit guarantee:** `slide()` wraps content in `<div class="fit">`; a script
+zoom-shrinks any slide whose content is taller than the viewport (desktop only,
+>700px; floor 0.5). `.chart` is capped at `max-width:760px` so chart SVGs stop
+scaling with slide width — that alone makes every slide fit at ≥900px-tall screens;
+the zoom only engages on short projectors (e.g. 1280×720). Don't remove the `.fit`
+wrapper or add fixed-height content without re-measuring.
 
 The `hiring/` and `brochure/` pages use the **Chamber's own** brand instead:
 navy `#0D2240`, red `#C0392B` / `#E85449`, Montserrat + Open Sans, 14px radius.

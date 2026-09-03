@@ -119,7 +119,7 @@ text-transform:uppercase;fill:var(--ink);opacity:.55;text-anchor:middle}
 .fw-mid{font-family:var(--serif);font-style:italic;font-size:19px;fill:var(--sage);text-anchor:middle}
 .fw-midsub{font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
 fill:var(--ink);opacity:.4;text-anchor:middle}
-.chart{display:block;width:100%;height:auto;margin-top:26px}
+.chart{display:block;width:100%;height:auto;margin-top:26px;max-width:760px}
 .ch-title{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.16em;
 text-transform:uppercase;fill:var(--ink);opacity:.45;text-anchor:middle}
 .ch-val{font-family:var(--serif);font-size:19px;fill:var(--ink);text-anchor:middle}
@@ -265,7 +265,7 @@ print('charts built')
 
 S=[]
 def slide(n, cls, inner):
-    S.append('<section class="slide %s">%s%s</section>' % (cls, inner, foot(n)))
+    S.append('<section class="slide %s"><div class="fit">%s</div>%s</section>' % (cls, inner, foot(n)))
 
 # 01 COVER
 S.append('''<section class="cover-hero">
@@ -475,7 +475,14 @@ HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Communi
  'else if(k==="ArrowLeft"||k==="PageUp"||(k===" "&&ev.shiftKey))d=-1;'
  'else return;ev.preventDefault();'
  'var i=Math.max(0,Math.min(sl.length-1,cur()+d));'
- 'sl[i].scrollIntoView({behavior:"smooth"})})})();</script>') % (CSS, '\n'.join(S))
+ 'sl[i].scrollIntoView({behavior:"smooth"})})})();'
+ '(function(){var sl=[].slice.call(document.querySelectorAll(".slide"));'
+ 'function fit(){if(window.innerWidth<=700)return sl.forEach(function(s){var c=s.querySelector(".fit");if(c)c.style.zoom=""});'
+ 'sl.forEach(function(s){var c=s.querySelector(".fit");if(!c)return;c.style.zoom=1;'
+ 'var cs=getComputedStyle(s),avail=window.innerHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom),h=c.offsetHeight;'
+ 'if(h>avail)c.style.zoom=Math.max(.5,avail/h)})}'
+ 'fit();window.addEventListener("resize",fit);window.addEventListener("load",fit);'
+ 'if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit)})();</script>') % (CSS, '\n'.join(S))
 open('proposal.html','w').write(HTML)
 i=HTML.find('<style>')
 open(os.path.join(HERE,'..','index.html'),'w').write('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
