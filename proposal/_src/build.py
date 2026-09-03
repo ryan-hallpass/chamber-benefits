@@ -465,7 +465,17 @@ HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Communi
  'setTimeout(function(){c.forEach(function(e){e.classList.add("is-visible")})},120);'
  'var o=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){'
  'e.target.classList.add("is-visible");o.unobserve(e.target)}})},{threshold:0.08,rootMargin:"0px 0px -40px 0px"});'
- 'els.forEach(function(e){if(e.closest(".cover-hero"))return;o.observe(e)})})();</script>') % (CSS, '\n'.join(S))
+ 'els.forEach(function(e){if(e.closest(".cover-hero"))return;o.observe(e)})})();'
+ '(function(){var sl=[].slice.call(document.querySelectorAll(".cover-hero,.slide"));'
+ 'function cur(){var y=window.scrollY+window.innerHeight*.3,i=0;'
+ 'sl.forEach(function(s,k){if(s.offsetTop<=y)i=k});return i}'
+ 'document.addEventListener("keydown",function(ev){'
+ 'if(ev.metaKey||ev.ctrlKey||ev.altKey)return;var k=ev.key,d=0;'
+ 'if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!ev.shiftKey))d=1;'
+ 'else if(k==="ArrowLeft"||k==="PageUp"||(k===" "&&ev.shiftKey))d=-1;'
+ 'else return;ev.preventDefault();'
+ 'var i=Math.max(0,Math.min(sl.length-1,cur()+d));'
+ 'sl[i].scrollIntoView({behavior:"smooth"})})})();</script>') % (CSS, '\n'.join(S))
 open('proposal.html','w').write(HTML)
 i=HTML.find('<style>')
 open(os.path.join(HERE,'..','index.html'),'w').write('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'

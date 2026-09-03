@@ -117,6 +117,8 @@ Cream `#F2EFE8` · ink `#1A1A18` · ink-soft `#3D3D38` · sage `#7A9E7E` ·
 sage-light `#B8D0BB` · sage-wash `#EAF0EB` · warm-white `#FAFAF7` ·
 rule `rgba(26,26,24,.12)`. Playfair Display (serif) + DM Sans (sans).
 Scroll reveal via `[data-reveal]` + `data-delay` and an IntersectionObserver.
+Keyboard nav for presenting: `→` `PgDn` `Space` next slide, `←` `PgUp` `Shift+Space`
+previous (`↑`/`↓` stay native scroll so tall slides remain reachable).
 
 The `hiring/` and `brochure/` pages use the **Chamber's own** brand instead:
 navy `#0D2240`, red `#C0392B` / `#E85449`, Montserrat + Open Sans, 14px radius.
