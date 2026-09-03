@@ -424,9 +424,8 @@ slide(8,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 01 &mdash; A
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll keep building the audience &mdash; and point it at <em>economic development.</em></h2>''')
 
 slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
-<h2 class="display-sm" data-reveal data-delay="1">Continue to grow our reach on<br><em>Ardmore Means More</em> social media.</h2>
-<p class="body wide" data-reveal data-delay="2" style="margin-top:26px">Opportunities for future content:</p>
-<div class="pillar-grid" data-reveal data-delay="3">
+<h2 class="display-sm" data-reveal data-delay="1">Opportunities for future<br><em>Ardmore Means More</em> social content:</h2>
+<div class="pillar-grid" data-reveal data-delay="2" style="margin-top:34px">
 <div class="pillar pillar--active"><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
 <div class="pillar"><b>The Michelin site</b>More than a listing &mdash; the broader story of infrastructure, location, workforce, transportation and surrounding investment</div>
 <div class="pillar"><b>Growth updates</b>Development, construction, infrastructure, PREP projects and new investment &mdash; riding the buzz, not waiting for announcements</div>
