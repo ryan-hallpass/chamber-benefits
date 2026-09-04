@@ -536,17 +536,18 @@ slide(17,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
-</div>
-<div class="site-card" data-reveal data-delay="3"><img src="data:image/jpeg;base64,%s" alt="The Ardmore Chamber Learning Library concept, with lessons on Google Business Profile, customer reviews, social media and SEO"><div class="email-card-cap">The learning library &mdash; concept</div></div>
-</div>
-<div class="pillar-grid" data-reveal data-delay="5" style="grid-template-columns:repeat(6,1fr);max-width:none;margin-top:22px">
+<div class="pillar-grid" data-reveal data-delay="2" style="grid-template-columns:repeat(2,1fr);margin-top:28px">
 <div class="pillar"><b>Google Business Profile</b>Build it, keep it current</div>
 <div class="pillar"><b>Reviews &amp; reputation</b>Ask, respond, repeat</div>
 <div class="pillar"><b>Social media basics</b>What to post, and how often</div>
 <div class="pillar"><b>A website that gets found</b>Practical SEO, no jargon</div>
 <div class="pillar"><b>AI that saves time</b>Automate the routine parts</div>
 <div class="pillar"><b>Own your audience</b>Email list fundamentals</div>
-</div>''' % LIBIMG)
+</div>
+</div>
+<div class="site-card" data-reveal data-delay="3"><img src="data:image/jpeg;base64,%s" alt="The Ardmore Chamber Learning Library concept, with lessons on Google Business Profile, customer reviews, social media and SEO"><div class="email-card-cap">The learning library &mdash; concept</div></div>
+</div>
+''' % LIBIMG)
 
 # 13 INITIATIVE 05
 slide(18,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
