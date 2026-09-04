@@ -467,7 +467,7 @@ slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; 
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')
 
 slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
-<h2 class="display-sm" data-reveal data-delay="1">Two things are holding<br>the card <em>back.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">Two things are holding<br>the discount card <em>back.</em></h2>
 <ul class="problem-list" style="margin-top:26px">
 <li data-reveal data-delay="2">New signups aren&rsquo;t coming in steadily &mdash; a distribution problem: the cards aren&rsquo;t displayed prominently, and they&rsquo;re in too few places</li>
 <li data-reveal data-delay="3">And when a visitor does sign up, their contact info lands in a spreadsheet &mdash; nothing happens next</li>
