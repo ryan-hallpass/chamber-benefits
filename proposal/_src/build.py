@@ -579,12 +579,12 @@ slide(22,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 <h2 class="display-sm" data-reveal data-delay="1">ExploreArdmore.com isn&rsquo;t living up to<br>the reputation <em>that the brand has built.</em></h2>
 <ul class="problem-list" style="margin-top:22px">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
-<li data-reveal data-delay="3">Business photos are blurry and low-resolution &mdash; a first impression that undersells real places</li>
-<li data-reveal data-delay="4">The directory is a bare list, and the itineraries section &mdash; the heart of a visitor site &mdash; holds two articles</li>
+<li data-reveal data-delay="3"><a class="deck-link" href="https://www.exploreardmore.com/explore/dine/" target="_blank" rel="noopener">Business photos are blurry and low-resolution</a> &mdash; a first impression that undersells real places</li>
+<li data-reveal data-delay="4"><a class="deck-link" href="https://www.exploreardmore.com/itineraries/" target="_blank" rel="noopener">The itineraries page is a bare list</a> &mdash; the heart of a visitor site, holding just two articles</li>
 </ul>
 <div class="two-col-tight" data-reveal data-delay="5" style="margin-top:24px">
 <a class="site-card" href="https://www.exploreardmore.com/events/" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="The Explore Ardmore events calendar showing the same Mahjong Mondays listing repeated on a single day"><div class="email-card-cap">The events calendar, today &mdash; click to see it live</div></a>
-<div class="site-card"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="A blurry low-resolution Applebee's stock photo on the Explore Ardmore dine page"><div class="email-card-cap">The dine page, today</div></div>
+<a class="site-card" href="https://www.exploreardmore.com/explore/dine/" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="A blurry low-resolution Applebee's stock photo on the Explore Ardmore dine page"><div class="email-card-cap">The dine page, today &mdash; click to see it live</div></a>
 </div>
 <p class="srcnote" data-reveal data-delay="6">Observations from exploreardmore.com, September 3, 2026.</p>''' % (EAEVENTS, EADINE))
 
