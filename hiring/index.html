@@ -70,7 +70,15 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
 .btn-primary{background:var(--red-cta);color:#fff;box-shadow:0 8px 22px rgba(192,57,43,.26)}
 .btn-primary:hover{background:var(--red-cta-h);transform:translateY(-2px)}
 .btn-lg{font-size:1.06rem;padding:17px 30px}
-@media(max-width:760px){.nav a{display:none}}
+@media(max-width:760px){
+  .nav a:not(.btn){display:none}
+  .brand img{height:39px}
+  .nav .btn{font-size:.72rem;padding:9px 11px}
+}
+@media(max-width:380px){
+  .site-head .wrap{padding-left:12px;padding-right:12px}
+  .nav .btn{max-width:150px;line-height:1.15;white-space:normal}
+}
 
 /* hero */
 .hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-700) 55%,var(--navy-900) 100%);
@@ -92,6 +100,20 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
 .stat .n{font-family:Montserrat,sans-serif;font-weight:800;font-size:2.4rem;line-height:1;color:#fff}
 .stat .l{font-family:Montserrat,sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;
   letter-spacing:.15em;color:rgba(255,255,255,.6);margin-top:9px}
+
+/* weekly email */
+.email-strip{background:var(--paper-2);border-bottom:1px solid var(--line);padding:20px 0}
+.email-strip-in{display:flex;align-items:center;justify-content:space-between;gap:28px;
+  padding:22px 24px;border:1px solid var(--line);border-left:5px solid var(--red-cta);
+  border-radius:var(--radius);box-shadow:var(--shadow)}
+.email-strip .eyebrow{color:var(--red-ink);font-size:.68rem}
+.email-strip h2{font-size:clamp(1.1rem,2.4vw,1.42rem);line-height:1.22;margin:6px 0 0}
+.email-strip p:not(.eyebrow){font-size:.92rem;color:var(--ink-2);margin:5px 0 0;max-width:62ch}
+.email-strip .btn{flex:0 0 auto;text-align:center}
+@media(max-width:760px){
+  .email-strip-in{align-items:stretch;flex-direction:column;gap:16px;padding:20px}
+  .email-strip .btn{width:100%}
+}
 
 /* controls */
 .controls{background:var(--paper-2);border-bottom:1px solid var(--line);position:sticky;top:70px;z-index:40;
@@ -175,7 +197,7 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
     <nav class="nav">
       <a href="#jobs">Jobs</a>
       <a href="#employers">For employers</a>
-      <a class="btn btn-primary" href="https://ryan-hallpass.github.io/chamber-benefits/">Join the Chamber</a>
+      <a class="btn btn-primary" href="mailto:hiring@ardmore.org?subject=Sign%20me%20up%20for%20the%20free%20weekly%20jobs%20email&amp;body=Please%20add%20this%20email%20address%20to%20the%20Monday%20Ardmore%20jobs%20email.">Sign Up for the Free Weekly Email</a>
     </nav>
   </div>
 </header>
@@ -191,6 +213,19 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
       <div class="stat"><div class="n" id="employerCount">—</div><div class="l">Employers hiring</div></div>
       <div class="stat"><div class="n" id="newCount">—</div><div class="l">Posted this week</div></div>
       <div class="stat"><div class="n" id="payCount">—</div><div class="l">List a wage</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="email-strip" id="weekly-email" aria-labelledby="weekly-email-title">
+  <div class="wrap">
+    <div class="email-strip-in">
+      <div>
+        <p class="eyebrow">Free every Monday</p>
+        <h2 id="weekly-email-title">Start the week with Ardmore's latest job openings.</h2>
+        <p>Get all of Ardmore's latest local job listings, organized by category and delivered free to your inbox every Monday.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:hiring@ardmore.org?subject=Sign%20me%20up%20for%20the%20free%20weekly%20jobs%20email&amp;body=Please%20add%20this%20email%20address%20to%20the%20Monday%20Ardmore%20jobs%20email.">Sign Up for the Free Weekly Email</a>
     </div>
   </div>
 </section>
@@ -255,7 +290,7 @@ h1,h2,h3,.mont{font-family:Montserrat,-apple-system,sans-serif;letter-spacing:-.
         <p style="margin:0">PO Box 1585<br>Ardmore, OK 73402<br>580.223.7765</p>
       </div>
       <div><h4>Jobs</h4>
-        <a href="#jobs">Browse openings</a><a href="#employers">Submit an opening</a><a href="#">Get the weekly email</a></div>
+        <a href="#jobs">Browse openings</a><a href="#employers">Submit an opening</a><a href="mailto:hiring@ardmore.org?subject=Sign%20me%20up%20for%20the%20free%20weekly%20jobs%20email&amp;body=Please%20add%20this%20email%20address%20to%20the%20Monday%20Ardmore%20jobs%20email.">Get the weekly email</a></div>
       <div><h4>Chamber</h4>
         <a href="https://ryan-hallpass.github.io/chamber-benefits/">Member benefits</a><a href="#">Member directory</a><a href="#">Events</a></div>
     </div>
