@@ -583,7 +583,7 @@ slide(22,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 <li data-reveal data-delay="4">The directory is a bare list, and the itineraries section &mdash; the heart of a visitor site &mdash; holds two articles</li>
 </ul>
 <div class="two-col-tight" data-reveal data-delay="5" style="margin-top:24px">
-<div class="site-card"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="The Explore Ardmore events calendar showing the same Mahjong Mondays listing repeated on a single day"><div class="email-card-cap">The events calendar, today</div></div>
+<a class="site-card" href="https://www.exploreardmore.com/events/" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="The Explore Ardmore events calendar showing the same Mahjong Mondays listing repeated on a single day"><div class="email-card-cap">The events calendar, today &mdash; click to see it live</div></a>
 <div class="site-card"><img style="height:290px;object-fit:cover;object-position:top" src="data:image/jpeg;base64,%s" alt="A blurry low-resolution Applebee's stock photo on the Explore Ardmore dine page"><div class="email-card-cap">The dine page, today</div></div>
 </div>
 <p class="srcnote" data-reveal data-delay="6">Observations from exploreardmore.com, September 3, 2026.</p>''' % (EAEVENTS, EADINE))
