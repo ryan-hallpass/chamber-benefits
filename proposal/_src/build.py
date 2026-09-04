@@ -564,7 +564,6 @@ slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment 
 <h2 class="display-sm" data-reveal data-delay="1">Let&rsquo;s create the bridge between Ardmore&rsquo;s employers and <em>individual employees.</em></h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">A weekly hiring email plus a searchable Chamber-owned job board</li>
-<li data-reveal data-delay="3">Openings collected automatically &mdash; no member posts anything</li>
 <li data-reveal data-delay="4">Board populated with a combination of jobs located on available job boards and user submissions</li>
 </ul>
 <p class="body" data-reveal data-delay="5" style="margin-top:26px">Try it now: <a class="deck-link" href="https://ryan-hallpass.github.io/chamber-benefits/hiring/" target="_blank" rel="noopener">ryan-hallpass.github.io/chamber-benefits/hiring</a></p>
