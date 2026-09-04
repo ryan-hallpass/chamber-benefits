@@ -277,7 +277,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,10,15,18,21,24,26}
+DARK={4,8,11,17,21,24,28,30}
 print('module ready')
 
 
@@ -463,10 +463,16 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 </div>''')
 
 # 10 INITIATIVE 02
-slide(10,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Marketing Engine</p>
+slide(10,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Implement a content marketing strategy with authentic stories &hellip; develop a social media strategy focusing on visual platforms &hellip; create video content showcasing experiences throughout the region.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="body wide" data-reveal data-delay="3">Ardmore Means More is this &mdash; already in motion, one year in.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 51.</p>''')
+
+slide(11,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')
 
-slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(12,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display-sm" data-reveal data-delay="1">Two things are holding<br>the discount card <em>back.</em></h2>
 <ul class="problem-list" style="margin-top:26px">
 <li data-reveal data-delay="2">New signups aren&rsquo;t coming in steadily &mdash; a distribution problem: the cards aren&rsquo;t displayed prominently, and they&rsquo;re in too few places</li>
@@ -478,7 +484,7 @@ slide(11,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; To
 </div>''')
 
 # 12 INITIATIVE 02a — DISTRIBUTION SOLUTION (cream)
-slide(12,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(13,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Put the card everywhere<br>visitors <em>already are.</em></h2>
@@ -491,7 +497,7 @@ slide(12,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engi
 <div class="email-card" data-reveal data-delay="3"><img style="height:auto" src="data:image/jpeg;base64,%s" alt="Branded Ardmore Means More countertop take-one display holding discount cards"><div class="email-card-cap">The take-one display &mdash; concept</div></div>
 </div>''' % DISPIMG)
 
-slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Let&rsquo;s use this email list to bring visitors <em>back to Ardmore.</em></h2>
@@ -507,7 +513,7 @@ slide(13,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Mar
 </div>''' % EMAILIMG)
 
 # 13 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
-slide(14,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(15,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">&hellip;and we&rsquo;ll turn it into a stand-alone <em>What&rsquo;s Happening Around Ardmore</em> website.</h2>
@@ -523,16 +529,22 @@ slide(14,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engi
 </div>''' % SITEIMG)
 
 # 12 INITIATIVE 04
-slide(15,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
+slide(16,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;By systematically gathering and analyzing this data, Ardmore can develop a data-driven approach to tourism growth.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="body wide" data-reveal data-delay="3">The plan lists the questions every tourism business should be asking &mdash; who is visiting, why, from where, what did they spend. The marketing engine is how those answers get collected.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Establish a Data-Driven Foundation, pp. 50&ndash;51.</p>''')
+
+slide(17,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s hand every member the 20% of digital marketing that drives <em>80% of the results.</em></h2>''')
 
 # 16 INITIATIVE 03 — PROBLEM (cream)
-slide(16,'fitc900',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
+slide(18,'fitc900',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display-sm" data-reveal data-delay="1">Many members aren&rsquo;t doing the basics<br>that would <em>promote their own business.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">A review of the Chamber&rsquo;s member list makes it plain: many businesses aren&rsquo;t doing the most basic things that would help promote themselves online. And businesses that don&rsquo;t adapt to the changing digital landscape get left behind.</p>''')
 
-slide(17,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
+slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
@@ -550,16 +562,22 @@ slide(17,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 ''' % LIBIMG)
 
 # 13 INITIATIVE 05
-slide(18,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
+slide(20,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;&hellip;delivery of services and professional development programs, seminars, events and courses &hellip; programs that cater to and meet the needs of local, small business owners and entrepreneurs.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="body wide" data-reveal data-delay="3">The plan assigns this to the Chamber. The Learning Library delivers that programming &mdash; on demand, without waiting on a new hire.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Accelerate Downtown Development &amp; Entrepreneurship, p. 46.</p>''')
+
+slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll put every open job in Ardmore in one place &mdash; in front of the people <em>ready to fill them.</em></h2>''')
 
-slide(19,'fitc900',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
+slide(22,'fitc900',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display-sm" data-reveal data-delay="1">Job opportunities were the top issue in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is <em>visibility.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="srcnote" data-reveal data-delay="3">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
 
 # 18 INITIATIVE 04b — SOLUTION (sage)
-slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
+slide(23,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Let&rsquo;s create the bridge between Ardmore&rsquo;s employers and <em>individual employees.</em></h2>
@@ -573,10 +591,10 @@ slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment 
 </div>''' % HIRINGIMG)
 
 # 14 IMPLEMENTATION
-slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s give visitors a front door as good as the Ardmore <em>we&rsquo;ve been showing them.</em></h2>''')
 
-slide(22,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(25,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">ExploreArdmore.com isn&rsquo;t living up to<br>the reputation <em>that the brand has built.</em></h2>
 <ul class="problem-list" style="margin-top:22px">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
@@ -590,7 +608,7 @@ slide(22,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 <p class="srcnote" data-reveal data-delay="6">Observations from exploreardmore.com, September 3, 2026.</p>''' % (EAEVENTS, EADINE))
 
 # 21 INITIATIVE 05b — SOLUTION (cream)
-slide(23,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(26,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">Rebuild it on the<br><em>Ardmore Means More</em> brand.</h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>
@@ -599,7 +617,13 @@ slide(23,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore
 </ul>''')
 
 # 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
-slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
+slide(27,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Redesign the destination website providing comprehensive information about both Ardmore and Arbuckle Mountains attractions.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="body wide" data-reveal data-delay="3">The Accelerate package is this line item, executed.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 51.</p>''')
+
+slide(28,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
@@ -612,7 +636,7 @@ slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 </div>
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
-slide(25,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(29,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">One program. <em>Everything connected.</em></h2>
 <div class="price-grid price-grid--two">
 <div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">Growth &mdash; The Program</p>
@@ -628,7 +652,7 @@ slide(25,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
 # 24 CLOSING
-slide(26,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+slide(30,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">Let&rsquo;s build the brand<br><em>worthy of Ardmore.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="4">The audience is growing. The only open question is what we point it at over the next twelve months.</p>

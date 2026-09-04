@@ -82,7 +82,7 @@ dashboard mockup is that deck's Measurement dashboard rebuilt in the sage palett
 slide 10's email card is the actual newsletter screenshot extracted from it
 (`email.b64`, 680w JPEG). Dashboard figures are illustrative and labeled "Sample."
 
-### Current structure (26 slides)
+### Current structure (30 slides)
 
 Each initiative is a dark title slide (big serif overview statement) followed by
 its detail slide(s) — initiative 02 has TWO detail slides. Detail slides
@@ -108,30 +108,30 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
 08  T: Initiative 01 statement                                (dark)
 09  01 Ardmore Means More Social — stepped pillar walk-through (cream)
-10  T: Initiative 02 statement                                (dark)
-11  02 PROBLEM ×2: distribution (no steady signups) + spreadsheet
-    dead-end — 50+ collected / 0 sent metrics                 (sage)
-12  02 SOLUTION A: distribution — countertop take-one displays,
-    wider venue net (Airbnbs, Lake Murray Lodge, Convention
-    Center, Hardy Murphy); Ryan's display pick:
-    https://ecardsystems.com/product/ch4-cards-only-acrylic/  (cream)
-13  02 SOLUTION B: round-up email + email mockup image        (sage)
-14  02 SOLUTION C: stand-alone What's Happening website + domains (cream)
-15  T: Initiative 03 statement                                (dark)
-16  03 PROBLEM: members not doing the basics; adapt or be left behind (cream)
-17  03 SOLUTION: library concept mockup + six-topic pillar row
-    (80/20 body + readiness-score bullets CUT 2026-09-04)     (sage)
-18  T: Initiative 04 statement                                (dark)
-19  04 PROBLEM: every job in one place headline + Vision Plan cite (cream)
-20  04 SOLUTION: bullets + working-prototype screenshot + live link (sage)
-21  T: Initiative 05 statement                                (dark)
-22  05 PROBLEM: audit bullets + live evidence screenshots
-    (events dupes + blurry dine page, from exploreardmore.com) (sage)
-23  05 SOLUTION: rebuild on the Ardmore Means More brand      (cream)
-24  What These Initiatives Will Accomplish — 6 outcome cards
-    tied to the 2025 Economic Vision Plan                     (dark)
-25  Investment — "Growth" $199,200 / "Accelerate" $233,000    (cream)
-26  Next Step                                                 (dark)
+10  Q: plan citation for 01 — content/social/video tactic quote (sage)
+11  T: Initiative 02 statement                                (dark)
+12  02 PROBLEM ×2: distribution + spreadsheet dead-end — 50+/0 (sage)
+13  02 SOLUTION A: distribution — take-one displays + wider venue net
+    (display pick: ecardsystems.com/product/ch4-cards-only-acrylic/) (cream)
+14  02 SOLUTION B: round-up email + email mockup image        (sage)
+15  02 SOLUTION C: stand-alone What's Happening website + domains (cream)
+16  Q: plan citation for 02 — data-driven tourism quote       (sage)
+17  T: Initiative 03 statement                                (dark)
+18  03 PROBLEM: members not doing the basics; adapt or be left behind (cream)
+19  03 SOLUTION: library concept mockup + six-topic 2x3 grid left (sage)
+20  Q: plan citation for 03 — professional development mandate (cream)
+21  T: Initiative 04 statement                                (dark)
+22  04 PROBLEM: Vision Plan citation AS the headline          (cream)
+23  04 SOLUTION: bridge headline + prototype screenshot + live link (sage)
+    (no Q slide for 04 — its problem slide IS the citation)
+24  T: Initiative 05 statement                                (dark)
+25  05 PROBLEM: audit bullets + clickable live evidence shots (sage)
+26  05 SOLUTION: rebuild on the Ardmore Means More brand      (cream)
+27  Q: plan citation for 05 — "redesign the destination website" (sage)
+28  What These Initiatives Will Accomplish — 6 outcome cards,
+    data-walk highlight one-by-one                            (dark)
+29  Investment — "Growth" $199,200 / "Accelerate" $233,000    (cream)
+30  Next Step                                                 (dark)
 
 (The Implementation three-phase slide and the Why This Has Worked slide were CUT
 2026-09-03 per Ryan — their content survives only in git history; the phase plan
@@ -152,7 +152,7 @@ to the `.b64` files, rebuild.
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,8,10,15,18,21,24,26}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,8,11,17,21,24,28,30}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
