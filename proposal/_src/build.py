@@ -506,9 +506,9 @@ slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Mar
 <li data-reveal data-delay="4">Member events promoted alongside community events</li>
 </ul>
 <p class="body" data-reveal data-delay="5" style="margin-top:26px">Grown by every tourism-card scan, the list becomes promotional space the Chamber owns outright.</p>
-<p class="body" data-reveal data-delay="6" style="margin-top:18px">See the example: <a class="deck-link" href="https://ryan-hallpass.github.io/ardmore-events/email.html" target="_blank" rel="noopener">the first issue, live</a></p>
+<p class="body" data-reveal data-delay="6" style="margin-top:18px">See the example: <a class="deck-link" href="https://ryan-hallpass.github.io/ardmore-events/email.html" target="_blank" rel="noopener">the latest issue, live</a></p>
 </div>
-<div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">Issue 01 &mdash; what a send looks like</div></div>
+<div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">Issue 02 &mdash; what a send looks like</div></div>
 </div>''' % EMAILIMG)
 
 # 13 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
@@ -562,7 +562,7 @@ slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 
 # 13 INITIATIVE 05
 slide(20,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;&hellip;delivery of services and professional development programs, seminars, events and courses &hellip; programs that cater to and meet the needs of local, small business owners and entrepreneurs.&rdquo;</h2>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;&hellip;delivery of services and professional development programs, seminars events and courses &hellip; programs that cater to and meet the needs of local, small business owners and entrepreneurs.&rdquo;</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">The plan assigns this to the Chamber. The Learning Library delivers that programming &mdash; on demand, without waiting on a new hire.</p>
 <p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Accelerate Downtown Development &amp; Entrepreneurship, p. 46.</p>''')
