@@ -562,7 +562,6 @@ slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 slide(20,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
 <h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;&hellip;delivery of services and professional development programs, seminars events and courses &hellip; programs that cater to and meet the needs of local, small business owners and entrepreneurs.&rdquo;</h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<p class="body wide" data-reveal data-delay="3">The plan assigns this to the Chamber. The Learning Library delivers that programming &mdash; on demand, without waiting on a new hire.</p>
 <p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Accelerate Downtown Development &amp; Entrepreneurship, p. 46.</p>''')
 
 slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
