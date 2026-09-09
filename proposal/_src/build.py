@@ -471,7 +471,12 @@ slide(10,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soc
 slide(11,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')
 
-slide(12,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(12,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Develop an aggressive tourism marketing plan that &hellip; includes the convention center along with local small businesses and restaurants.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; SWOT Analysis &amp; Leverage Points, p. 30.</p>''')
+
+slide(13,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display-sm" data-reveal data-delay="1">Two things are holding<br>the discount card <em>back.</em></h2>
 <ul class="problem-list" style="margin-top:26px">
 <li data-reveal data-delay="2">New signups aren&rsquo;t coming in steadily &mdash; a distribution problem: the cards aren&rsquo;t displayed prominently, and they&rsquo;re in too few places</li>
@@ -482,8 +487,8 @@ slide(12,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>02 &mdash; To
 <div class="metric" data-reveal data-delay="5"><div class="metric-value">0</div><div class="metric-label">Emails ever sent to that list</div></div>
 </div>''')
 
-# 12 INITIATIVE 02a — DISTRIBUTION SOLUTION (cream)
-slide(13,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+# 14 INITIATIVE 02a — DISTRIBUTION SOLUTION (cream)
+slide(14,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Put the card everywhere<br>visitors <em>already are.</em></h2>
@@ -496,7 +501,7 @@ slide(13,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engi
 <div class="email-card" data-reveal data-delay="3"><img style="height:auto" src="data:image/jpeg;base64,%s" alt="Branded Ardmore Means More countertop take-one display holding discount cards"><div class="email-card-cap">The take-one display &mdash; concept</div></div>
 </div>''' % DISPIMG)
 
-slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+slide(15,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">Let&rsquo;s use this email list to bring visitors <em>back to Ardmore.</em></h2>
@@ -511,8 +516,8 @@ slide(14,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Mar
 <div class="email-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="Sample weekly round-up email of upcoming Ardmore events"><div class="email-card-cap">Issue 02 &mdash; what a send looks like</div></div>
 </div>''' % EMAILIMG)
 
-# 13 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
-slide(15,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
+# 16 INITIATIVE 02c — STAND-ALONE WEBSITE (sage)
+slide(16,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engine</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">&hellip;and we&rsquo;ll turn it into a stand-alone <em>What&rsquo;s Happening Around Ardmore</em> website.</h2>
@@ -526,13 +531,6 @@ slide(15,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engi
 </div>
 <div class="site-card" data-reveal data-delay="4"><img src="data:image/jpeg;base64,%s" alt="The stand-alone Ardmore Means More Events website"><div class="email-card-cap">The stand-alone site</div></div>
 </div>''' % SITEIMG)
-
-# 12 INITIATIVE 04
-slide(16,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Develop an aggressive tourism marketing plan that &hellip; includes the convention center along with local small businesses and restaurants.&rdquo;</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<p class="body wide" data-reveal data-delay="3">The plan pairs this with the weakness it answers: &ldquo;underutilized tourism assets.&rdquo; The marketing engine is that plan &mdash; discounts that put local businesses in visitors&rsquo; hands, a round-up that brings them back, and the Convention Center already on the display list.</p>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; SWOT Analysis &amp; Leverage Points, p. 30.</p>''')
 
 slide(17,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s hand every member the 20% of digital marketing that drives <em>80% of the results.</em></h2>''')
