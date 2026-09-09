@@ -115,7 +115,7 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
 [data-reveal].visible{opacity:1;transform:none}
 [data-delay='1']{transition-delay:.12s}[data-delay='2']{transition-delay:.24s}[data-delay='3']{transition-delay:.36s}
 @media(max-width:760px){html{scroll-snap-type:none}.slide{min-height:auto;padding:66px 24px 76px}.cover{min-height:100svh}.timeline,.choice-grid,.package-grid,.decision{grid-template-columns:1fr}.price-head{display:block}.price{margin-top:24px}.compare-row{grid-template-columns:1fr 1fr}.compare-row>div:first-child{grid-column:1/-1;padding:14px 0 6px}.compare-row>div:nth-child(2),.compare-row>div:nth-child(3){padding:9px 10px 14px}.compare-row:first-child>div:first-child{display:none}.footer{left:24px;right:24px}.future{min-height:0}.decision-card{margin-top:10px}}
-@media(max-height:800px) and (min-width:761px){.slide{padding-top:46px;padding-bottom:54px}.footer{bottom:16px}.choice-grid{margin-top:24px}.future{min-height:286px;padding:28px 34px}.future-name{margin-top:10px;font-size:30px}.future-list{margin-top:16px}.future-list li{padding-top:8px;padding-bottom:8px}.momentum-note{margin-top:14px;padding:11px 18px;font-size:12.5px}.compare{margin-top:22px}.compare-row>div{padding-top:10px;padding-bottom:10px}.compare-row.price-row>div{font-size:19px}}
+@media(max-height:800px) and (min-width:761px){.slide{padding-top:46px;padding-bottom:54px}.footer{bottom:16px}.choice-grid{margin-top:24px}.future{min-height:286px;padding:28px 34px}.future-name{margin-top:10px;font-size:30px}.future-list{margin-top:16px}.future-list li{padding-top:8px;padding-bottom:8px}.momentum-note{margin-top:14px;padding:11px 18px;font-size:12.5px}.price-head{margin-bottom:18px}.deliverables li{padding-top:8px;padding-bottom:8px;font-size:13.5px}.scope-box{padding:24px}.scope-box p{margin-bottom:9px;line-height:1.5}.compare{margin-top:22px}.compare-row>div{padding-top:10px;padding-bottom:10px}.compare-row.price-row>div{font-size:19px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}[data-reveal]{opacity:1!important;transform:none!important;transition:none!important}}
 @media print{html{scroll-snap-type:none}.slide{min-height:100vh;break-after:page}[data-reveal]{opacity:1!important;transform:none!important}}
 </style>
@@ -156,9 +156,9 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
     <h2 class="display-sm" data-reveal data-delay="1">Both prevent silence.<br>Only one preserves the <em>current cadence.</em></h2>
     <div class="choice-grid">
       <article class="future" data-reveal data-delay="2">
-        <div class="future-kicker">Bridge Essentials</div>
+        <div class="future-kicker">Focused Bridge</div>
         <h3 class="future-name">Keep a <em>visible pulse.</em></h3>
-        <ul class="future-list"><li>Two polished videos each month</li><li>A reusable property-post system for ADA</li><li>Less publishing and account management</li><li>Fewer opportunities to reach, test and learn</li></ul>
+        <ul class="future-list"><li>Two polished videos each month: one development, one tourism</li><li>Plug-and-play templates for timely ADA posts</li><li>ADA handles ad-hoc publishing and day-to-day engagement</li><li>A deliberate reduction in reach, repetition and creative learning</li></ul>
       </article>
       <article class="future featured" data-reveal data-delay="3">
         <div class="future-kicker">Momentum Continuity · Recommended</div>
@@ -166,7 +166,7 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
         <ul class="future-list"><li>Current platform cadence remains intact</li><li>Full publishing, optimization and engagement</li><li>Continuous performance learning</li><li>A stronger starting position in January</li></ul>
       </article>
     </div>
-    <p class="momentum-note" data-reveal>Reducing the frequency of well-produced posts means fewer chances to reach new people, reinforce the brand and learn what works. A lighter cadence keeps the channels active, but we should expect slower growth.</p>
+    <p class="momentum-note" data-reveal><strong>Focused Bridge keeps Ardmore visible, but it does not preserve the current growth capacity.</strong> Fewer well-produced posts mean fewer chances to reach new people, reinforce the brand and learn what works. While results are never guaranteed, reducing the cadence is likely to slow the momentum Ardmore Means More has developed.</p>
   </div>
   __FOOT3__
 </section>
@@ -174,18 +174,20 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
 <section class="slide sage">
   <div class="fit">
     <div class="price-head">
-      <div><p class="eyebrow" data-reveal>Option 01 · Bridge Essentials</p><h2 class="display-sm" data-reveal data-delay="1">A focused handoff<br>with a <em>steady pulse.</em></h2></div>
-      <div class="price" data-reveal data-delay="2">$9,000<small>$3,000 per month · three months</small></div>
+      <div><p class="eyebrow" data-reveal>Option 01 · Focused Bridge</p><h2 class="display-sm" data-reveal data-delay="1">A focused cadence<br>with a <em>clear job to do.</em></h2></div>
+      <div class="price" data-reveal data-delay="2">$16,500<small>$5,500 per month · three months</small></div>
     </div>
     <div class="package-grid">
       <ul class="deliverables" data-reveal data-delay="2">
-        <li><strong>Two short-form videos per month</strong>—six total</li>
+        <li><strong>Two short-form videos per month</strong>—one development story and one tourism story; six total</li>
+        <li>Development stories may feature properties, infrastructure, investment, workforce or growth</li>
+        <li>Tourism stories may feature attractions, events, local businesses or experiences</li>
         <li>Editing from footage captured during the final September shoot</li>
         <li>Captions and publishing across TikTok, Instagram Reels, Facebook and YouTube Shorts</li>
-        <li>One reusable property-post template, plus a practical handoff to ADA</li>
+        <li>Plug-and-play templates for available properties, development updates and timely tourism or event content—plus a practical handoff so ADA can publish ad-hoc posts</li>
         <li>A monthly performance snapshot</li>
       </ul>
-      <aside class="scope-box" data-reveal data-delay="3"><span class="tag">Lean bridge</span><h3>What changes</h3><p>ADA takes on other static posts and day-to-day community engagement.</p><p>This is intentionally narrower than the current program. It maintains a credible presence, but not the same rate of creative testing or audience growth.</p><p><strong>No new travel or shooting is included.</strong></p></aside>
+      <aside class="scope-box" data-reveal data-delay="3"><span class="tag">Focused bridge</span><h3>What changes</h3><p>Hall Pass maintains a scheduled video presence. ADA uses the new templates for ad-hoc static posts and manages day-to-day community engagement.</p><p>This is intentionally narrower than the current program. It maintains a credible presence, but the lower frequency is likely to slow reach, follower growth and performance learning.</p><p><strong>No new travel or shooting is included.</strong></p></aside>
     </div>
   </div>
   __FOOT4__
@@ -217,14 +219,14 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
     <p class="eyebrow" data-reveal>Side by side</p>
     <h2 class="display-sm" data-reveal data-delay="1">Choose the bridge that matches<br>the outcome you want in <em>January.</em></h2>
     <div class="compare" data-reveal data-delay="2">
-      <div class="compare-row"><div class="compare-head">Scope</div><div class="compare-head">Bridge Essentials</div><div class="compare-head">Momentum Continuity</div></div>
-      <div class="compare-row"><div>Video cadence</div><div>2 per month</div><div>4–6 per month</div></div>
-      <div class="compare-row"><div>Supporting platform posts</div><div>Video cross-posts only</div><div>Full current cadence</div></div>
-      <div class="compare-row"><div>Property content</div><div>Template + ADA publishing</div><div>Managed within content mix</div></div>
+      <div class="compare-row"><div class="compare-head">Scope</div><div class="compare-head">Focused Bridge</div><div class="compare-head">Momentum Continuity</div></div>
+      <div class="compare-row"><div>Video cadence</div><div>2 per month: 1 development + 1 tourism</div><div>4–6 per month</div></div>
+      <div class="compare-row"><div>Supporting platform posts</div><div>Included videos only</div><div>Full current cadence</div></div>
+      <div class="compare-row"><div>Ad-hoc content</div><div>Templates + ADA publishing</div><div>Created and managed within the full content mix</div></div>
       <div class="compare-row"><div>Account management</div><div>Limited to included videos</div><div>Full publishing + optimization</div></div>
       <div class="compare-row"><div>Reporting</div><div>Monthly snapshot</div><div>Monthly report + check-in</div></div>
       <div class="compare-row"><div>New travel or shooting</div><div>None</div><div>None</div></div>
-      <div class="compare-row price-row"><div>October–December total</div><div>$9,000</div><div>$24,500<span class="recommended">Recommended</span></div></div>
+      <div class="compare-row price-row"><div>October–December total</div><div>$16,500</div><div>$24,500<span class="recommended">For $8,000 more, maintain the current program</span></div></div>
     </div>
   </div>
   __FOOT6__
@@ -235,7 +237,7 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);f
     <div>
       <p class="eyebrow" data-reveal>The recommendation</p>
       <h2 class="display" data-reveal data-delay="1">Enter January with the<br><em>strongest possible hand.</em></h2>
-      <p class="lede" data-reveal data-delay="2">Momentum Continuity preserves the work already producing results while the broader program is finalized. Bridge Essentials remains a credible lower-cost path when budget is the deciding constraint.</p>
+      <p class="lede" data-reveal data-delay="2">Momentum Continuity preserves the cadence, account management and performance learning already producing results while the broader program is finalized. Focused Bridge remains a credible lower-cost path when budget is the deciding constraint.</p>
     </div>
     <aside class="decision-card" data-reveal data-delay="3">
       <span class="tag">Decision requested</span>

@@ -29,6 +29,7 @@ Proposals are presented live to executives, executive committees, and boards, th
 - The Chamber Member Engagement & Visibility Agreement remains active and must not be re-scoped or re-billed in these proposals.
 - The broader next-year program is intended for executive-committee review, a November 2026 board retreat, and a January 1, 2027 start.
 - A separate social-media bridge is needed for October through December 2026. It must use footage already captured by the final September shoot and include no new travel or on-location production.
+- The bridge offers a $16,500 Focused Bridge and a recommended $24,500 Momentum Continuity option.
 - The broader program should target a $225,000 annual price point and describe appropriate use of Ardmore-area vendors.
 
 ## Brand Commitments
@@ -51,4 +52,3 @@ Proposals are presented live to executives, executive committees, and boards, th
 - Tie claims to signed scope, observed performance, or the Economic Vision Plan.
 - Treat local procurement as a strength while preserving Hall Pass's specialized role.
 - State exclusions and provisional pricing clearly.
-
