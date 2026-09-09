@@ -508,7 +508,7 @@ slide(15,'slide--sage',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Mar
 <ul class="init-bullets">
 <li data-reveal data-delay="2">A weekly <em>What&rsquo;s Happening Around Ardmore</em> round-up</li>
 <li data-reveal data-delay="3">Events collected automatically from venues and public calendars</li>
-<li data-reveal data-delay="4">Member events promoted alongside community events</li>
+<li data-reveal data-delay="4">Chamber member events promoted alongside community &amp; Convention Center events</li>
 </ul>
 <p class="body" data-reveal data-delay="5" style="margin-top:26px">Grown by every tourism-card scan, the list becomes promotional space the Chamber owns outright.</p>
 <p class="body" data-reveal data-delay="6" style="margin-top:18px">See the example: <a class="deck-link" href="https://ryan-hallpass.github.io/ardmore-events/email.html" target="_blank" rel="noopener">the latest issue, live</a></p>
