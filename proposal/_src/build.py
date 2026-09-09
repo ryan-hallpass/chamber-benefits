@@ -12,6 +12,13 @@ EAEVENTS=open(os.path.join(HERE,'eaevents.b64')).read()
 DISPIMG=open(os.path.join(HERE,'display.b64')).read()
 EADINE=open(os.path.join(HERE,'eadine.b64')).read()
 
+FAVICON_HEAD = (
+ '<link rel="icon" href="favicon.png" sizes="32x32">\n'
+ '<link rel="icon" href="favicon.png" sizes="192x192">\n'
+ '<link rel="apple-touch-icon" href="favicon.png">\n'
+ '<meta name="msapplication-TileImage" content="favicon.png">\n'
+)
+
 CSS = """
 :root{--cream:#F2EFE8;--ink:#1A1A18;--ink-soft:#3D3D38;--sage:#7A9E7E;--sage-light:#B8D0BB;
 --sage-wash:#EAF0EB;--warm-white:#FAFAF7;--rule:rgba(26,26,24,0.12);
@@ -742,6 +749,7 @@ open('proposal.html','w').write(HTML)
 i=HTML.find('<style>')
 open(os.path.join(HERE,'..','index.html'),'w').write('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
  '<meta name="viewport" content="width=device-width,initial-scale=1">\n'+HTML[:i]+
+ FAVICON_HEAD+
  '<meta name="description" content="Where we started, what we built, and where we take it next — Hallpass Digital for the Ardmore Chamber of Commerce.">\n' '<meta name="robots" content="noindex,nofollow">\n'
  '</head>\n<body>\n'+HTML[i:]+'\n</body>\n</html>')
 print('slides:',len(S),'| KB',round(len(HTML)/1024,1),'-> ../index.html')
