@@ -88,13 +88,18 @@ padding:15px 0 15px 30px;position:relative;border-bottom:1px solid var(--rule)}
 .phase-body{font-size:13px;line-height:1.6;font-weight:300;opacity:.7}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
 .price-grid--two{grid-template-columns:repeat(2,1fr)}
+.price-grid--one{grid-template-columns:1fr;max-width:1080px}
 .price-card{background:var(--cream);padding:36px 30px;display:flex;flex-direction:column}
 .price-card--featured{background:var(--ink);color:var(--cream)}
+.price-card--single{padding:40px 42px}
+.price-card--single .price-amount{font-size:52px}
 .price-tier{font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.5;margin-bottom:16px}
 .price-amount{font-family:var(--serif);font-size:36px;line-height:1;margin-bottom:4px}
 .price-estimate{font-family:var(--sans);font-size:14px;letter-spacing:.04em;opacity:.55}
 .price-period{font-size:12px;opacity:.5;margin-bottom:20px}
 .price-items{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.price-items--two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 34px}
+.price-items--two li{font-size:14px}
 .price-items li{font-size:12.5px;padding-left:16px;position:relative;line-height:1.5;opacity:.8}
 .price-items li::before{content:'\\2197';position:absolute;left:0;color:var(--sage);opacity:.9}
 .price-card--featured .price-items li::before{color:var(--sage-light)}
@@ -265,6 +270,7 @@ transition:opacity 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16
 @media (max-width:700px){
 .slide{padding:56px 26px;min-height:auto}
 .card-grid,.price-grid,.metric-strip,.two-col,.two-col-tight,.diagram,.pillar-grid{grid-template-columns:1fr}
+.price-card--single{padding:32px 24px}.price-card--single .price-amount{font-size:40px}.price-items--two{grid-template-columns:1fr}
 .dash-stats{grid-template-columns:repeat(2,1fr)}.email-card{justify-self:start}
 .diagram{gap:14px}.dgap{transform:rotate(90deg);padding:8px 0}
 .phase-item{grid-template-columns:1fr;gap:10px}
@@ -278,7 +284,7 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,9,11,17,21,24,28,30}
+DARK={4,9,11,17,21,24,29,31}
 print('module ready')
 
 # ---------------- CHARTS ----------------
@@ -614,11 +620,21 @@ slide(27,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore
 <li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>
 <li data-reveal data-delay="3">Digital guides to the area&rsquo;s most popular destinations</li>
 <li data-reveal data-delay="4">Trip-planning tools that help visitors build a stay around their interests</li>
-<li data-reveal data-delay="5">A companion mobile app for planning on the go</li>
-<li data-reveal data-delay="6">Daily blog content featuring itineraries and experiences</li>
-</ul>''')
+<li data-reveal data-delay="5">A flexible foundation that can grow as visitor needs become clearer</li>
+</ul>
+<p class="body wide" data-reveal data-delay="6"><strong>Future phases:</strong> a companion mobile app and daily itinerary and experience content can be added after the core site launches and usage data clarifies the next priorities.</p>''')
 
-slide(28,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
+slide(28,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>Local Partnership</p>
+<h2 class="display-sm" data-reveal data-delay="1">Keep specialized strategy centralized &mdash;<br>and put <em>local work in local hands.</em></h2>
+<p class="body wide" data-reveal data-delay="2">Hall Pass will lead strategy, creative direction and quality control while engaging qualified Ardmore-area contractors whenever practical.</p>
+<div class="phase-list">
+<div class="phase-item" data-reveal data-delay="3"><div class="phase-label">Print production</div><div><div class="phase-title">Local printing services</div><div class="phase-body">Use qualified local printers for discount cards, take-one displays and campaign collateral when scope and timing permit.</div></div></div>
+<div class="phase-item" data-reveal data-delay="4"><div class="phase-label">Photography</div><div><div class="phase-title">Local photographers</div><div class="phase-body">Commission destination, business, event and community imagery locally when additional assets are needed.</div></div></div>
+<div class="phase-item" data-reveal data-delay="5"><div class="phase-label">Video capture</div><div><div class="phase-title">Local videographers</div><div class="phase-body">Engage on-the-ground crews when they can meet the program&rsquo;s creative, technical, scheduling and budget requirements.</div></div></div>
+</div>
+<p class="body wide" data-reveal data-delay="6">Hall Pass will coordinate every partner so the work remains consistent with the Ardmore Means More brand and functions as one connected program.</p>''')
+
+slide(29,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
@@ -631,23 +647,28 @@ slide(28,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives
 </div>
 <p class="srcnote" data-reveal data-delay="6">2025 Economic Vision Plan &mdash; commissioned by the Ardmore Chamber of Commerce, Ardmore Development Authority and Ardmore Tourism Authority.</p>''')
 
-slide(29,'',u'''<p class="eyebrow" data-reveal>Investment</p>
+slide(30,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <h2 class="display-sm" data-reveal data-delay="1">One program. <em>Everything connected.</em></h2>
-<div class="price-grid price-grid--two">
-<div class="price-card price-card--featured" data-reveal data-delay="2"><p class="price-tier">Growth &mdash; The Program</p>
-<div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
-<ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Marketing Engine</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
-<div class="price-card" data-reveal data-delay="3"><p class="price-tier">Accelerate &mdash; Program + Explore Ardmore</p>
-<div class="price-amount">$233,000&ndash;$275,000 <span class="price-estimate">(estimate)</span></div><p class="price-period">Twelve-month investment, based on the defined scope of work</p>
-<ul class="price-items"><li>The full Growth program, unchanged</li><li><strong>$233,000 scope:</strong> Explore Ardmore rebuilt with a <em>What&rsquo;s Happening Around Ardmore</em> page and digital guides to the area&rsquo;s most popular destinations</li><li><strong>$275,000 scope:</strong> adds trip-planning tools, a mobile app and daily blog content featuring itineraries and experiences</li><li>Site rebuild billed in two payments &mdash; half at kickoff, half at launch</li></ul></div>
+<div class="price-grid price-grid--one">
+<div class="price-card price-card--featured price-card--single" data-reveal data-delay="2"><p class="price-tier">Integrated Marketing Program</p>
+<div class="price-amount">$225,000</div><p class="price-period">Twelve-month investment &middot; average $18,750 per month</p>
+<ul class="price-items price-items--two">
+<li>Ardmore Means More Social</li>
+<li>Tourism Marketing Engine, including discount-card distribution and the weekly events round-up</li>
+<li>Chamber Member Learning Library</li>
+<li>Employment in Ardmore email and searchable job board</li>
+<li>Explore Ardmore core rebuild with a <em>What&rsquo;s Happening Around Ardmore</em> page, digital destination guides and web-based trip-planning tools</li>
+<li>Qualified local printing, photography and videography partners used when possible</li>
+<li>Explore Ardmore build billed in two payments &mdash; half at kickoff and half at launch; the ongoing program billed monthly</li>
+</ul></div>
 </div>
 <div class="total-bar" data-reveal data-delay="4">
 <div><span class="lbl">Agreement term</span><div class="amt" style="font-size:24px">Twelve months</div></div>
-<div class="sub">October 1, 2026 through September 30, 2027</div></div>
+<div class="sub">January 1 through December 31, 2027</div></div>
 <p class="body wide" data-reveal data-delay="5" style="font-size:13px">Separate from and additive to the Member Engagement &amp; Visibility Agreement dated May 12, 2026, which remains in full force. Membership collateral, lifecycle email, business profiles, the member directory, the Annual Visibility Report and testimonial video are scoped there and are not re-billed here.</p>''')
 
-# 24 CLOSING
-slide(30,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
+# CLOSING
+slide(31,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next Step</p>
 <h2 class="display" data-reveal data-delay="1">Let&rsquo;s build the brand<br><em>worthy of Ardmore.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body" data-reveal data-delay="4">The audience is growing. The only open question is what we point it at over the next twelve months.</p>
