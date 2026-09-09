@@ -448,7 +448,7 @@ slide(8,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vis
 <h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Implement a content marketing strategy with authentic stories &hellip; develop a social media strategy focusing on visual platforms &hellip; create video content showcasing experiences throughout the region.&rdquo;</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">Ardmore Means More is this &mdash; already in motion, one year in.</p>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 51.</p>''')
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 52.</p>''')
 
 slide(9,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 01 &mdash; Ardmore Means More Social</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll keep building the audience &mdash; and point it at <em>economic development.</em></h2>''')
@@ -571,9 +571,9 @@ slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; 
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll put every open job in Ardmore in one place &mdash; in front of the people <em>ready to fill them.</em></h2>''')
 
 slide(22,'fitc900',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
-<h2 class="display-sm" data-reveal data-delay="1">Job opportunities were the top issue in the Economic Vision Plan&rsquo;s community survey, and &ldquo;loss of talent to larger cities&rdquo; is on its threat list. The jobs exist &mdash; what&rsquo;s missing is <em>visibility.</em></h2>
+<h2 class="display-sm" data-reveal data-delay="1">The Economic Vision Plan identifies strong demand for diverse, high-paying job opportunities and lists &ldquo;loss of talent to larger cities&rdquo; as a threat. The jobs exist &mdash; what&rsquo;s missing is <em>visibility.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<p class="srcnote" data-reveal data-delay="3">2025 Economic Vision Plan: community survey themes and SWOT analysis.</p>''')
+<p class="srcnote" data-reveal data-delay="3">2025 Economic Vision Plan &mdash; community survey themes, p. 15; SWOT analysis, p. 29.</p>''')
 
 # 18 INITIATIVE 04b — SOLUTION (sage)
 slide(23,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment in Ardmore Email</p>
@@ -620,14 +620,14 @@ slide(27,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025
 <h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Redesign the destination website providing comprehensive information about both Ardmore and Arbuckle Mountains attractions.&rdquo;</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">The Accelerate package is this line item, executed.</p>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 51.</p>''')
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 52.</p>''')
 
 slide(28,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
 <p class="body wide" data-reveal data-delay="2">The 2025 plan the Chamber co-commissioned says the marketing challenge is &ldquo;not due to a lack of planning, but because of execution constraints.&rdquo; These five initiatives are the execution.</p>
 <div class="card-grid" style="margin-top:28px">
 <div class="card walk-active" data-walk data-reveal data-delay="3"><div class="card-title">Top of mind, out of market</div><div class="card-body">Site selectors and entrepreneurs evaluate communities online &mdash; anonymously, long before they make contact. The audience we&rsquo;ve built keeps Ardmore in that conversation.</div></div>
-<div class="card" data-walk data-reveal data-delay="3"><div class="card-title">A clear sense of place</div><div class="card-body">The plan names the lack of &ldquo;a clear sense of who Ardmore is&rdquo; as a core weakness. A year of storytelling &mdash; and a rebuilt visitor site &mdash; is the answer.</div></div>
+<div class="card" data-walk data-reveal data-delay="3"><div class="card-title">A clear sense of place</div><div class="card-body">The plan identifies a lack of a clear sense of place for Ardmore as a core weakness. A year of storytelling &mdash; and a rebuilt visitor site &mdash; is the answer.</div></div>
 <div class="card" data-walk data-reveal data-delay="4"><div class="card-title">Stronger small businesses</div><div class="card-body">Diversifying beyond one large employer starts with the businesses already here. Training, visibility and measurable foot traffic, for all 587 members.</div></div>
 <div class="card" data-walk data-reveal data-delay="4"><div class="card-title">Talent that stays</div><div class="card-body">The plan lists &ldquo;loss of talent to larger cities&rdquo; as a threat. Every open job in Ardmore, in one place, gives people a reason to stay &mdash; or come back.</div></div>
 <div class="card" data-walk data-reveal data-delay="5"><div class="card-title">Tourism assets, put to work</div><div class="card-body">&ldquo;Underutilized tourism assets&rdquo; is the plan&rsquo;s phrase. The discount card, the weekly round-up and a rebuilt Explore Ardmore put them in front of visitors.</div></div>
