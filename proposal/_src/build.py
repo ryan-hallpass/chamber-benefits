@@ -611,8 +611,7 @@ slide(26,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore
 <h2 class="display-sm" data-reveal data-delay="1">Rebuild it on the<br><em>Ardmore Means More</em> brand.</h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>
-<li data-reveal data-delay="3">Powered by the Chamber directory work we&rsquo;ve already built</li>
-<li data-reveal data-delay="4">Always current &mdash; no one has to tend it by hand</li>
+<li data-reveal data-delay="3">Trip-planning tools and guides to the area&rsquo;s most popular destinations</li>
 </ul>''')
 
 # 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
