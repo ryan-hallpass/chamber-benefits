@@ -529,10 +529,10 @@ slide(15,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engi
 
 # 12 INITIATIVE 04
 slide(16,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;By systematically gathering and analyzing this data, Ardmore can develop a data-driven approach to tourism growth.&rdquo;</h2>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Develop an aggressive tourism marketing plan that &hellip; includes the convention center along with local small businesses and restaurants.&rdquo;</h2>
 <div class="rule" data-reveal data-delay="2"></div>
-<p class="body wide" data-reveal data-delay="3">The plan lists the questions every tourism business should be asking &mdash; who is visiting, why, from where, what did they spend. The marketing engine is how those answers get collected.</p>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Establish a Data-Driven Foundation, pp. 50&ndash;51.</p>''')
+<p class="body wide" data-reveal data-delay="3">The plan pairs this with the weakness it answers: &ldquo;underutilized tourism assets.&rdquo; The marketing engine is that plan &mdash; discounts that put local businesses in visitors&rsquo; hands, a round-up that brings them back, and the Convention Center already on the display list.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; SWOT Analysis &amp; Leverage Points, p. 30.</p>''')
 
 slide(17,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s hand every member the 20% of digital marketing that drives <em>80% of the results.</em></h2>''')

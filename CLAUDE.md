@@ -116,7 +116,8 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
     (display pick: ecardsystems.com/product/ch4-cards-only-acrylic/) (cream)
 14  02 SOLUTION B: round-up email + email mockup image        (sage)
 15  02 SOLUTION C: stand-alone What's Happening website + domains (cream)
-16  Q: plan citation for 02 — data-driven tourism quote       (sage)
+16  Q: plan citation for 02 — 'aggressive tourism marketing plan'
+    leverage point (swapped 2026-09-09; data quote felt a stretch) (sage)
 17  T: Initiative 03 statement                                (dark)
 18  03 PROBLEM: members not doing the basics; adapt or be left behind (cream)
 19  03 SOLUTION: library concept mockup + six-topic 2x3 grid left (sage)
