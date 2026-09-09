@@ -612,7 +612,10 @@ slide(27,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore
 <h2 class="display-sm" data-reveal data-delay="1">Rebuild it on the<br><em>Ardmore Means More</em> brand.</h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>
-<li data-reveal data-delay="3">Trip-planning tools and guides to the area&rsquo;s most popular destinations</li>
+<li data-reveal data-delay="3">Digital guides to the area&rsquo;s most popular destinations</li>
+<li data-reveal data-delay="4">Trip-planning tools that help visitors build a stay around their interests</li>
+<li data-reveal data-delay="5">A companion mobile app for planning on the go</li>
+<li data-reveal data-delay="6">Daily blog content featuring itineraries and experiences</li>
 </ul>''')
 
 slide(28,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
