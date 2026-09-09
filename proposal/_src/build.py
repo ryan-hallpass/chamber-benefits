@@ -535,13 +535,18 @@ slide(16,'',u'''<p class="eyebrow" data-reveal>02 &mdash; Tourism Marketing Engi
 slide(17,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s hand every member the 20% of digital marketing that drives <em>80% of the results.</em></h2>''')
 
-# 16 INITIATIVE 03 — PROBLEM (cream)
-slide(18,'fitc900',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
+slide(18,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;&hellip;delivery of services and professional development programs, seminars events and courses &hellip; programs that cater to and meet the needs of local, small business owners and entrepreneurs.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Accelerate Downtown Development &amp; Entrepreneurship, p. 46.</p>''')
+
+# 19 INITIATIVE 03 — PROBLEM (cream)
+slide(19,'fitc900',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
 <h2 class="display-sm" data-reveal data-delay="1">Many members aren&rsquo;t doing the basics<br>that would <em>promote their own business.</em></h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">A review of the Chamber&rsquo;s member list makes it plain: many businesses aren&rsquo;t doing the most basic things that would help promote themselves online. And businesses that don&rsquo;t adapt to the changing digital landscape get left behind.</p>''')
 
-slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
+slide(20,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Member Learning Library</p>
 <div class="two-col-tight" style="align-items:start;margin-top:0">
 <div>
 <h2 class="display-sm" data-reveal data-delay="1">On-demand training every<br>member can <em>actually use.</em></h2>
@@ -557,12 +562,6 @@ slide(19,'slide--sage',u'''<p class="eyebrow" data-reveal>03 &mdash; Chamber Mem
 <div class="site-card" data-reveal data-delay="3"><img src="data:image/jpeg;base64,%s" alt="The Ardmore Chamber Learning Library concept, with lessons on Google Business Profile, customer reviews, social media and SEO"><div class="email-card-cap">The learning library &mdash; concept</div></div>
 </div>
 ''' % LIBIMG)
-
-# 13 INITIATIVE 05
-slide(20,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;&hellip;delivery of services and professional development programs, seminars events and courses &hellip; programs that cater to and meet the needs of local, small business owners and entrepreneurs.&rdquo;</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Accelerate Downtown Development &amp; Entrepreneurship, p. 46.</p>''')
 
 slide(21,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 04 &mdash; Employment in Ardmore Email</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll put every open job in Ardmore in one place &mdash; in front of the people <em>ready to fill them.</em></h2>''')
