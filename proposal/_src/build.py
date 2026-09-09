@@ -277,9 +277,8 @@ def foot(n):
       '<div class="slide-footer"><span>Ardmore Chamber of Commerce</span>' \
       '<img class="%s" src="data:image/png;base64,%s" alt="Hallpass Digital"></div>' % (light,LOGO)
 
-DARK={4,8,11,17,21,24,28,30}
+DARK={4,9,11,17,21,24,28,30}
 print('module ready')
-
 
 # ---------------- CHARTS ----------------
 def panel(px, title, v1, v2, l1, l2, delta):
@@ -383,7 +382,6 @@ FLY = '''<svg class="flywheel" viewBox="0 -38 720 481" role="img"
 <text class="fw-sub" x="195.5" y="359">of</text><text class="fw-sub" x="195.5" y="373">Commerce</text>
 </svg>'''
 
-
 # 02 THE STARTING POINT — BEFORE/AFTER, stepped reveal (cream)
 slide(2,'',u'''<p class="eyebrow" data-reveal>The Starting Point</p>
 <h2 class="display-sm" data-reveal data-delay="1">The nine months before this work<br>&mdash; and <em>one year later.</em></h2>
@@ -446,10 +444,16 @@ slide(7,'slide--sage',u'''<p class="eyebrow" data-reveal>How This Proposal Is St
 <div class="fly-wrap" data-reveal data-delay="2">%s</div>''' % FLY)
 
 # 09 INITIATIVE 01
-slide(8,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 01 &mdash; Ardmore Means More Social</p>
+slide(8,'fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Implement a content marketing strategy with authentic stories &hellip; develop a social media strategy focusing on visual platforms &hellip; create video content showcasing experiences throughout the region.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="body wide" data-reveal data-delay="3">Ardmore Means More is this &mdash; already in motion, one year in.</p>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 51.</p>''')
+
+slide(9,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 01 &mdash; Ardmore Means More Social</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">We&rsquo;ll keep building the audience &mdash; and point it at <em>economic development.</em></h2>''')
 
-slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
+slide(10,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Social</p>
 <h2 class="display-sm" data-reveal data-delay="1">Opportunities for future<br><em>Ardmore Means More</em> social content:</h2>
 <div class="pillar-grid" data-reveal data-delay="2" style="margin-top:34px">
 <div class="pillar walk-active" data-walk><b>Property highlights</b>A recurring series showcasing available properties &mdash; and making ADA&rsquo;s property tools and inventory easier to discover</div>
@@ -463,11 +467,6 @@ slide(9,'',u'''<p class="eyebrow" data-reveal>01 &mdash; Ardmore Means More Soci
 </div>''')
 
 # 10 INITIATIVE 02
-slide(10,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Implement a content marketing strategy with authentic stories &hellip; develop a social media strategy focusing on visual platforms &hellip; create video content showcasing experiences throughout the region.&rdquo;</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<p class="body wide" data-reveal data-delay="3">Ardmore Means More is this &mdash; already in motion, one year in.</p>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 51.</p>''')
 
 slide(11,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 02 &mdash; Tourism Marketing Engine</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s turn the discount card from one-time use into a marketing channel that grows, gets measured &mdash; <em>and brings visitors back.</em></h2>''')

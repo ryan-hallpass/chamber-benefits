@@ -106,9 +106,10 @@ Base program is now FOUR initiatives (+ Explore Ardmore as the $233K package).
 05  The Momentum .......... projection chart                  (sage)
 06  Proposed Initiatives for the Coming Year — six rows       (cream)
 07  How This Proposal Is Structured — ADA/ATA/Chamber flywheel (sage)
-08  T: Initiative 01 statement                                (dark)
-09  01 Ardmore Means More Social — stepped pillar walk-through (cream)
-10  Q: plan citation for 01 — content/social/video tactic quote (sage)
+08  Q: plan citation for 01 — content/social/video tactic quote (cream)
+    (MOVED 2026-09-09 to lead the initiative, per Ryan)
+09  T: Initiative 01 statement                                (dark)
+10  01 Ardmore Means More Social — stepped pillar walk-through (cream)
 11  T: Initiative 02 statement                                (dark)
 12  02 PROBLEM ×2: distribution + spreadsheet dead-end — 50+/0 (sage)
 13  02 SOLUTION A: distribution — take-one displays + wider venue net
@@ -152,7 +153,7 @@ to the `.b64` files, rebuild.
 
 - `slide(n, cls, inner)` — `n` must stay sequential; it drives the page number
   **and** the footer logo colour.
-- `DARK={4,8,11,17,21,24,28,30}` must list exactly the dark slide numbers, or the footer logo
+- `DARK={4,9,11,17,21,24,28,30}` must list exactly the dark slide numbers, or the footer logo
   inverts wrongly. **Update it whenever slides are added, removed or reordered.**
 - **Never two consecutive slides with the same background.** Rotate
   `''` (cream) → `slide--sage` → `slide--dark`. Verify after any reorder.
