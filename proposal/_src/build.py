@@ -589,7 +589,12 @@ slide(23,'slide--sage',u'''<p class="eyebrow" data-reveal>04 &mdash; Employment 
 slide(24,'slide--dark',u'''<p class="eyebrow" data-reveal>Initiative 05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display" data-reveal data-delay="1" style="max-width:1080px">Let&rsquo;s give visitors a front door as good as the Ardmore <em>we&rsquo;ve been showing them.</em></h2>''')
 
-slide(25,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+slide(25,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;To enhance digital infrastructure, the community should develop a comprehensive destination website &hellip; providing comprehensive information about both Ardmore and Arbuckle Mountains attractions.&rdquo;</h2>
+<div class="rule" data-reveal data-delay="2"></div>
+<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 52.</p>''')
+
+slide(26,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">ExploreArdmore.com isn&rsquo;t living up to<br>the reputation <em>that the brand has built.</em></h2>
 <ul class="problem-list" style="margin-top:22px">
 <li data-reveal data-delay="2">The events calendar greets visitors with sixteen copies of the same Mahjong Mondays listing on a single day</li>
@@ -602,19 +607,13 @@ slide(25,'slide--sage',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ard
 </div>
 <p class="srcnote" data-reveal data-delay="6">Observations from exploreardmore.com, September 3, 2026.</p>''' % (EAEVENTS, EADINE))
 
-# 21 INITIATIVE 05b — SOLUTION (cream)
-slide(26,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
+# 27 INITIATIVE 05b — SOLUTION (cream)
+slide(27,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore, Rebuilt</p>
 <h2 class="display-sm" data-reveal data-delay="1">Rebuild it on the<br><em>Ardmore Means More</em> brand.</h2>
 <ul class="init-bullets">
 <li data-reveal data-delay="2">Fed by the content engine and the weekly <em>What&rsquo;s Happening</em> round-up</li>
 <li data-reveal data-delay="3">Trip-planning tools and guides to the area&rsquo;s most popular destinations</li>
 </ul>''')
-
-# 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
-slide(27,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;To enhance digital infrastructure, the community should develop a comprehensive destination website &hellip; providing comprehensive information about both Ardmore and Arbuckle Mountains attractions.&rdquo;</h2>
-<div class="rule" data-reveal data-delay="2"></div>
-<p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 52.</p>''')
 
 slide(28,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
