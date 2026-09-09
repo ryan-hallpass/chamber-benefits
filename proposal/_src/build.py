@@ -639,13 +639,13 @@ slide(27,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore
 
 slide(28,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>Local Partnership</p>
 <h2 class="display-sm" data-reveal data-delay="1">Keep specialized strategy centralized &mdash;<br>and put <em>local work in local hands.</em></h2>
-<p class="body wide" data-reveal data-delay="2">Hall Pass will lead strategy, creative direction and quality control while engaging qualified Ardmore-area contractors whenever practical.</p>
+<p class="body wide" data-reveal data-delay="2">Hallpass will lead strategy, creative direction and quality control while engaging qualified Ardmore-area contractors whenever practical.</p>
 <div class="phase-list">
 <div class="phase-item" data-reveal data-delay="3"><div class="phase-label">Print production</div><div><div class="phase-title">Local printing services</div><div class="phase-body">Use qualified local printers for discount cards, take-one displays and campaign collateral when scope and timing permit.</div></div></div>
 <div class="phase-item" data-reveal data-delay="4"><div class="phase-label">Photography</div><div><div class="phase-title">Local photographers</div><div class="phase-body">Commission destination, business, event and community imagery locally when additional assets are needed.</div></div></div>
 <div class="phase-item" data-reveal data-delay="5"><div class="phase-label">Video capture</div><div><div class="phase-title">Local videographers</div><div class="phase-body">Engage on-the-ground crews when they can meet the program&rsquo;s creative, technical, scheduling and budget requirements.</div></div></div>
 </div>
-<p class="body wide" data-reveal data-delay="6">Hall Pass will coordinate every partner so the work remains consistent with the Ardmore Means More brand and functions as one connected program.</p>''')
+<p class="body wide" data-reveal data-delay="6">Hallpass will coordinate every partner so the work remains consistent with the Ardmore Means More brand and functions as one connected program.</p>''')
 
 slide(29,'slide--dark',u'''<p class="eyebrow" data-reveal>What These Initiatives Will Accomplish</p>
 <h2 class="display-sm" data-reveal data-delay="1">Outcomes straight from Ardmore&rsquo;s<br><em>Economic Vision Plan.</em></h2>
@@ -687,7 +687,7 @@ slide(31,'slide--dark slide--closing',u'''<p class="eyebrow" data-reveal>Next St
 <p class="body" data-reveal data-delay="4">The audience is growing. The only open question is what we point it at over the next twelve months.</p>
 <p class="body" data-reveal data-delay="6" style="opacity:1;margin-top:30px">
 <strong style="font-family:var(--serif);font-size:20px;font-weight:400">Ryan McNeill</strong><br>
-<span style="font-size:13px;opacity:.7">Hall Pass Digital, LLC &middot; ryan@hallpassdigital.com</span></p>
+<span style="font-size:13px;opacity:.7">Hallpass Digital, LLC &middot; ryan@hallpassdigital.com</span></p>
 <div class="big-arrow">&rarr;</div>''')
 
 HTML = ('<title>Ardmore Chamber of Commerce — Marketing, Content &amp; Community Engagement Program</title>\n'
@@ -742,6 +742,6 @@ open('proposal.html','w').write(HTML)
 i=HTML.find('<style>')
 open(os.path.join(HERE,'..','index.html'),'w').write('<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
  '<meta name="viewport" content="width=device-width,initial-scale=1">\n'+HTML[:i]+
- '<meta name="description" content="Where we started, what we built, and where we take it next — Hall Pass Digital for the Ardmore Chamber of Commerce.">\n' '<meta name="robots" content="noindex,nofollow">\n'
+ '<meta name="description" content="Where we started, what we built, and where we take it next — Hallpass Digital for the Ardmore Chamber of Commerce.">\n' '<meta name="robots" content="noindex,nofollow">\n'
  '</head>\n<body>\n'+HTML[i:]+'\n</body>\n</html>')
 print('slides:',len(S),'| KB',round(len(HTML)/1024,1),'-> ../index.html')
