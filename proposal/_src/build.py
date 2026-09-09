@@ -617,7 +617,7 @@ slide(26,'fitc900',u'''<p class="eyebrow" data-reveal>05 &mdash; Explore Ardmore
 
 # 20 WHAT THESE INITIATIVES WILL ACCOMPLISH (dark) — outcomes tied to the 2025 Economic Vision Plan
 slide(27,'slide--sage fitc1060',u'''<p class="eyebrow" data-reveal>From the 2025 Economic Vision Plan</p>
-<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;Redesign the destination website providing comprehensive information about both Ardmore and Arbuckle Mountains attractions.&rdquo;</h2>
+<h2 class="display-sm" data-reveal data-delay="1" style="max-width:1000px">&ldquo;To enhance digital infrastructure, the community should develop a comprehensive destination website &hellip; providing comprehensive information about both Ardmore and Arbuckle Mountains attractions.&rdquo;</h2>
 <div class="rule" data-reveal data-delay="2"></div>
 <p class="body wide" data-reveal data-delay="3">The Accelerate package is this line item, executed.</p>
 <p class="srcnote" data-reveal data-delay="4">2025 Economic Vision Plan &mdash; Intensify Tourism Initiatives: Enhance Digital Tourism Infrastructure, p. 52.</p>''')
