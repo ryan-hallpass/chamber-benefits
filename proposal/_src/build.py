@@ -635,8 +635,8 @@ slide(29,'',u'''<p class="eyebrow" data-reveal>Investment</p>
 <div class="price-amount">$199,200</div><p class="price-period">$16,600 per month</p>
 <ul class="price-items"><li>Ardmore Means More Social</li><li>Tourism Marketing Engine</li><li>Chamber Member Learning Library</li><li>Employment in Ardmore Email</li></ul></div>
 <div class="price-card" data-reveal data-delay="3"><p class="price-tier">Accelerate &mdash; Program + Explore Ardmore</p>
-<div class="price-amount">$233,000</div><p class="price-period">$16,600 per month, plus the site rebuild</p>
-<ul class="price-items"><li>The full program, unchanged</li><li>exploreardmore.com rebuilt on the Ardmore Means More brand</li><li>Kept current automatically by the program&rsquo;s content, events and directory work</li><li>Site rebuild billed in two payments &mdash; half at kickoff, half at launch</li></ul></div>
+<div class="price-amount">$233,000&ndash;$275,000</div><p class="price-period">Twelve-month investment, based on the defined scope of work</p>
+<ul class="price-items"><li>The full Growth program, unchanged</li><li><strong>$233,000 scope:</strong> Explore Ardmore rebuilt with a <em>What&rsquo;s Happening Around Ardmore</em> page and digital guides to the area&rsquo;s most popular destinations</li><li><strong>$275,000 scope:</strong> adds trip-planning tools, a mobile app and daily blog content featuring itineraries and experiences</li><li>Site rebuild billed in two payments &mdash; half at kickoff, half at launch</li></ul></div>
 </div>
 <div class="total-bar" data-reveal data-delay="4">
 <div><span class="lbl">Agreement term</span><div class="amt" style="font-size:24px">Twelve months</div></div>
